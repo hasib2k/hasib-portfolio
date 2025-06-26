@@ -13,12 +13,12 @@ export default function HireMe() {
         {/* Header Section */}
         <div className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold mb-6" style={{color: '#104F8F'}}>
-            Let's Work Together
+            Let&apos;s Work Together
           </h1>
           <div className="w-24 h-1 mx-auto mb-6" style={{backgroundColor: '#104F8F'}}></div>
           <p className="text-xl max-w-3xl mx-auto leading-relaxed" style={{color: '#104F8F'}}>
-            I'm always interested in new opportunities and exciting projects. Whether you're looking for a full-time developer, 
-            freelance work, or just want to collaborate on something amazing, I'd love to hear from you.
+            I&apos;m always interested in new opportunities and exciting projects. Whether you&apos;re looking for a full-time developer, 
+            freelance work, or just want to collaborate on something amazing, I&apos;d love to hear from you.
           </p>
         </div>
         
@@ -170,7 +170,7 @@ export default function HireMe() {
                 Ready to Start Your Project?
               </h2>
               <p className="text-lg mb-8" style={{color: '#104F8F'}}>
-                Let's discuss how I can help bring your ideas to life with clean, efficient code and modern design.
+                Let&apos;s discuss how I can help bring your ideas to life with clean, efficient code and modern design.
               </p>
               <a 
                 href="mailto:hasibahmed.ig@gmail.com"

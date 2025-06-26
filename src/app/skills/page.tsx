@@ -94,17 +94,12 @@ export default function SkillsPage() {
     }
   ]
 
-  const getColorClasses = (color: string) => {
+  const getColorClasses = () => {
     // Using theme colors for all categories
     return `text-white shadow-lg`
   }
 
-  const getProgressColor = (color: string) => {
-    // Using theme color for all progress bars
-    return `bg-gradient-to-r from-blue-600 to-purple-600`
-  }
-
-  const getCategoryBackground = (color: string) => {
+  const getCategoryBackground = () => {
     // Using theme color for category backgrounds
     return `#104F8F`
   }
@@ -150,7 +145,7 @@ export default function SkillsPage() {
             <div key={categoryIndex} className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border p-8" style={{borderColor: '#B7C9E2'}}>
               {/* Enhanced Category Header */}
               <div className="flex items-center gap-4 mb-8">
-                <div className={`p-4 rounded-2xl shadow-lg ${getColorClasses(category.color)}`} style={{backgroundColor: getCategoryBackground(category.color)}}>
+                <div className={`p-4 rounded-2xl shadow-lg ${getColorClasses()}`} style={{backgroundColor: getCategoryBackground()}}>
                   {category.icon}
                 </div>
                 <div>
@@ -242,10 +237,10 @@ export default function SkillsPage() {
         <div className="text-center mt-16 pt-16">
           <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-12 border shadow-xl" style={{borderColor: '#B7C9E2'}}>
             <h2 className="text-4xl font-bold mb-4" style={{color: '#104F8F'}}>
-              Let's Build Something <span style={{color: '#104F8F'}}>Together</span>
+              Let&apos;s Build Something <span style={{color: '#104F8F'}}>Together</span>
             </h2>
             <p className="text-lg mb-8 max-w-2xl mx-auto" style={{color: '#104F8F'}}>
-              With this diverse skill set, I'm ready to tackle challenging projects and bring your ideas to life.
+              With this diverse skill set, I&apos;m ready to tackle challenging projects and bring your ideas to life.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

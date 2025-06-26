@@ -16,13 +16,16 @@ export default function About() {
               About <span style={{color: '#104F8F'}}>Me</span>
             </h1>
             <div className="w-24 h-1 mx-auto rounded-full" style={{backgroundColor: '#104F8F'}}></div>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mt-6 leading-relaxed">
+              Passionate Software Developer crafting innovative solutions with modern technologies
+            </p>
           </div>
           
           {/* Main Content */}
           <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 mb-12">
             <div className="space-y-8 text-lg text-gray-600 leading-relaxed">
               <div className="relative">
-                <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-blue-600 to-purple-600 rounded-full"></div>
+                <div className="absolute -left-4 top-0 w-1 h-full rounded-full" style={{backgroundColor: '#104F8F'}}></div>
                 <p className="pl-8">
                   Hi, I am <span className="font-semibold text-gray-900">Hasib Ahmed</span>, a passionate Software Developer with over a year of
                   experience in real-time projects. I continuously evolve my skills and embrace new
@@ -32,9 +35,9 @@ export default function About() {
               </div>
               
               <div className="relative">
-                <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-purple-600 to-indigo-600 rounded-full"></div>
+                <div className="absolute -left-4 top-0 w-1 h-full rounded-full" style={{backgroundColor: '#B7C9E2'}}></div>
                 <p className="pl-8">
-                  Currently, I'm pursuing an <span className="font-semibold text-gray-900">Parallaxlogic Infotech, Software Development Company (LTD)</span> in Software Quality Assurance Engineer,
+                  Currently, I&apos;m pursuing an <span className="font-semibold text-gray-900">Parallaxlogic Infotech, Software Development Company (LTD)</span> in Software Quality Assurance Engineer,
                   merging my technical expertise with business insight for impactful results.
                 </p>
               </div>
@@ -44,16 +47,17 @@ export default function About() {
           {/* Skills Section */}
           <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-              Skills & <span className="text-blue-600">Technologies</span>
+              Skills & <span style={{color: '#104F8F'}}>Technologies</span>
             </h2>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {['JavaScript', 'TypeScript', 'React', 'Next.js', 'Node.js', 'Python', 'Java', 'HTML/CSS', 'Tailwind CSS', 'MongoDB', 'SQL', 'Git'].map((skill, index) => (
+              {['JavaScript', 'TypeScript', 'React', 'Next.js', 'Node.js', 'Python', 'Java', 'HTML/CSS', 'Tailwind CSS', 'MongoDB', 'SQL', 'Git'].map((skill) => (
                 <div 
                   key={skill} 
-                  className="group bg-gradient-to-br from-gray-50 to-gray-100 hover:from-blue-50 hover:to-purple-50 rounded-xl p-4 text-center transition-all duration-300 transform hover:scale-105 hover:shadow-lg border border-gray-200 hover:border-blue-300"
+                  className="group rounded-xl p-4 text-center transition-all duration-300 transform hover:scale-105 hover:shadow-lg border border-gray-200"
+                  style={{backgroundColor: '#F5F6F7'}}
                 >
-                  <span className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">{skill}</span>
+                  <span className="font-semibold text-gray-900 group-hover:opacity-80 transition-opacity" style={{color: '#104F8F'}}>{skill}</span>
                 </div>
               ))}
             </div>
@@ -62,32 +66,61 @@ export default function About() {
           {/* Work Experience Section */}
           <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-              Work <span className="text-blue-600">Experience</span>
+              Work <span style={{color: '#104F8F'}}>Experience</span>
             </h2>
             
-            <div className="relative bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-6 border-l-4 border-blue-600">
+            <div className="relative rounded-xl p-6 border-l-4" style={{backgroundColor: '#B7C9E2', borderColor: '#104F8F'}}>
               <div className="absolute top-4 right-4">
-                <div className="w-3 h-3 bg-blue-600 rounded-full animate-pulse"></div>
+                <div className="w-3 h-3 rounded-full animate-pulse" style={{backgroundColor: '#104F8F'}}></div>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Parallaxlogic Infotech, Software Development Company (LTD)</h3>
-              <p className="text-blue-600 font-medium mb-1">Software Quality Assurance Engineer</p>
-              <p className="text-gray-500 text-sm">Currently Pursuing</p>
+              <p className="font-medium mb-1" style={{color: '#104F8F'}}>Software Quality Assurance Engineer</p>
+              <p className="text-gray-600 text-sm">Currently Pursuing</p>
             </div>
           </div>
 
           {/* Educational Background Section */}
           <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-              Educational <span className="text-blue-600">Background</span>
+              Educational <span style={{color: '#104F8F'}}>Background</span>
             </h2>
             
-            <div className="relative bg-gradient-to-r from-gray-50 to-blue-50 rounded-xl p-6 border-l-4 border-purple-600">
+            <div className="relative rounded-xl p-6 border-l-4" style={{backgroundColor: '#F5F6F7', borderColor: '#B7C9E2'}}>
               <div className="absolute top-4 right-4">
                 <div className="w-3 h-3 bg-green-500 rounded-full"></div>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Bachelor's Degree</h3>
-              <p className="text-purple-600 font-medium mb-1">Computer Science Engineering</p>
-              <p className="text-gray-500 text-sm">Completed</p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Bachelor&apos;s Degree</h3>
+              <p className="font-medium mb-1" style={{color: '#104F8F'}}>Computer Science Engineering</p>
+              <p className="text-gray-600 text-sm">Completed</p>
+            </div>
+          </div>
+
+          {/* Call to Action */}
+          <div className="text-center mt-16">
+            <div className="bg-white rounded-2xl shadow-xl p-8">
+              <h2 className="text-3xl font-bold mb-4" style={{color: '#104F8F'}}>
+                Let&apos;s Connect & Collaborate
+              </h2>
+              <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+                I&apos;m always excited to work on new projects and collaborate with like-minded individuals. 
+                Let&apos;s build something amazing together!
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="/hireme"
+                  className="px-8 py-3 text-white rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
+                  style={{backgroundColor: '#104F8F'}}
+                >
+                  Hire Me
+                </a>
+                <a
+                  href="/contact"
+                  className="px-8 py-3 bg-white border-2 text-gray-700 hover:bg-gray-50 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
+                  style={{borderColor: '#104F8F'}}
+                >
+                  Get In Touch
+                </a>
+              </div>
             </div>
           </div>
         </div>

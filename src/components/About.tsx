@@ -103,7 +103,7 @@ export default function About() {
                 className="bg-white/80 backdrop-blur-sm p-6 rounded-xl border border-white/50 shadow-lg"
               >
                 <p className="text-lg leading-relaxed" style={{color: '#104F8F'}}>
-                  Currently, I'm pursuing an <span className="font-semibold">Parallaxlogic Infotech, Software Development Company (LTD)</span> in Software Quality Assurance Engineer,
+                  Currently, I&apos;m pursuing an <span className="font-semibold">Parallaxlogic Infotech, Software Development Company (LTD)</span> in Software Quality Assurance Engineer,
                   merging my technical expertise with business insight for impactful results.
                 </p>
               </motion.div>

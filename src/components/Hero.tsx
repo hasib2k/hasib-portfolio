@@ -31,7 +31,7 @@ export default function Hero() {
                 className="text-5xl md:text-6xl font-bold leading-tight"
                 style={{color: '#104F8F'}}
               >
-                Hello I'm
+                Hello I&apos;m
                 <span className="block" style={{color: '#104F8F'}}>Hasib Ahmed</span>
               </motion.h1>
               
@@ -42,7 +42,7 @@ export default function Hero() {
                 className="text-xl font-medium"
                 style={{color: '#104F8F'}}
               >
-                I'm a passionate Software Developer
+                I&apos;m a passionate Software Developer
               </motion.p>
               
               <motion.p 
@@ -70,7 +70,7 @@ export default function Hero() {
                 download="Hasib_Ahmed_CV.pdf"
                 className="text-white px-8 py-4 rounded-2xl font-semibold inline-flex items-center justify-center gap-2 transition-all duration-300 hover:shadow-2xl transform hover:scale-105 w-full sm:w-auto cursor-pointer active:scale-95 shadow-xl"
                 style={{backgroundColor: '#104F8F'}}
-                onClick={(e) => {
+                onClick={() => {
                   // Ensure the download works even if the file path needs adjustment
                   console.log('Downloading CV...');
                 }}

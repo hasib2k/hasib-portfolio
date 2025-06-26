@@ -175,12 +175,12 @@ export default function BlogPage() {
           {/* Category Filter */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {categories.map((category) => (
-              <span
+              <button
                 key={category}
-                className="px-4 py-2 border border-gray-300 text-gray-700 hover:bg-gray-50 transition-all duration-300 font-medium rounded-lg hover:border-blue-300 hover:text-blue-700 cursor-pointer"
+                className="px-4 py-2 border border-gray-300 text-gray-700 hover:bg-gray-50 transition-all duration-300 font-medium rounded-lg hover:border-blue-300 hover:text-blue-700"
               >
                 {category}
-              </span>
+              </button>
             ))}
           </div>
 
