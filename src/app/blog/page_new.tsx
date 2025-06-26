@@ -187,7 +187,7 @@ export default function BlogPage() {
           {/* All Posts */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-              All <span style={{color: '#104F8F'}}>Posts</span>
+              All <span style={{color: '#104F8F'}}>Articles</span>
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {recentPosts.map((post) => (

@@ -1,12 +1,76 @@
-import { Metadata } from 'next'
-import { Mail, Phone, MapPin, Clock, Send, MessageSquare } from 'lucide-react'
+'use client'
 
-export const metadata: Metadata = {
-  title: 'Contact - Hasib Ahmed',
-  description: 'Get in touch with Hasib Ahmed for software development opportunities, collaborations, or just to say hello.'
+import { useState } from 'react'
+import { Mail, Phone, MapPin, Clock, Send, MessageSquare, ChevronDown, ChevronUp } from 'lucide-react'
+
+// FAQ Item Component with smooth dropdown
+function FAQItem({ 
+  question, 
+  answer, 
+  isOpen, 
+  onToggle 
+}: { 
+  question: string; 
+  answer: string; 
+  isOpen: boolean; 
+  onToggle: () => void; 
+}) {
+  return (
+    <div className="bg-white rounded-2xl shadow-xl border transition-all duration-300 hover:shadow-2xl" style={{borderColor: '#B7C9E2'}}>
+      <button
+        onClick={onToggle}
+        className="w-full p-6 text-left flex items-center justify-between focus:outline-none rounded-2xl transition-all duration-200 hover:bg-gray-50"
+      >
+        <h3 className="text-xl font-semibold" style={{color: '#104F8F'}}>
+          {question}
+        </h3>
+        <div className="flex-shrink-0 ml-4">
+          {isOpen ? (
+            <ChevronUp className="w-6 h-6 transition-transform duration-300" style={{color: '#104F8F'}} />
+          ) : (
+            <ChevronDown className="w-6 h-6 transition-transform duration-300" style={{color: '#104F8F'}} />
+          )}
+        </div>
+      </button>
+      
+      <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
+        <div className="px-6 pb-6">
+          <div className="w-full h-px mb-4" style={{backgroundColor: '#B7C9E2', opacity: 0.3}}></div>
+          <p className="text-gray-600 leading-relaxed">
+            {answer}
+          </p>
+        </div>
+      </div>
+    </div>
+  )
 }
 
 export default function ContactPage() {
+  const [openFAQIndex, setOpenFAQIndex] = useState<number | null>(null)
+
+  const faqData = [
+    {
+      question: "What services do you offer?",
+      answer: "I specialize in full-stack web development using modern technologies like React, Next.js, Node.js, and TypeScript. I also provide API development, database design, and consultation services."
+    },
+    {
+      question: "What's your typical project timeline?",
+      answer: "Project timelines vary based on complexity and requirements. Small projects typically take 2-4 weeks, while larger applications can take 2-6 months. I'll provide a detailed timeline after discussing your needs."
+    },
+    {
+      question: "Do you work with international clients?",
+      answer: "Yes! I work with clients worldwide and am comfortable with remote collaboration. I'm flexible with meeting times to accommodate different time zones."
+    },
+    {
+      question: "How do you handle project communication?",
+      answer: "I believe in transparent communication throughout the project. I provide regular updates, use project management tools, and am available for calls/meetings as needed."
+    }
+  ]
+
+  const handleFAQToggle = (index: number) => {
+    setOpenFAQIndex(openFAQIndex === index ? null : index)
+  }
+
   return (
     <div className="min-h-screen py-20" style={{background: 'linear-gradient(135deg, #F5F6F7 0%, #B7C9E2 100%)'}}>
       <div className="container mx-auto px-6">
@@ -130,7 +194,7 @@ export default function ContactPage() {
                       type="text"
                       id="name"
                       name="name"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors placeholder-gray-600 text-gray-800"
                       placeholder="John Doe"
                     />
                   </div>
@@ -142,7 +206,7 @@ export default function ContactPage() {
                       type="email"
                       id="email"
                       name="email"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors placeholder-gray-600 text-gray-800"
                       placeholder="john@example.com"
                     />
                   </div>
@@ -156,7 +220,7 @@ export default function ContactPage() {
                     type="text"
                     id="subject"
                     name="subject"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors placeholder-gray-600 text-gray-800"
                     placeholder="Project Discussion"
                   />
                 </div>
@@ -169,7 +233,7 @@ export default function ContactPage() {
                     id="message"
                     name="message"
                     rows={6}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors resize-none"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors resize-none placeholder-gray-600 text-gray-800"
                     placeholder="Tell me about your project..."
                   ></textarea>
                 </div>
@@ -191,46 +255,16 @@ export default function ContactPage() {
             <h2 className="text-3xl font-bold text-center mb-12" style={{color: '#104F8F'}}>
               Frequently Asked <span style={{color: '#104F8F'}}>Questions</span>
             </h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-white rounded-2xl shadow-xl p-6">
-                <h3 className="text-xl font-semibold mb-3" style={{color: '#104F8F'}}>
-                  What services do you offer?
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  I specialize in full-stack web development using modern technologies like React, Next.js, Node.js, 
-                  and TypeScript. I also provide API development, database design, and consultation services.
-                </p>
-              </div>
-
-              <div className="bg-white rounded-2xl shadow-xl p-6">
-                <h3 className="text-xl font-semibold mb-3" style={{color: '#104F8F'}}>
-                  What&apos;s your typical project timeline?
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Project timelines vary based on complexity and requirements. Small projects typically take 2-4 weeks, 
-                  while larger applications can take 2-6 months. I&apos;ll provide a detailed timeline after discussing your needs.
-                </p>
-              </div>
-
-              <div className="bg-white rounded-2xl shadow-xl p-6">
-                <h3 className="text-xl font-semibold mb-3" style={{color: '#104F8F'}}>
-                  Do you work with international clients?
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Yes! I work with clients worldwide and am comfortable with remote collaboration. I&apos;m flexible 
-                  with meeting times to accommodate different time zones.
-                </p>
-              </div>
-
-              <div className="bg-white rounded-2xl shadow-xl p-6">
-                <h3 className="text-xl font-semibold mb-3" style={{color: '#104F8F'}}>
-                  How do you handle project communication?
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  I believe in transparent communication throughout the project. I provide regular updates, 
-                  use project management tools, and am available for calls/meetings as needed.
-                </p>
-              </div>
+            <div className="max-w-4xl mx-auto space-y-4">
+              {faqData.map((faq, index) => (
+                <FAQItem
+                  key={index}
+                  question={faq.question}
+                  answer={faq.answer}
+                  isOpen={openFAQIndex === index}
+                  onToggle={() => handleFAQToggle(index)}
+                />
+              ))}
             </div>
           </div>
         </div>

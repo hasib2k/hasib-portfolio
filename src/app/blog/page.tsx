@@ -89,8 +89,6 @@ export default function BlogPage() {
     }
   ]
 
-  const categories = ["All", "React", "AI", "Next.js", "TypeScript", "CSS", "Backend"]
-  const featuredPosts = blogPosts.filter(post => post.featured)
   const recentPosts = blogPosts.slice(0, 6)
 
   const formatDate = (dateString: string) => {
@@ -117,77 +115,10 @@ export default function BlogPage() {
             </p>
           </div>
 
-          {/* Featured Posts */}
-          {featuredPosts.length > 0 && (
-            <div className="mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-                Featured <span style={{color: '#104F8F'}}>Articles</span>
-              </h2>
-              <div className="grid md:grid-cols-2 gap-8">
-                {featuredPosts.map((post) => (
-                  <article key={post.id} className="bg-white rounded-2xl shadow-xl p-6 hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
-                    <div className="flex items-center gap-4 mb-6">
-                      <span className="px-3 py-1 text-sm font-medium rounded-lg" style={{backgroundColor: '#B7C9E2', color: '#104F8F'}}>
-                        {post.category}
-                      </span>
-                      <span className="px-3 py-1 bg-orange-100 text-orange-700 text-sm font-medium rounded-lg">
-                        ⭐ Featured
-                      </span>
-                    </div>
-                    
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4 hover:opacity-80 transition-opacity">
-                      <Link href={`/blog/${post.slug}`}>
-                        {post.title}
-                      </Link>
-                    </h3>
-                    
-                    <p className="text-gray-600 mb-6 leading-relaxed">
-                      {post.excerpt}
-                    </p>
-                    
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-4 text-sm text-gray-500">
-                        <span className="flex items-center gap-2">
-                          <Calendar className="w-4 h-4" />
-                          {formatDate(post.date)}
-                        </span>
-                        <span className="flex items-center gap-2">
-                          <Clock className="w-4 h-4" />
-                          {post.readTime}
-                        </span>
-                      </div>
-                      
-                      <Link 
-                        href={`/blog/${post.slug}`}
-                        className="px-4 py-2 text-white rounded-lg font-medium transition-all duration-300 flex items-center gap-2 hover:opacity-90"
-                        style={{backgroundColor: '#104F8F'}}
-                      >
-                        Read More
-                        <ArrowRight className="w-4 h-4" />
-                      </Link>
-                    </div>
-                  </article>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {/* Category Filter */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            {categories.map((category) => (
-              <span
-                key={category}
-                className="px-4 py-2 border border-gray-300 text-gray-700 hover:bg-gray-50 transition-all duration-300 font-medium rounded-lg hover:border-blue-300 hover:text-blue-700 cursor-pointer"
-              >
-                {category}
-              </span>
-            ))}
-          </div>
-
           {/* All Posts */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-              All <span style={{color: '#104F8F'}}>Posts</span>
+              All <span style={{color: '#104F8F'}}>Articles</span>
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {recentPosts.map((post) => (
@@ -253,7 +184,7 @@ export default function BlogPage() {
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-gray-600"
                 />
                 <button 
                   className="px-6 py-3 text-white rounded-lg font-semibold transition-all duration-300 hover:opacity-90"

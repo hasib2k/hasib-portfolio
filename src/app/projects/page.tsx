@@ -83,13 +83,6 @@ export default function ProjectsPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project) => (
               <div key={project.id} className="bg-white rounded-2xl shadow-xl p-6 hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
-                {/* Project Header */}
-                <div className="flex items-center justify-center h-20 mb-6 rounded-xl" style={{backgroundColor: '#B7C9E2'}}>
-                  <div className="text-3xl font-bold" style={{color: '#104F8F'}}>
-                    {project.title.charAt(0)}
-                  </div>
-                </div>
-
                 {/* Project Content */}
                 <div className="space-y-4">
                   <h3 className="text-xl font-bold text-gray-900 mb-3">

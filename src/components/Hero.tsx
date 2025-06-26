@@ -215,28 +215,43 @@ export default function Hero() {
           ))}
         </motion.div>
 
-        {/* Enhanced Scroll Indicator */}
+        {/* Scroll Down Indicator */}
         <motion.div 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 2, duration: 0.8 }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.6, duration: 0.8 }}
+          className="flex justify-center mt-12"
         >
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="flex flex-col items-center gap-2 p-4 bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border"
-            style={{color: '#104F8F', borderColor: '#B7C9E2'}}
-          >
-            <span className="text-sm font-medium">Scroll Down</span>
-            <div className="w-6 h-10 rounded-full flex justify-center" style={{border: '2px solid #B7C9E2'}}>
+          <motion.div className="flex flex-col items-center gap-3">
+            <motion.span 
+              className="text-sm font-medium tracking-wide"
+              style={{color: '#104F8F'}}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.8, duration: 0.6 }}
+            >
+              Scroll Down
+            </motion.span>
+            
+            <motion.div
+              animate={{ y: [0, 8, 0] }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+              className="w-6 h-10 rounded-full border-2 flex justify-center cursor-pointer hover:scale-110 transition-transform duration-300"
+              style={{borderColor: '#104F8F'}}
+              onClick={() => {
+                const aboutSection = document.getElementById('about');
+                if (aboutSection) {
+                  aboutSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+            >
               <motion.div 
-                animate={{ y: [0, 16, 0] }}
-                transition={{ duration: 2, repeat: Infinity }}
+                animate={{ y: [2, 18, 2] }}
+                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
                 className="w-1 h-3 rounded-full mt-2" 
                 style={{backgroundColor: '#104F8F'}}
-              ></motion.div>
-            </div>
+              />
+            </motion.div>
           </motion.div>
         </motion.div>
       </div>

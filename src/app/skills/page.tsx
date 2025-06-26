@@ -121,19 +121,19 @@ export default function SkillsPage() {
 
         {/* Enhanced Skills Overview Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-          <div className="text-center p-6 bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border" style={{borderColor: '#B7C9E2'}}>
+          <div className="text-center p-6 bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-102 border" style={{borderColor: '#B7C9E2'}}>
             <div className="text-3xl font-bold mb-2" style={{color: '#104F8F'}}>15+</div>
             <div className="font-medium" style={{color: '#104F8F'}}>Programming Languages</div>
           </div>
-          <div className="text-center p-6 bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border" style={{borderColor: '#B7C9E2'}}>
+          <div className="text-center p-6 bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-102 border" style={{borderColor: '#B7C9E2'}}>
             <div className="text-3xl font-bold mb-2" style={{color: '#104F8F'}}>25+</div>
             <div className="font-medium" style={{color: '#104F8F'}}>Frameworks & Libraries</div>
           </div>
-          <div className="text-center p-6 bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border" style={{borderColor: '#B7C9E2'}}>
+          <div className="text-center p-6 bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-102 border" style={{borderColor: '#B7C9E2'}}>
             <div className="text-3xl font-bold mb-2" style={{color: '#104F8F'}}>30+</div>
             <div className="font-medium" style={{color: '#104F8F'}}>Tools & Technologies</div>
           </div>
-          <div className="text-center p-6 bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border" style={{borderColor: '#B7C9E2'}}>
+          <div className="text-center p-6 bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-102 border" style={{borderColor: '#B7C9E2'}}>
             <div className="text-3xl font-bold mb-2" style={{color: '#104F8F'}}>1+</div>
             <div className="font-medium" style={{color: '#104F8F'}}>Years Experience</div>
           </div>
@@ -142,7 +142,7 @@ export default function SkillsPage() {
         {/* Enhanced Skills Categories */}
         <div className="space-y-12">
           {skillCategories.map((category, categoryIndex) => (
-            <div key={categoryIndex} className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border p-8" style={{borderColor: '#B7C9E2'}}>
+            <div key={categoryIndex} className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-102 border p-8" style={{borderColor: '#B7C9E2'}}>
               {/* Enhanced Category Header */}
               <div className="flex items-center gap-4 mb-8">
                 <div className={`p-4 rounded-2xl shadow-lg ${getColorClasses()}`} style={{backgroundColor: getCategoryBackground()}}>
@@ -159,7 +159,7 @@ export default function SkillsPage() {
               {/* Enhanced Skills Grid */}
               <div className="grid md:grid-cols-2 gap-8">
                 {category.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex} className="space-y-4 p-6 rounded-xl hover:shadow-lg transition-all duration-300 transform hover:scale-105 border" style={{backgroundColor: '#F5F6F7', borderColor: '#B7C9E2'}}>
+                  <div key={skillIndex} className="space-y-4 p-6 rounded-xl hover:shadow-lg transition-all duration-300 transform hover:scale-102 border" style={{backgroundColor: '#F5F6F7', borderColor: '#B7C9E2'}}>
                     {/* Enhanced Skill Header */}
                     <div className="flex justify-between items-center">
                       <h3 className="font-bold text-lg" style={{color: '#104F8F'}}>{skill.name}</h3>
@@ -201,7 +201,7 @@ export default function SkillsPage() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center p-8 bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border" style={{borderColor: '#B7C9E2'}}>
+            <div className="text-center p-8 bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-102 border" style={{borderColor: '#B7C9E2'}}>
               <div className="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg" style={{backgroundColor: '#104F8F'}}>
                 <Code className="w-10 h-10 text-white" />
               </div>
@@ -211,7 +211,7 @@ export default function SkillsPage() {
               </p>
             </div>
 
-            <div className="text-center p-8 bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border" style={{borderColor: '#B7C9E2'}}>
+            <div className="text-center p-8 bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-102 border" style={{borderColor: '#B7C9E2'}}>
               <div className="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg" style={{backgroundColor: '#104F8F'}}>
                 <Users className="w-10 h-10 text-white" />
               </div>
@@ -221,7 +221,7 @@ export default function SkillsPage() {
               </p>
             </div>
 
-            <div className="text-center p-8 bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border" style={{borderColor: '#B7C9E2'}}>
+            <div className="text-center p-8 bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-102 border" style={{borderColor: '#B7C9E2'}}>
               <div className="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg" style={{backgroundColor: '#104F8F'}}>
                 <Palette className="w-10 h-10 text-white" />
               </div>
@@ -245,14 +245,14 @@ export default function SkillsPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/projects"
-                className="text-white px-8 py-4 rounded-2xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                className="text-white px-8 py-4 rounded-2xl font-semibold transition-all duration-300 transform hover:scale-102 shadow-lg hover:shadow-xl"
                 style={{backgroundColor: '#104F8F'}}
               >
                 View My Projects
               </a>
               <a
                 href="/hireme"
-                className="px-8 py-4 rounded-2xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg border-2 hover:shadow-xl"
+                className="px-8 py-4 rounded-2xl font-semibold transition-all duration-300 transform hover:scale-102 shadow-lg border-2 hover:shadow-xl"
                 style={{
                   backgroundColor: 'white',
                   color: '#104F8F',
