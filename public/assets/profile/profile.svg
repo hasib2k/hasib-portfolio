@@ -1,0 +1,7 @@
+<svg width="500" height="600" viewBox="0 0 500 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="500" height="600" fill="#F3F4F6"/>
+  <circle cx="250" cy="200" r="80" fill="#9CA3AF"/>
+  <path d="M150 450 C150 380, 200 330, 250 330 C300 330, 350 380, 350 450 L150 450 Z" fill="#9CA3AF"/>
+  <text x="250" y="520" text-anchor="middle" fill="#6B7280" font-family="Arial, sans-serif" font-size="18">Hasib Ahmed</text>
+  <text x="250" y="545" text-anchor="middle" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="14">Software Developer</text>
+</svg>

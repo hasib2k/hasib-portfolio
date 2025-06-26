@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor">
+  <!-- Robot head -->
+  <rect x="25" y="15" width="50" height="40" rx="8" stroke="currentColor" stroke-width="3" fill="none"/>
+  <!-- Copilot eyes -->
+  <circle cx="35" cy="28" r="3" fill="currentColor"/>
+  <circle cx="65" cy="28" r="3" fill="currentColor"/>
+  <!-- GitHub octocat features -->
+  <circle cx="35" cy="32" r="1" fill="currentColor"/>
+  <circle cx="65" cy="32" r="1" fill="currentColor"/>
+  <!-- Pilot mustache -->
+  <path d="M42 38 Q50 36, 58 38" stroke="currentColor" stroke-width="2" fill="none"/>
+  <!-- Pilot cap -->
+  <rect x="30" y="10" width="40" height="8" rx="4" fill="currentColor"/>
+  <circle cx="50" cy="14" r="3" stroke="currentColor" stroke-width="1" fill="none"/>
+  <!-- Body -->
+  <rect x="30" y="55" width="40" height="30" rx="5" stroke="currentColor" stroke-width="3" fill="none"/>
+  <!-- Pilot wings -->
+  <path d="M35 65 L25 60 L35 70 Z" fill="currentColor"/>
+  <path d="M65 65 L75 60 L65 70 Z" fill="currentColor"/>
+  <!-- Code completion suggestions -->
+  <line x1="40" y1="70" x2="50" y2="70" stroke="currentColor" stroke-width="1"/>
+  <line x1="40" y1="75" x2="45" y2="75" stroke="currentColor" stroke-width="1"/>
+  <!-- Arms -->
+  <rect x="15" y="60" width="15" height="4" rx="2" fill="currentColor"/>
+  <rect x="70" y="60" width="15" height="4" rx="2" fill="currentColor"/>
+  <!-- Legs -->
+  <rect x="35" y="85" width="6" height="10" rx="3" fill="currentColor"/>
+  <rect x="59" y="85" width="6" height="10" rx="3" fill="currentColor"/>
+</svg>

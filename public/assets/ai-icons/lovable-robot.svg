@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor">
+  <!-- Robot head -->
+  <rect x="25" y="15" width="50" height="40" rx="8" stroke="currentColor" stroke-width="3" fill="none"/>
+  <!-- Heart eyes for "Lovable" -->
+  <path d="M30 25 C30 20, 40 20, 40 30 C40 20, 50 20, 50 30 C50 35, 40 40, 30 30 Z" fill="currentColor"/>
+  <path d="M60 25 C60 20, 70 20, 70 30 C70 20, 80 20, 80 30 C80 35, 70 40, 60 30 Z" fill="currentColor" transform="scale(0.6) translate(15, 5)"/>
+  <!-- Smile -->
+  <path d="M40 42 Q50 50, 60 42" stroke="currentColor" stroke-width="2" fill="none"/>
+  <!-- Antennae -->
+  <line x1="35" y1="15" x2="35" y2="5" stroke="currentColor" stroke-width="2"/>
+  <line x1="65" y1="15" x2="65" y2="5" stroke="currentColor" stroke-width="2"/>
+  <circle cx="35" cy="5" r="2" fill="currentColor"/>
+  <circle cx="65" cy="5" r="2" fill="currentColor"/>
+  <!-- Body -->
+  <rect x="30" y="55" width="40" height="30" rx="5" stroke="currentColor" stroke-width="3" fill="none"/>
+  <!-- Heart in body -->
+  <path d="M45 62 C45 60, 50 60, 50 65 C50 60, 55 60, 55 65 C55 70, 50 75, 45 65 Z" fill="currentColor"/>
+  <!-- Arms -->
+  <rect x="15" y="60" width="15" height="4" rx="2" fill="currentColor"/>
+  <rect x="70" y="60" width="15" height="4" rx="2" fill="currentColor"/>
+  <!-- Legs -->
+  <rect x="35" y="85" width="6" height="10" rx="3" fill="currentColor"/>
+  <rect x="59" y="85" width="6" height="10" rx="3" fill="currentColor"/>
+</svg>
