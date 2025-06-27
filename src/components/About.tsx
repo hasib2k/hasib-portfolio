@@ -20,7 +20,7 @@ export default function About() {
             <div className="relative w-full max-w-lg mx-auto">
               <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
                 <Image
-                  src="/assets/profile_pic.jpg"
+                  src="/assets/profile_pic _2.jpg"
                   alt="Hasib Ahmed Profile"
                   width={500}
                   height={600}

@@ -82,3 +82,39 @@ html {
     opacity: 0;
   }
 }
+
+/* Mobile touch improvements */
+.touch-manipulation {
+  touch-action: manipulation;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Improve mobile tap targets */
+@media (max-width: 768px) {
+  .nav-button {
+    min-height: 44px;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  button, .nav-button, a {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* Better touch feedback */
+.nav-button:active {
+  transform: scale(0.98);
+}
+
+/* Prevent text selection on mobile */
+.nav-button, button {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

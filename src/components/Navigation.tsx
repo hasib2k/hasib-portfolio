@@ -18,13 +18,50 @@ export default function Navigation() {
     { href: '/hireme', label: 'Hire Me' },
   ]
 
+  // Close menu when clicking outside or pressing escape
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const nav = document.querySelector('nav')
+      if (nav && !nav.contains(event.target as Node)) {
+        setIsOpen(false)
+      }
+    }
+
+    const handleEscapeKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setIsOpen(false)
+      }
+    }
+
+    if (isOpen) {
+      document.addEventListener('mousedown', handleClickOutside)
+      document.addEventListener('keydown', handleEscapeKey)
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+      document.removeEventListener('keydown', handleEscapeKey)
+    }
+  }, [isOpen])
+
   // Water drop effect handler
-  const createWaterDropEffect = (e: MouseEvent) => {
+  const createWaterDropEffect = (e: MouseEvent | TouchEvent) => {
     const button = e.currentTarget as HTMLElement
     const rect = button.getBoundingClientRect()
     const size = Math.max(rect.width, rect.height)
-    const x = e.clientX - rect.left - size / 2
-    const y = e.clientY - rect.top - size / 2
+    
+    // Get coordinates from either mouse or touch event
+    let clientX: number, clientY: number
+    if (e instanceof TouchEvent) {
+      clientX = e.touches[0]?.clientX || e.changedTouches[0]?.clientX || 0
+      clientY = e.touches[0]?.clientY || e.changedTouches[0]?.clientY || 0
+    } else {
+      clientX = e.clientX
+      clientY = e.clientY
+    }
+    
+    const x = clientX - rect.left - size / 2
+    const y = clientY - rect.top - size / 2
     
     // Create ripple element
     const ripple = document.createElement('span')
@@ -57,12 +94,15 @@ export default function Navigation() {
     const attachWaterDropEffect = () => {
       const navButtons = document.querySelectorAll('.nav-button')
       navButtons.forEach(button => {
+        // Add both mouse and touch event listeners
         button.addEventListener('mousedown', createWaterDropEffect as EventListener)
+        button.addEventListener('touchstart', createWaterDropEffect as EventListener)
       })
       
       return () => {
         navButtons.forEach(button => {
           button.removeEventListener('mousedown', createWaterDropEffect as EventListener)
+          button.removeEventListener('touchstart', createWaterDropEffect as EventListener)
         })
       }
     }
@@ -95,7 +135,7 @@ export default function Navigation() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="nav-button relative transition-all duration-300 hover:opacity-80 hover:scale-105 px-4 py-2 rounded-lg backdrop-blur-md bg-white/10 shadow-lg border overflow-hidden"
+                className="nav-button relative transition-all duration-300 hover:opacity-80 hover:scale-105 px-4 py-2 rounded-lg backdrop-blur-md bg-white/10 shadow-lg border overflow-hidden touch-manipulation"
                 style={{color: '#104F8F', borderColor: '#B7C9E2'}}
               >
                 <span className="relative z-10">{item.label}</span>
@@ -103,7 +143,7 @@ export default function Navigation() {
             ))}
             <a
               href="/contact"
-              className="nav-button relative text-white px-4 py-2 rounded-lg transition-all duration-300 hover:opacity-90 hover:scale-105 backdrop-blur-md bg-white/20 shadow-lg border overflow-hidden"
+              className="nav-button relative text-white px-4 py-2 rounded-lg transition-all duration-300 hover:opacity-90 hover:scale-105 backdrop-blur-md bg-white/20 shadow-lg border overflow-hidden touch-manipulation"
               style={{backgroundColor: '#104F8F', borderColor: '#B7C9E2'}}
             >
               <span className="relative z-10">Contact</span>
@@ -113,7 +153,7 @@ export default function Navigation() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-lg backdrop-blur-sm hover:bg-white/10 transition-all duration-300"
+            className="md:hidden p-2 rounded-lg backdrop-blur-sm hover:bg-white/10 transition-all duration-300 touch-manipulation"
             style={{color: '#104F8F'}}
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -135,7 +175,7 @@ export default function Navigation() {
                   <Link
                     key={item.href}
                     href={item.href}
-                    className="nav-button relative block transition-all duration-300 hover:opacity-80 hover:scale-105 px-4 py-2 rounded-lg backdrop-blur-md bg-white/10 shadow-lg border overflow-hidden"
+                    className="nav-button relative block transition-all duration-300 hover:opacity-80 hover:scale-105 px-4 py-3 rounded-lg backdrop-blur-md bg-white/10 shadow-lg border overflow-hidden touch-manipulation"
                     style={{color: '#104F8F', borderColor: '#B7C9E2'}}
                     onClick={() => setIsOpen(false)}
                   >
@@ -144,8 +184,9 @@ export default function Navigation() {
                 ))}
                 <a
                   href="/contact"
-                  className="nav-button relative block text-white px-4 py-2 rounded-lg transition-all duration-300 hover:opacity-90 hover:scale-105 text-center backdrop-blur-md bg-white/20 shadow-lg border overflow-hidden"
+                  className="nav-button relative block text-white px-4 py-3 rounded-lg transition-all duration-300 hover:opacity-90 hover:scale-105 text-center backdrop-blur-md bg-white/20 shadow-lg border overflow-hidden touch-manipulation"
                   style={{backgroundColor: '#104F8F', borderColor: '#B7C9E2'}}
+                  onClick={() => setIsOpen(false)}
                 >
                   <span className="relative z-10">Contact</span>
                 </a>

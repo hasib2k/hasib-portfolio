@@ -143,7 +143,7 @@ export default function Hero() {
             <div className="relative w-full max-w-md mx-auto">
               <div className="aspect-square rounded-full overflow-hidden border-8 border-white/90 backdrop-blur-sm shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105" style={{background: 'linear-gradient(135deg, #B7C9E2, #F5F6F7)'}}>
                 <Image
-                  src="/assets/profile_pic.jpg"
+                  src="/assets/profile_pic _2.jpg"
                   alt="Hasib Ahmed"
                   width={400}
                   height={400}
