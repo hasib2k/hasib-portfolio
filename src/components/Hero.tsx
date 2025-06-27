@@ -92,7 +92,7 @@ export default function Hero() {
                   <Github size={20} style={{color: '#104F8F'}} />
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/hasib-ahmed-429204210"
+                  href="https://www.linkedin.com/in/hasib2k"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 rounded-2xl transition-all duration-300 transform hover:scale-110 cursor-pointer border backdrop-blur-md bg-white/10 shadow-lg"

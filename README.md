@@ -127,5 +127,5 @@ This project is open source and available under the [MIT License](LICENSE).
 
 - **Email**: hasibahmed.ig@gmail.com
 - **Phone**: +880 170 6776 711
-- **LinkedIn**: [Hasib Ahmed](https://www.linkedin.com/in/hasib-ahmed-429204210)
+- **LinkedIn**: [Hasib Ahmed](https://www.linkedin.com/in/hasib2k)
 - **GitHub**: [hasib-ahmed](https://github.com/hasib2k)

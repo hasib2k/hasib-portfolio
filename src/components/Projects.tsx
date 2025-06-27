@@ -8,17 +8,17 @@ export default function Projects() {
     {
       title: "E-Commerce Platform",
       github: "https://github.com/hasib2k",
-      live: "https://ecommerce-demo.hasibdev.in",
+      live: "https://dev-portfolio-main.vercel.app",
     },
     {
       title: "Task Management App",
       github: "https://github.com/hasib2k",
-      live: "https://tasks.hasibdev.in",
+      live: "https://dev-portfolio-main.vercel.app",
     },
     {
       title: "AI Chat Application",
       github: "https://github.com/hasib2k",
-      live: "https://chat.hasibdev.in",
+      live: "https://dev-portfolio-main.vercel.app",
     }
   ]
 

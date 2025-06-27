@@ -73,7 +73,7 @@ export default function Footer() {
                   <Github size={18} />
                 </motion.a>
                 <motion.a
-                  href="https://www.linkedin.com/in/hasib-ahmed-429204210"
+                  href="https://www.linkedin.com/in/hasib2k"
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.1 }}

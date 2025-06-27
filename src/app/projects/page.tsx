@@ -13,8 +13,8 @@ export default function ProjectsPage() {
       title: "E-Commerce Testing Suite",
       description: "Comprehensive testing suite for e-commerce platform including automated test scripts, performance testing, and quality assurance workflows.",
       technologies: ["Selenium", "Jest", "Cypress", "TestNG", "JavaScript"],
-      github: "https://github.com/hasib2k/ecommerce-testing",
-      live: "https://testing-demo.hasibdev.in",
+      github: "https://github.com/hasib2k",
+      live: "dev-portfolio-main.vercel.app",
       category: "QA Testing"
     },
     {
@@ -22,8 +22,8 @@ export default function ProjectsPage() {
       title: "Task Management Frontend",
       description: "Modern React-based frontend for project management with comprehensive testing coverage and quality assurance processes.",
       technologies: ["React", "TypeScript", "Jest", "React Testing Library", "Tailwind CSS"],
-      github: "https://github.com/hasib2k/task-frontend",
-      live: "https://tasks.hasibdev.in",
+      github: "https://github.com/hasib2k",
+      live: "https://dev-portfolio-main.vercel.app",
       category: "Frontend"
     },
     {
@@ -31,8 +31,8 @@ export default function ProjectsPage() {
       title: "Automated Testing Framework",
       description: "Custom testing framework for web applications with automated test generation, bug tracking, and quality metrics reporting.",
       technologies: ["Selenium", "Python", "Pytest", "TestRail", "Jenkins"],
-      github: "https://github.com/hasib2k/test-automation",
-      live: "https://automation.hasibdev.in",
+      github: "https://github.com/hasib2k",
+      live: "https://dev-portfolio-main.vercel.app",
       category: "QA Testing"
     },
     {
@@ -40,8 +40,8 @@ export default function ProjectsPage() {
       title: "Quality Dashboard Frontend",
       description: "Interactive dashboard for QA metrics and testing results built with modern frontend technologies and comprehensive testing.",
       technologies: ["React", "Chart.js", "TypeScript", "Jest", "Cypress"],
-      github: "https://github.com/hasib2k/qa-dashboard",
-      live: "https://hasibdev.in",
+      github: "https://github.com/hasib2k",
+      live: "https://dev-portfolio-main.vercel.app",
       category: "Frontend"
     },
     {
@@ -49,8 +49,8 @@ export default function ProjectsPage() {
       title: "API Testing Suite",
       description: "Comprehensive API testing solution with automated validation, performance testing, and quality assurance for RESTful services.",
       technologies: ["Postman", "Newman", "Jest", "Supertest", "API Testing"],
-      github: "https://github.com/hasib2k/api-testing",
-      live: "https://api-testing.hasibdev.in",
+      github: "https://github.com/hasib2k",
+      live: "https://dev-portfolio-main.vercel.app",
       category: "QA Testing"
     },
     {
@@ -58,8 +58,8 @@ export default function ProjectsPage() {
       title: "Frontend Component Library",
       description: "Reusable React component library with comprehensive testing coverage, documentation, and quality assurance processes.",
       technologies: ["React", "TypeScript", "Storybook", "Jest", "Testing Library"],
-      github: "https://github.com/hasib2k/component-library",
-      live: "https://components.hasibdev.in",
+      github: "https://github.com/hasib2k",
+      live: "https://dev-portfolio-main.vercel.app",
       category: "Frontend"
     }
   ]
