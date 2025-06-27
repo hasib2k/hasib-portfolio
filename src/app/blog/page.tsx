@@ -1,13 +1,65 @@
-import { Metadata } from 'next'
-import { Calendar, Clock, ArrowRight } from 'lucide-react'
-import Link from 'next/link'
+'use client'
 
-export const metadata: Metadata = {
-  title: 'Blog - Hasib Ahmed',
-  description: 'Read my insights on software quality assurance, testing methodologies, frontend development, and QA best practices.'
-}
+import { Calendar, Clock, ArrowRight, Mail, Check } from 'lucide-react'
+import Link from 'next/link'
+import { useState, useEffect } from 'react'
 
 export default function BlogPage() {
+  // Set document title and meta description on client side
+  useEffect(() => {
+    document.title = 'Blog - Hasib Ahmed'
+    const metaDescription = document.querySelector('meta[name="description"]')
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Read my insights on software quality assurance, testing methodologies, frontend development, and QA best practices.')
+    } else {
+      const meta = document.createElement('meta')
+      meta.name = 'description'
+      meta.content = 'Read my insights on software quality assurance, testing methodologies, frontend development, and QA best practices.'
+      document.head.appendChild(meta)
+    }
+  }, [])
+  const [email, setEmail] = useState('')
+  const [isSubscribing, setIsSubscribing] = useState(false)
+  const [isSubscribed, setIsSubscribed] = useState(false)
+  const [subscriptionMessage, setSubscriptionMessage] = useState('')
+
+  const handleSubscribe = async (e: React.FormEvent) => {
+    e.preventDefault()
+    
+    // Basic email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    if (!email || !emailRegex.test(email)) {
+      setSubscriptionMessage('Please enter a valid email address.')
+      return
+    }
+
+    setIsSubscribing(true)
+    setSubscriptionMessage('')
+
+    try {
+      // Simulate API call (replace with actual subscription service)
+      await new Promise(resolve => setTimeout(resolve, 1500))
+      
+      // For demo purposes, we'll just show success message
+      // In a real app, you would send this to your newsletter service
+      console.log('Subscribing email:', email)
+      
+      setIsSubscribed(true)
+      setSubscriptionMessage('Thank you for subscribing! You\'ll receive updates soon.')
+      setEmail('')
+      
+      // Reset success state after 5 seconds
+      setTimeout(() => {
+        setIsSubscribed(false)
+        setSubscriptionMessage('')
+      }, 5000)
+      
+    } catch (error) {
+      setSubscriptionMessage('Subscription failed. Please try again.')
+    } finally {
+      setIsSubscribing(false)
+    }
+  }
   const blogPosts = [
     {
       id: 1,
@@ -174,26 +226,64 @@ export default function BlogPage() {
           {/* Call to Action */}
           <div className="text-center mt-16">
             <div className="rounded-2xl border backdrop-blur-md bg-white/10 shadow-lg p-8" style={{borderColor: '#B7C9E2'}}>
-              <h2 className="text-3xl font-bold mb-4" style={{color: '#104F8F'}}>
-                Stay Updated
-              </h2>
+              <div className="flex items-center justify-center mb-4">
+                <Mail className="w-8 h-8 mr-3" style={{color: '#104F8F'}} />
+                <h2 className="text-3xl font-bold" style={{color: '#104F8F'}}>
+                  Stay Updated
+                </h2>
+              </div>
               <p className="mb-6 max-w-2xl mx-auto" style={{color: '#104F8F'}}>
                 Subscribe to get the latest posts and development insights delivered to your inbox.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+              
+              {subscriptionMessage && (
+                <div className={`mb-4 p-3 rounded-lg ${isSubscribed ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
+                  <div className="flex items-center justify-center gap-2">
+                    {isSubscribed && <Check className="w-4 h-4" />}
+                    {subscriptionMessage}
+                  </div>
+                </div>
+              )}
+              
+              <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="flex-1 px-4 py-3 border rounded-lg focus:outline-none focus:ring-2"
-                  style={{borderColor: '#B7C9E2', color: '#104F8F'}}
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="flex-1 px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 backdrop-blur-sm bg-white/20 transition-all duration-300"
+                  style={{
+                    borderColor: '#B7C9E2', 
+                    color: '#104F8F'
+                  }}
+                  disabled={isSubscribing || isSubscribed}
+                  required
                 />
                 <button 
-                  className="px-6 py-3 text-white rounded-lg font-semibold transition-all duration-300 hover:opacity-90"
+                  type="submit"
+                  className="px-6 py-3 text-white rounded-lg font-semibold transition-all duration-300 hover:opacity-90 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 min-w-[120px]"
                   style={{backgroundColor: '#104F8F'}}
+                  disabled={isSubscribing || isSubscribed}
                 >
-                  Subscribe
+                  {isSubscribing ? (
+                    <>
+                      <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                      Subscribing...
+                    </>
+                  ) : isSubscribed ? (
+                    <>
+                      <Check className="w-4 h-4" />
+                      Subscribed!
+                    </>
+                  ) : (
+                    'Subscribe'
+                  )}
                 </button>
-              </div>
+              </form>
+              
+              <p className="text-xs mt-4 opacity-75" style={{color: '#104F8F'}}>
+                We respect your privacy. Unsubscribe at any time.
+              </p>
             </div>
           </div>
         </div>
