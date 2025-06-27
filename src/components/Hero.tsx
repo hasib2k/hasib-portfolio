@@ -120,12 +120,12 @@ export default function Hero() {
                   <MessageCircle size={20} style={{color: '#104F8F'}} />
                 </a>
                 <a
-                  href="https://leetcode.com/u/hasib_ahmed15/"
+                  href="https://dev-portfolio-main.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 rounded-2xl transition-all duration-300 transform hover:scale-110 cursor-pointer border backdrop-blur-md bg-white/10 shadow-lg"
                   style={{borderColor: '#B7C9E2'}}
-                  title="View my LeetCode Profile"
+                  title="Profile"
                 >
                   <Code size={20} style={{color: '#104F8F'}} />
                 </a>
