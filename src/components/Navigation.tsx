@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 import Link from 'next/link'
@@ -19,8 +19,8 @@ export default function Navigation() {
   ]
 
   // Water drop effect handler
-  const createWaterDropEffect = (e: React.MouseEvent<HTMLElement>) => {
-    const button = e.currentTarget
+  const createWaterDropEffect = (e: MouseEvent) => {
+    const button = e.currentTarget as HTMLElement
     const rect = button.getBoundingClientRect()
     const size = Math.max(rect.width, rect.height)
     const x = e.clientX - rect.left - size / 2
@@ -52,6 +52,25 @@ export default function Navigation() {
     }, 600)
   }
 
+  // Attach event listeners after component mounts
+  useEffect(() => {
+    const attachWaterDropEffect = () => {
+      const navButtons = document.querySelectorAll('.nav-button')
+      navButtons.forEach(button => {
+        button.addEventListener('mousedown', createWaterDropEffect as EventListener)
+      })
+      
+      return () => {
+        navButtons.forEach(button => {
+          button.removeEventListener('mousedown', createWaterDropEffect as EventListener)
+        })
+      }
+    }
+
+    const cleanup = attachWaterDropEffect()
+    return cleanup
+  }, [isOpen]) // Re-attach when mobile menu state changes
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-white/10 shadow-lg border-b" style={{borderColor: '#B7C9E2'}}>
       <div className="container mx-auto px-6">
@@ -76,18 +95,16 @@ export default function Navigation() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="relative transition-all duration-300 hover:opacity-80 hover:scale-105 px-4 py-2 rounded-lg backdrop-blur-md bg-white/10 shadow-lg border overflow-hidden"
+                className="nav-button relative transition-all duration-300 hover:opacity-80 hover:scale-105 px-4 py-2 rounded-lg backdrop-blur-md bg-white/10 shadow-lg border overflow-hidden"
                 style={{color: '#104F8F', borderColor: '#B7C9E2'}}
-                onClick={createWaterDropEffect}
               >
                 <span className="relative z-10">{item.label}</span>
               </Link>
             ))}
             <a
               href="/contact"
-              className="relative text-white px-4 py-2 rounded-lg transition-all duration-300 hover:opacity-90 hover:scale-105 backdrop-blur-md bg-white/20 shadow-lg border overflow-hidden"
+              className="nav-button relative text-white px-4 py-2 rounded-lg transition-all duration-300 hover:opacity-90 hover:scale-105 backdrop-blur-md bg-white/20 shadow-lg border overflow-hidden"
               style={{backgroundColor: '#104F8F', borderColor: '#B7C9E2'}}
-              onClick={createWaterDropEffect}
             >
               <span className="relative z-10">Contact</span>
             </a>
@@ -118,21 +135,17 @@ export default function Navigation() {
                   <Link
                     key={item.href}
                     href={item.href}
-                    className="relative block transition-all duration-300 hover:opacity-80 hover:scale-105 px-4 py-2 rounded-lg backdrop-blur-md bg-white/10 shadow-lg border overflow-hidden"
+                    className="nav-button relative block transition-all duration-300 hover:opacity-80 hover:scale-105 px-4 py-2 rounded-lg backdrop-blur-md bg-white/10 shadow-lg border overflow-hidden"
                     style={{color: '#104F8F', borderColor: '#B7C9E2'}}
-                    onClick={(e) => {
-                      createWaterDropEffect(e)
-                      setIsOpen(false)
-                    }}
+                    onClick={() => setIsOpen(false)}
                   >
                     <span className="relative z-10">{item.label}</span>
                   </Link>
                 ))}
                 <a
                   href="/contact"
-                  className="relative block text-white px-4 py-2 rounded-lg transition-all duration-300 hover:opacity-90 hover:scale-105 text-center backdrop-blur-md bg-white/20 shadow-lg border overflow-hidden"
+                  className="nav-button relative block text-white px-4 py-2 rounded-lg transition-all duration-300 hover:opacity-90 hover:scale-105 text-center backdrop-blur-md bg-white/20 shadow-lg border overflow-hidden"
                   style={{backgroundColor: '#104F8F', borderColor: '#B7C9E2'}}
-                  onClick={createWaterDropEffect}
                 >
                   <span className="relative z-10">Contact</span>
                 </a>

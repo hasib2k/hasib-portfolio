@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import { Code, Database, Globe, Smartphone, Cloud, Cpu, Palette, Users } from 'lucide-react'
+import { Code, Globe, Cloud, Cpu, Palette, Users } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Skills - Hasib Ahmed',
