@@ -7,17 +7,17 @@ export default function Projects() {
   const projects = [
     {
       title: "E-Commerce Platform",
-      github: "https://github.com/hasib2k/ecommerce-platform",
+      github: "https://github.com/hasib2k",
       live: "https://ecommerce-demo.hasibdev.in",
     },
     {
       title: "Task Management App",
-      github: "https://github.com/hasib2k/task-manager",
+      github: "https://github.com/hasib2k",
       live: "https://tasks.hasibdev.in",
     },
     {
       title: "AI Chat Application",
-      github: "https://github.com/hasib2k/ai-chat-app",
+      github: "https://github.com/hasib2k",
       live: "https://chat.hasibdev.in",
     }
   ]
@@ -54,9 +54,6 @@ export default function Projects() {
                 borderColor: '#B7C9E2'
               }}
             >
-              {/* Decorative gradient border */}
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-400/20 to-purple-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
-              
               {/* Floating icon */}
               <div className="absolute -top-4 -right-4 w-12 h-12 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300"
                    style={{backgroundColor: '#104F8F'}}>

@@ -1,11 +1,11 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Github, Linkedin, Mail, MessageCircle } from 'lucide-react'
+import { Github, Linkedin, Mail, MessageCircle, Phone } from 'lucide-react'
 
 export default function Footer() {
   return (
-    <footer className="py-4 backdrop-blur-md" style={{background: 'linear-gradient(135deg, #F5F6F7 0%, #B7C9E2 100%)'}}>
+    <footer className="py-4 backdrop-blur-md" style={{backgroundColor: '#F5F6F7'}}>
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <motion.div
@@ -40,9 +40,10 @@ export default function Footer() {
                 </a>
                 <a 
                   href="tel:+8801706776711"
-                  className="transition-all duration-300 hover:opacity-80 hover:scale-105 px-2 py-1 rounded-lg backdrop-blur-sm bg-white/5 border text-sm"
+                  className="transition-all duration-300 flex items-center gap-2 hover:opacity-80 hover:scale-105 px-2 py-1 rounded-lg backdrop-blur-sm bg-white/5 border text-sm"
                   style={{color: '#104F8F', borderColor: '#B7C9E2'}}
                 >
+                  <Phone size={14} />
                   +880 170 6776 711
                 </a>
               </div>

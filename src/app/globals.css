@@ -54,3 +54,31 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: #104F8F;
 }
+
+/* Water drop effect animation */
+@keyframes water-drop {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+
+/* Additional ripple effect */
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}

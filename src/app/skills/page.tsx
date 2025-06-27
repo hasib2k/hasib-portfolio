@@ -119,38 +119,38 @@ export default function SkillsPage() {
         </div>
 
         {/* Enhanced Skills Overview Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
-          <div className="text-center p-3 rounded-xl transition-all duration-300 transform hover:scale-105 border backdrop-blur-md bg-white/10 shadow-lg" style={{borderColor: '#B7C9E2'}}>
-            <div className="text-2xl font-bold mb-1" style={{color: '#104F8F'}}>1+</div>
-            <div className="font-medium text-sm" style={{color: '#104F8F'}}>Years of experience</div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-12">
+          <div className="text-center p-2 rounded-lg transition-all duration-300 transform hover:scale-105 border backdrop-blur-md bg-white/10 shadow-lg" style={{borderColor: '#B7C9E2'}}>
+            <div className="text-xl font-bold mb-1" style={{color: '#104F8F'}}>1+</div>
+            <div className="font-medium text-xs" style={{color: '#104F8F'}}>Years of experience</div>
           </div>
-          <div className="text-center p-3 rounded-xl transition-all duration-300 transform hover:scale-105 border backdrop-blur-md bg-white/10 shadow-lg" style={{borderColor: '#B7C9E2'}}>
-            <div className="text-2xl font-bold mb-1" style={{color: '#104F8F'}}>20+</div>
-            <div className="font-medium text-sm" style={{color: '#104F8F'}}>Projects Tested</div>
+          <div className="text-center p-2 rounded-lg transition-all duration-300 transform hover:scale-105 border backdrop-blur-md bg-white/10 shadow-lg" style={{borderColor: '#B7C9E2'}}>
+            <div className="text-xl font-bold mb-1" style={{color: '#104F8F'}}>20+</div>
+            <div className="font-medium text-xs" style={{color: '#104F8F'}}>Projects Tested</div>
           </div>
-          <div className="text-center p-3 rounded-xl transition-all duration-300 transform hover:scale-105 border backdrop-blur-md bg-white/10 shadow-lg" style={{borderColor: '#B7C9E2'}}>
-            <div className="text-2xl font-bold mb-1" style={{color: '#104F8F'}}>15+</div>
-            <div className="font-medium text-sm" style={{color: '#104F8F'}}>Technical Skills</div>
+          <div className="text-center p-2 rounded-lg transition-all duration-300 transform hover:scale-105 border backdrop-blur-md bg-white/10 shadow-lg" style={{borderColor: '#B7C9E2'}}>
+            <div className="text-xl font-bold mb-1" style={{color: '#104F8F'}}>15+</div>
+            <div className="font-medium text-xs" style={{color: '#104F8F'}}>Technical Skills</div>
           </div>
-          <div className="text-center p-3 rounded-xl transition-all duration-300 transform hover:scale-105 border backdrop-blur-md bg-white/10 shadow-lg" style={{borderColor: '#B7C9E2'}}>
-            <div className="text-2xl font-bold mb-1" style={{color: '#104F8F'}}>1000+</div>
-            <div className="font-medium text-sm" style={{color: '#104F8F'}}>Bugs Found & Fixed</div>
+          <div className="text-center p-2 rounded-lg transition-all duration-300 transform hover:scale-105 border backdrop-blur-md bg-white/10 shadow-lg" style={{borderColor: '#B7C9E2'}}>
+            <div className="text-xl font-bold mb-1" style={{color: '#104F8F'}}>1000+</div>
+            <div className="font-medium text-xs" style={{color: '#104F8F'}}>Bugs Found & Fixed</div>
           </div>
         </div>
 
         {/* Enhanced Skills Categories */}
-        <div className="space-y-8">
+        <div className="space-y-6">
           {skillCategories.map((category, categoryIndex) => (
-            <div key={categoryIndex} className="space-y-6">
+            <div key={categoryIndex} className="space-y-4">
               {/* Category Header Card - Separate */}
-              <div className="rounded-xl transition-all duration-300 transform hover:scale-102 border backdrop-blur-md bg-white/10 shadow-lg p-6" style={{borderColor: '#B7C9E2'}}>
-                <div className="flex items-center gap-3">
-                  <div className={`p-3 rounded-xl shadow-lg ${getColorClasses()}`} style={{backgroundColor: getCategoryBackground()}}>
+              <div className="rounded-lg transition-all duration-300 transform hover:scale-102 border backdrop-blur-md bg-white/10 shadow-lg p-4" style={{borderColor: '#B7C9E2'}}>
+                <div className="flex items-center gap-2">
+                  <div className={`p-2 rounded-lg shadow-lg ${getColorClasses()}`} style={{backgroundColor: getCategoryBackground()}}>
                     {category.icon}
                   </div>
                   <div>
-                    <h2 className="text-2xl font-bold" style={{color: '#104F8F'}}>{category.title}</h2>
-                    <p className="font-medium text-sm" style={{color: '#104F8F'}}>
+                    <h2 className="text-xl font-bold" style={{color: '#104F8F'}}>{category.title}</h2>
+                    <p className="font-medium text-xs" style={{color: '#104F8F'}}>
                       {category.skills.length} skills in this category
                     </p>
                   </div>
@@ -158,19 +158,19 @@ export default function SkillsPage() {
               </div>
 
               {/* Skills Grid - Separate Container */}
-              <div className="grid md:grid-cols-2 gap-4">
+              <div className="grid md:grid-cols-2 gap-3">
                 {category.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex} className="space-y-3 p-4 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-102 border backdrop-blur-md bg-white/10 shadow-lg" style={{borderColor: '#B7C9E2'}}>
+                  <div key={skillIndex} className="space-y-2 p-3 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-102 border backdrop-blur-md bg-white/10 shadow-lg" style={{borderColor: '#B7C9E2'}}>
                     {/* Enhanced Skill Header */}
                     <div className="flex justify-between items-center">
-                      <h3 className="font-bold text-base" style={{color: '#104F8F'}}>{skill.name}</h3>
-                      <span className="text-xs font-bold text-white px-2 py-1 rounded-full shadow-sm" style={{backgroundColor: '#104F8F'}}>{skill.level}%</span>
+                      <h3 className="font-bold text-sm" style={{color: '#104F8F'}}>{skill.name}</h3>
+                      <span className="text-xs font-bold text-white px-1.5 py-0.5 rounded-full shadow-sm" style={{backgroundColor: '#104F8F'}}>{skill.level}%</span>
                     </div>
                     
                     {/* Enhanced Progress Bar */}
-                    <div className="w-full rounded-full h-2 shadow-inner" style={{backgroundColor: '#B7C9E2'}}>
+                    <div className="w-full rounded-full h-1.5 shadow-inner" style={{backgroundColor: '#B7C9E2'}}>
                       <div 
-                        className={`h-2 rounded-full transition-all duration-1000 ease-out shadow-lg`}
+                        className={`h-1.5 rounded-full transition-all duration-1000 ease-out shadow-lg`}
                         style={{ 
                           width: `${skill.level}%`,
                           background: 'linear-gradient(90deg, #104F8F 0%, #B7C9E2 100%)'
@@ -190,44 +190,44 @@ export default function SkillsPage() {
         </div>
 
         {/* Enhanced Certifications & Learning */}
-        <div className="mt-16 pt-16">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4" style={{color: '#104F8F'}}>
+        <div className="mt-12 pt-12">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold mb-3" style={{color: '#104F8F'}}>
               Continuous <span style={{color: '#104F8F'}}>Learning</span>
             </h2>
-            <div className="w-16 h-1 mx-auto rounded-full mb-6" style={{backgroundColor: '#104F8F'}}></div>
-            <p className="text-lg max-w-2xl mx-auto" style={{color: '#104F8F'}}>
+            <div className="w-12 h-1 mx-auto rounded-full mb-4" style={{backgroundColor: '#104F8F'}}></div>
+            <p className="text-base max-w-2xl mx-auto" style={{color: '#104F8F'}}>
               I believe in lifelong learning and staying updated with the latest technologies and best practices.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="text-center p-6 rounded-xl transition-all duration-300 transform hover:scale-102 border backdrop-blur-md bg-white/10 shadow-lg" style={{borderColor: '#B7C9E2'}}>
-              <div className="w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg" style={{backgroundColor: '#104F8F'}}>
-                <Code className="w-8 h-8 text-white" />
+          <div className="grid md:grid-cols-3 gap-4">
+            <div className="text-center p-4 rounded-lg transition-all duration-300 transform hover:scale-102 border backdrop-blur-md bg-white/10 shadow-lg" style={{borderColor: '#B7C9E2'}}>
+              <div className="w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-3 shadow-lg" style={{backgroundColor: '#104F8F'}}>
+                <Code className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-2" style={{color: '#104F8F'}}>Online Courses</h3>
-              <p className="leading-relaxed text-sm" style={{color: '#104F8F'}}>
+              <h3 className="text-lg font-bold mb-2" style={{color: '#104F8F'}}>Online Courses</h3>
+              <p className="leading-relaxed text-xs" style={{color: '#104F8F'}}>
                 Regularly completing courses on platforms like Udemy, Coursera, and freeCodeCamp
               </p>
             </div>
 
-            <div className="text-center p-6 rounded-xl transition-all duration-300 transform hover:scale-102 border backdrop-blur-md bg-white/10 shadow-lg" style={{borderColor: '#B7C9E2'}}>
-              <div className="w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg" style={{backgroundColor: '#104F8F'}}>
-                <Users className="w-8 h-8 text-white" />
+            <div className="text-center p-4 rounded-lg transition-all duration-300 transform hover:scale-102 border backdrop-blur-md bg-white/10 shadow-lg" style={{borderColor: '#B7C9E2'}}>
+              <div className="w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-3 shadow-lg" style={{backgroundColor: '#104F8F'}}>
+                <Users className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-2" style={{color: '#104F8F'}}>Community</h3>
-              <p className="leading-relaxed text-sm" style={{color: '#104F8F'}}>
+              <h3 className="text-lg font-bold mb-2" style={{color: '#104F8F'}}>Community</h3>
+              <p className="leading-relaxed text-xs" style={{color: '#104F8F'}}>
                 Active participant in developer communities, forums, and local tech meetups
               </p>
             </div>
 
-            <div className="text-center p-6 rounded-xl transition-all duration-300 transform hover:scale-102 border backdrop-blur-md bg-white/10 shadow-lg" style={{borderColor: '#B7C9E2'}}>
-              <div className="w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg" style={{backgroundColor: '#104F8F'}}>
-                <Palette className="w-8 h-8 text-white" />
+            <div className="text-center p-4 rounded-lg transition-all duration-300 transform hover:scale-102 border backdrop-blur-md bg-white/10 shadow-lg" style={{borderColor: '#B7C9E2'}}>
+              <div className="w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-3 shadow-lg" style={{backgroundColor: '#104F8F'}}>
+                <Palette className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-2" style={{color: '#104F8F'}}>Side Projects</h3>
-              <p className="leading-relaxed text-sm" style={{color: '#104F8F'}}>
+              <h3 className="text-lg font-bold mb-2" style={{color: '#104F8F'}}>Side Projects</h3>
+              <p className="leading-relaxed text-xs" style={{color: '#104F8F'}}>
                 Building personal projects to experiment with new technologies and frameworks
               </p>
             </div>
@@ -235,25 +235,25 @@ export default function SkillsPage() {
         </div>
 
         {/* Enhanced CTA Section */}
-        <div className="text-center mt-16 pt-16">
-          <div className="rounded-2xl p-8 border backdrop-blur-md bg-white/10 shadow-lg" style={{borderColor: '#B7C9E2'}}>
-            <h2 className="text-3xl font-bold mb-4" style={{color: '#104F8F'}}>
+        <div className="text-center mt-12 pt-12">
+          <div className="rounded-lg p-6 border backdrop-blur-md bg-white/10 shadow-lg" style={{borderColor: '#B7C9E2'}}>
+            <h2 className="text-2xl font-bold mb-3" style={{color: '#104F8F'}}>
               Let&apos;s Build Something <span style={{color: '#104F8F'}}>Together</span>
             </h2>
-            <p className="text-base mb-6 max-w-2xl mx-auto" style={{color: '#104F8F'}}>
+            <p className="text-sm mb-4 max-w-xl mx-auto" style={{color: '#104F8F'}}>
               With this diverse skill set, I&apos;m ready to tackle challenging projects and bring your ideas to life.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <a
                 href="/projects"
-                className="text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-102 shadow-lg hover:shadow-xl"
+                className="text-white px-5 py-2 rounded-lg font-semibold transition-all duration-300 transform hover:scale-102 shadow-lg hover:shadow-xl text-sm"
                 style={{backgroundColor: '#104F8F'}}
               >
                 View My Projects
               </a>
               <a
                 href="/hireme"
-                className="px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-102 shadow-lg border-2 hover:shadow-xl"
+                className="px-5 py-2 rounded-lg font-semibold transition-all duration-300 transform hover:scale-102 shadow-lg border-2 hover:shadow-xl text-sm"
                 style={{
                   backgroundColor: 'transparent',
                   color: '#104F8F',

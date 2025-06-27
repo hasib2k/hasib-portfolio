@@ -85,12 +85,12 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3, duration: 0.6 }}
                 viewport={{ once: true }}
-                className="p-6 rounded-xl border backdrop-blur-md bg-white/10 shadow-lg"
+                className="p-6 rounded-xl border backdrop-blur-md bg-white/10 shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:bg-white/20"
                 style={{borderColor: '#B7C9E2'}}
               >
                 <p className="text-lg leading-relaxed" style={{color: '#104F8F'}}>
-                  Hi, I am <span className="font-semibold">Hasib Ahmed</span>, a dedicated QA Engineer & Frontend Developer with over 2 years of
-                  experience in software quality assurance and frontend development. I continuously evolve my testing methodologies and 
+                  Hi, I am <span className="font-semibold">Hasib Ahmed</span>, a dedicated QA Engineer & Frontend Developer with over 1 year of
+                  experience in software quality assurance and frontend development. I continuously evolve my testing methodologies and
                   development skills while embracing new technologies. With a degree in Computer Science Engineering, I enhance my
                   efficiency in ensuring software quality and creating exceptional user interfaces.
                 </p>
@@ -101,7 +101,7 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, duration: 0.6 }}
                 viewport={{ once: true }}
-                className="p-6 rounded-xl border backdrop-blur-md bg-white/10 shadow-lg"
+                className="p-6 rounded-xl border backdrop-blur-md bg-white/10 shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:bg-white/20"
                 style={{borderColor: '#B7C9E2'}}
               >
                 <p className="text-lg leading-relaxed" style={{color: '#104F8F'}}>
@@ -116,7 +116,7 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 0.6 }}
                 viewport={{ once: true }}
-                className="p-6 rounded-xl border backdrop-blur-md bg-white/10 shadow-lg"
+                className="p-6 rounded-xl border backdrop-blur-md bg-white/10 shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:bg-white/20"
                 style={{borderColor: '#B7C9E2'}}
               >
                 <h3 className="text-xl font-semibold mb-4" style={{color: '#104F8F'}}>
@@ -130,11 +130,19 @@ export default function About() {
                       whileInView={{ opacity: 1, scale: 1 }}
                       transition={{ delay: 0.6 + index * 0.1, duration: 0.4 }}
                       viewport={{ once: true }}
-                      className="px-4 py-2 rounded-full text-sm font-medium border"
+                      className="px-4 py-2 rounded-full text-sm font-medium border transition-all duration-300 transform hover:scale-110 hover:shadow-lg cursor-pointer"
                       style={{
                         backgroundColor: '#B7C9E2',
                         color: '#104F8F',
                         borderColor: '#104F8F'
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.backgroundColor = '#104F8F';
+                        e.currentTarget.style.color = 'white';
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.backgroundColor = '#B7C9E2';
+                        e.currentTarget.style.color = '#104F8F';
                       }}
                     >
                       {skill}
@@ -149,20 +157,20 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.6 }}
               viewport={{ once: true }}
-              className="flex flex-wrap gap-4 pt-6"
+              className="flex flex-wrap gap-3 pt-6"
             >
               <a
                 href="/about"
-                className="text-white px-8 py-4 rounded-lg font-medium inline-flex items-center gap-2 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+                className="text-white px-5 py-2 rounded-lg font-medium inline-flex items-center gap-2 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 text-sm"
                 style={{backgroundColor: '#104F8F'}}
               >
                 Discover More
-                <ExternalLink size={18} />
+                <ExternalLink size={16} />
               </a>
               
               <a
                 href="/hireme"
-                className="px-8 py-4 rounded-lg font-medium transition-all duration-300 hover:scale-105"
+                className="px-5 py-2 rounded-lg font-medium transition-all duration-300 hover:scale-105 text-sm"
                 style={{
                   border: '2px solid #104F8F',
                   color: '#104F8F',
