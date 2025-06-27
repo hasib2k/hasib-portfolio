@@ -141,24 +141,26 @@ export default function SkillsPage() {
         {/* Enhanced Skills Categories */}
         <div className="space-y-8">
           {skillCategories.map((category, categoryIndex) => (
-            <div key={categoryIndex} className="rounded-xl transition-all duration-300 transform hover:scale-102 border backdrop-blur-md bg-white/10 shadow-lg p-6" style={{borderColor: '#B7C9E2'}}>
-              {/* Enhanced Category Header */}
-              <div className="flex items-center gap-3 mb-6">
-                <div className={`p-3 rounded-xl shadow-lg ${getColorClasses()}`} style={{backgroundColor: getCategoryBackground()}}>
-                  {category.icon}
-                </div>
-                <div>
-                  <h2 className="text-2xl font-bold" style={{color: '#104F8F'}}>{category.title}</h2>
-                  <p className="font-medium text-sm" style={{color: '#104F8F'}}>
-                    {category.skills.length} skills in this category
-                  </p>
+            <div key={categoryIndex} className="space-y-6">
+              {/* Category Header Card - Separate */}
+              <div className="rounded-xl transition-all duration-300 transform hover:scale-102 border backdrop-blur-md bg-white/10 shadow-lg p-6" style={{borderColor: '#B7C9E2'}}>
+                <div className="flex items-center gap-3">
+                  <div className={`p-3 rounded-xl shadow-lg ${getColorClasses()}`} style={{backgroundColor: getCategoryBackground()}}>
+                    {category.icon}
+                  </div>
+                  <div>
+                    <h2 className="text-2xl font-bold" style={{color: '#104F8F'}}>{category.title}</h2>
+                    <p className="font-medium text-sm" style={{color: '#104F8F'}}>
+                      {category.skills.length} skills in this category
+                    </p>
+                  </div>
                 </div>
               </div>
 
-              {/* Enhanced Skills Grid */}
+              {/* Skills Grid - Separate Container */}
               <div className="grid md:grid-cols-2 gap-4">
                 {category.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex} className="space-y-3 p-4 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-102" style={{backgroundColor: '#F5F6F7'}}>
+                  <div key={skillIndex} className="space-y-3 p-4 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-102 border backdrop-blur-md bg-white/10 shadow-lg" style={{borderColor: '#B7C9E2'}}>
                     {/* Enhanced Skill Header */}
                     <div className="flex justify-between items-center">
                       <h3 className="font-bold text-base" style={{color: '#104F8F'}}>{skill.name}</h3>

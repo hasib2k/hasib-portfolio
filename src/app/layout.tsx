@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { MuseoModerno } from "next/font/google";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import "./globals.css";
 
-const poppins = Poppins({
+const museoModerno = MuseoModerno({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800"],
-  variable: "--font-poppins",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  style: ["normal", "italic"],
+  variable: "--font-museo-moderno",
 });
 
 export const metadata: Metadata = {
@@ -36,8 +37,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={poppins.variable}>
-      <body className="font-sans antialiased">
+    <html lang="en" className={museoModerno.variable}>
+      <body className={`${museoModerno.className} antialiased`}>
         <div className="flex flex-col min-h-screen">
           <Navigation />
           <main className="flex-1">
