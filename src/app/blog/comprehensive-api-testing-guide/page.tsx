@@ -62,7 +62,7 @@ export default function ComprehensiveApiTestingGuide() {
                     APIs (Application Programming Interfaces) are the backbone of modern applications, enabling communication between different software components, services, and systems. As applications become increasingly distributed and microservice-oriented, API testing has become crucial for ensuring system reliability, performance, and security.
                   </p>
                   <p className="leading-relaxed">
-                    Unlike UI testing, API testing focuses on the business logic layer, data exchange, and functionality. It's faster to execute, less flaky, and provides better coverage of edge cases and error scenarios.
+                    Unlike UI testing, API testing focuses on the business logic layer, data exchange, and functionality. It&apos;s faster to execute, less flaky, and provides better coverage of edge cases and error scenarios.
                   </p>
                 </section>
 

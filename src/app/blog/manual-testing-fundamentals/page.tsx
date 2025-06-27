@@ -308,7 +308,7 @@ export default function ManualTestingFundamentals() {
                     Manual testing remains an invaluable part of the quality assurance process. While automation handles repetitive tasks, manual testing provides the human insight necessary for comprehensive quality validation. By following systematic approaches to test case design, execution, and defect management, QA professionals can ensure thorough coverage and high-quality software delivery.
                   </p>
                   <p className="leading-relaxed">
-                    Remember that effective manual testing is not just about finding bugs—it's about understanding user behavior, validating business requirements, and ensuring the overall quality of the user experience.
+                    Remember that effective manual testing is not just about finding bugs—it&apos;s about understanding user behavior, validating business requirements, and ensuring the overall quality of the user experience.
                   </p>
                 </section>
               </div>

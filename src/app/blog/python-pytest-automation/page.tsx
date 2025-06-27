@@ -63,7 +63,7 @@ export default function PythonPytestBlog() {
                     Test automation has become an essential part of modern software development. With the increasing complexity of applications and the need for faster delivery cycles, manual testing alone is no longer sufficient. Python, combined with the Pytest framework, provides a powerful and flexible solution for creating robust test automation frameworks.
                   </p>
                   <p className="leading-relaxed">
-                    In this comprehensive guide, we'll explore how to build a scalable test automation framework using Python and Pytest, covering everything from basic setup to advanced patterns and best practices.
+                    In this comprehensive guide, we&apos;ll explore how to build a scalable test automation framework using Python and Pytest, covering everything from basic setup to advanced patterns and best practices.
                   </p>
                 </section>
 
@@ -76,7 +76,7 @@ export default function PythonPytestBlog() {
                   <div className="space-y-4">
                     <h3 className="text-2xl font-semibold" style={{color: '#104F8F'}}>Python Advantages</h3>
                     <ul className="list-disc list-inside space-y-2 leading-relaxed">
-                      <li><strong>Simplicity and Readability:</strong> Python's clean syntax makes test code easy to write and maintain</li>
+                      <li><strong>Simplicity and Readability:</strong> Python&apos;s clean syntax makes test code easy to write and maintain</li>
                       <li><strong>Rich Ecosystem:</strong> Extensive libraries for web automation, API testing, and data manipulation</li>
                       <li><strong>Cross-platform Support:</strong> Works seamlessly across Windows, macOS, and Linux</li>
                       <li><strong>Strong Community:</strong> Large community with excellent documentation and support</li>
@@ -99,7 +99,7 @@ export default function PythonPytestBlog() {
                     Framework Architecture
                   </h2>
                   <p className="leading-relaxed mb-4">
-                    A well-designed test automation framework should be modular, maintainable, and scalable. Here's the recommended structure:
+                    A well-designed test automation framework should be modular, maintainable, and scalable. Here&apos;s the recommended structure:
                   </p>
                   
                   <div className="bg-white/20 rounded-lg p-6 mb-6 border" style={{borderColor: '#B7C9E2'}}>
@@ -136,7 +136,7 @@ export default function PythonPytestBlog() {
                 <section>
                   <h2 className="text-3xl font-bold mb-4" style={{color: '#104F8F'}}>Implementation Example</h2>
                   <p className="leading-relaxed mb-4">
-                    Let's look at a practical example of implementing a test automation framework:
+                    Let&apos;s look at a practical example of implementing a test automation framework:
                   </p>
                   
                   <div className="bg-white/20 rounded-lg p-6 mb-6 border" style={{borderColor: '#B7C9E2'}}>
@@ -188,7 +188,7 @@ def api_client():
                     
                     <div className="p-6 rounded-lg border backdrop-blur-md bg-white/10" style={{borderColor: '#B7C9E2'}}>
                       <h3 className="text-xl font-semibold mb-3" style={{color: '#104F8F'}}>2. Data-Driven Testing</h3>
-                      <p className="leading-relaxed">Use Pytest's parametrize decorator to run the same test with different data sets.</p>
+                      <p className="leading-relaxed">Use Pytest&apos;s parametrize decorator to run the same test with different data sets.</p>
                     </div>
                     
                     <div className="p-6 rounded-lg border backdrop-blur-md bg-white/10" style={{borderColor: '#B7C9E2'}}>

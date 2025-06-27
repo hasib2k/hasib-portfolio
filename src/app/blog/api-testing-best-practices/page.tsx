@@ -62,7 +62,7 @@ export default function ApiTestingBlog() {
                     APIs (Application Programming Interfaces) are the backbone of modern applications, enabling communication between different software components, services, and systems. As applications become increasingly distributed and microservice-oriented, API testing has become crucial for ensuring system reliability, performance, and security.
                   </p>
                   <p className="leading-relaxed">
-                    Unlike UI testing, API testing focuses on the business logic layer, data exchange, and functionality. It's faster to execute, less flaky, and provides better coverage of edge cases and error scenarios.
+                    Unlike UI testing, API testing focuses on the business logic layer, data exchange, and functionality. It&apos;s faster to execute, less flaky, and provides better coverage of edge cases and error scenarios.
                   </p>
                 </section>
 
@@ -216,7 +216,7 @@ def test_get_user_success():
                     <div className="p-6 rounded-lg border backdrop-blur-md bg-white/10" style={{borderColor: '#B7C9E2'}}>
                       <h3 className="text-xl font-semibold mb-3" style={{color: '#104F8F'}}>1. Test Data Management</h3>
                       <ul className="list-disc list-inside space-y-2">
-                        <li>Use test-specific data that doesn't interfere with other tests</li>
+                        <li>Use test-specific data that doesn&apos;t interfere with other tests</li>
                         <li>Implement proper cleanup after test execution</li>
                         <li>Use data factories for generating test data</li>
                         <li>Separate test data from test logic</li>

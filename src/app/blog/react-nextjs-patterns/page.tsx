@@ -59,10 +59,10 @@ export default function ReactNextjsBlog() {
                     The Evolution of React Development
                   </h2>
                   <p className="leading-relaxed">
-                    React has revolutionized frontend development, and Next.js has taken it to the next level by providing a production-ready framework with built-in optimizations, server-side rendering, and developer experience enhancements. In this comprehensive guide, we'll explore advanced patterns and best practices for building modern, scalable React applications.
+                    React has revolutionized frontend development, and Next.js has taken it to the next level by providing a production-ready framework with built-in optimizations, server-side rendering, and developer experience enhancements. In this comprehensive guide, we&apos;ll explore advanced patterns and best practices for building modern, scalable React applications.
                   </p>
                   <p className="leading-relaxed">
-                    Whether you're building a portfolio website, an e-commerce platform, or a complex web application, understanding these patterns will help you create maintainable, performant, and user-friendly applications.
+                    Whether you&apos;re building a portfolio website, an e-commerce platform, or a complex web application, understanding these patterns will help you create maintainable, performant, and user-friendly applications.
                   </p>
                 </section>
 
@@ -113,7 +113,7 @@ export default function ReactNextjsBlog() {
                     <div className="p-6 rounded-lg border backdrop-blur-md bg-white/10" style={{borderColor: '#B7C9E2'}}>
                       <h4 className="text-lg font-semibold mb-3" style={{color: '#104F8F'}}>Client Components</h4>
                       <ul className="list-disc list-inside space-y-1 text-sm">
-                        <li>Use "use client" directive</li>
+                        <li>Use &quot;use client&quot; directive</li>
                         <li>Interactive functionality</li>
                         <li>Browser APIs access</li>
                         <li>State and event handlers</li>
@@ -419,7 +419,7 @@ test('user can create and view blog post', async ({ page }) => {
                     Modern React development with Next.js offers powerful tools and patterns for building exceptional web applications. By leveraging Server Components, implementing proper state management, optimizing performance, and maintaining comprehensive tests, you can create applications that are not only functional but also maintainable and scalable.
                   </p>
                   <p className="leading-relaxed">
-                    Remember that these patterns should be applied judiciously based on your application's specific needs. Start simple, measure performance, and optimize as needed. The React ecosystem continues to evolve, so stay updated with the latest best practices and emerging patterns.
+                    Remember that these patterns should be applied judiciously based on your application&apos;s specific needs. Start simple, measure performance, and optimize as needed. The React ecosystem continues to evolve, so stay updated with the latest best practices and emerging patterns.
                   </p>
                 </section>
               </div>

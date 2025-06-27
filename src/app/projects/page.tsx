@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Link from 'next/link'
 import { Github, ExternalLink } from 'lucide-react'
 
 export const metadata: Metadata = {
@@ -125,16 +126,14 @@ export default function ProjectsPage() {
                       <Github className="w-4 h-4" />
                       Code
                     </a>
-                    <a
+                    <Link
                       href={project.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
                       className="flex items-center gap-2 px-4 py-2 text-white rounded-lg transition-colors duration-200 text-sm"
                       style={{backgroundColor: '#104F8F'}}
                     >
                       <ExternalLink className="w-4 h-4" />
                       Live Demo
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -152,13 +151,13 @@ export default function ProjectsPage() {
                 Let&apos;s create something amazing together!
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
+                <Link
                   href="/hireme"
                   className="px-8 py-3 text-white rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
                   style={{backgroundColor: '#104F8F'}}
                 >
                   Hire Me
-                </a>
+                </Link>
                 <a
                   href="https://github.com/hasib2k"
                   target="_blank"

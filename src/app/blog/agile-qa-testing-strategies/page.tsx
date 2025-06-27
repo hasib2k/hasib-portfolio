@@ -62,7 +62,7 @@ export default function AgileQaTestingStrategies() {
                     Agile development has transformed how software is built, emphasizing rapid iterations, continuous feedback, and adaptive planning. This shift requires QA professionals to evolve from traditional waterfall testing approaches to more integrated, continuous testing methodologies that support fast-paced development cycles.
                   </p>
                   <p className="leading-relaxed">
-                    In agile environments, quality assurance becomes everyone's responsibility, with QA engineers serving as quality advocates and facilitators rather than gatekeepers. This collaborative approach ensures quality is built into the product from the ground up.
+                    In agile environments, quality assurance becomes everyone&apos;s responsibility, with QA engineers serving as quality advocates and facilitators rather than gatekeepers. This collaborative approach ensures quality is built into the product from the ground up.
                   </p>
                 </section>
 
@@ -128,7 +128,7 @@ export default function AgileQaTestingStrategies() {
                         <li><strong>Parallel Test Development:</strong> Write detailed test cases as features are developed</li>
                         <li><strong>Unit Test Collaboration:</strong> Work with developers on unit test coverage</li>
                         <li><strong>Continuous Integration:</strong> Set up automated tests in CI/CD pipelines</li>
-                        <li><strong>Early Validation:</strong> Test features as soon as they're available in development</li>
+                        <li><strong>Early Validation:</strong> Test features as soon as they&apos;re available in development</li>
                       </ul>
                     </div>
 

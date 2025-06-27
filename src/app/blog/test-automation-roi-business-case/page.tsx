@@ -371,7 +371,7 @@ export default function TestAutomationRoiBusinessCase() {
                     Building a successful business case for test automation requires balancing technical expertise with business acumen. By presenting clear ROI calculations, addressing stakeholder concerns, and demonstrating both quantitative and qualitative benefits, QA professionals can secure the investment needed for automation initiatives.
                   </p>
                   <p className="leading-relaxed">
-                    Remember that the business case is not just about getting approval—it's about setting realistic expectations and creating a foundation for measuring success. A well-crafted business case becomes a roadmap for implementation and a benchmark for evaluating results.
+                    Remember that the business case is not just about getting approval—it&apos;s about setting realistic expectations and creating a foundation for measuring success. A well-crafted business case becomes a roadmap for implementation and a benchmark for evaluating results.
                   </p>
                 </section>
               </div>
