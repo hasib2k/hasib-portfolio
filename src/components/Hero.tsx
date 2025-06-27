@@ -7,9 +7,9 @@ import Image from 'next/image'
 export default function Hero() {
   const stats = [
     { number: "1+", label: "Years of experience" },
-    { number: "10+", label: "Projects Completed" },
+    { number: "20+", label: "Projects Tested" },
     { number: "15+", label: "Technical Skills" },
-    { number: "100+", label: "LeetCode Solved" }
+    { number: "1000+", label: "Bugs Found & Fixed" }
   ]
 
   return (
@@ -42,7 +42,7 @@ export default function Hero() {
                 className="text-xl font-medium"
                 style={{color: '#104F8F'}}
               >
-                I&apos;m a passionate Software Developer
+                I&apos;m a dedicated QA Engineer & Frontend Developer
               </motion.p>
               
               <motion.p 
@@ -52,9 +52,9 @@ export default function Hero() {
                 className="text-lg leading-relaxed max-w-xl"
                 style={{color: '#104F8F'}}
               >
-                With expertise in web technologies, I specialize in building responsive web
-                experiences with a focus on intuitive design that enhances user satisfaction and
-                drives business value.
+                With expertise in software quality assurance and frontend development, I ensure 
+                exceptional user experiences through rigorous testing, automated solutions, and 
+                modern web technologies that deliver reliable, high-quality applications.
               </motion.p>
             </div>
 
@@ -85,7 +85,7 @@ export default function Hero() {
                   href="https://github.com/hasib2k"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 rounded-2xl bg-white/90 backdrop-blur-sm transition-all duration-300 hover:shadow-2xl transform hover:scale-110 cursor-pointer border shadow-lg"
+                  className="p-3 rounded-2xl transition-all duration-300 transform hover:scale-110 cursor-pointer border backdrop-blur-md bg-white/10 shadow-lg"
                   style={{borderColor: '#B7C9E2'}}
                   title="Visit my GitHub Profile"
                 >
@@ -95,7 +95,7 @@ export default function Hero() {
                   href="https://www.linkedin.com/in/hasib-ahmed-429204210"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 rounded-2xl bg-white/90 backdrop-blur-sm transition-all duration-300 hover:shadow-2xl transform hover:scale-110 cursor-pointer border shadow-lg"
+                  className="p-3 rounded-2xl transition-all duration-300 transform hover:scale-110 cursor-pointer border backdrop-blur-md bg-white/10 shadow-lg"
                   style={{borderColor: '#B7C9E2'}}
                   title="Connect with me on LinkedIn"
                 >
@@ -103,7 +103,7 @@ export default function Hero() {
                 </a>
                 <a
                   href="mailto:hasibahmed.ig@gmail.com"
-                  className="p-3 rounded-2xl bg-white/90 backdrop-blur-sm transition-all duration-300 hover:shadow-2xl transform hover:scale-110 cursor-pointer border shadow-lg"
+                  className="p-3 rounded-2xl transition-all duration-300 transform hover:scale-110 cursor-pointer border backdrop-blur-md bg-white/10 shadow-lg"
                   style={{borderColor: '#B7C9E2'}}
                   title="Send me an Email"
                 >
@@ -113,7 +113,7 @@ export default function Hero() {
                   href="https://t.me/hasib_ig"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 rounded-2xl bg-white/90 backdrop-blur-sm transition-all duration-300 hover:shadow-2xl transform hover:scale-110 cursor-pointer border shadow-lg"
+                  className="p-3 rounded-2xl transition-all duration-300 transform hover:scale-110 cursor-pointer border backdrop-blur-md bg-white/10 shadow-lg"
                   style={{borderColor: '#B7C9E2'}}
                   title="Message me on Telegram"
                 >
@@ -123,7 +123,7 @@ export default function Hero() {
                   href="https://leetcode.com/u/hasib_ahmed15/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 rounded-2xl bg-white/90 backdrop-blur-sm transition-all duration-300 hover:shadow-2xl transform hover:scale-110 cursor-pointer border shadow-lg"
+                  className="p-3 rounded-2xl transition-all duration-300 transform hover:scale-110 cursor-pointer border backdrop-blur-md bg-white/10 shadow-lg"
                   style={{borderColor: '#B7C9E2'}}
                   title="View my LeetCode Profile"
                 >
@@ -156,7 +156,7 @@ export default function Hero() {
               <motion.div 
                 animate={{ y: [-10, 10, -10] }}
                 transition={{ duration: 3, repeat: Infinity }}
-                className="absolute -top-4 -right-4 bg-white/90 backdrop-blur-sm rounded-full p-4 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-110 border"
+                className="absolute -top-4 -right-4 rounded-full p-4 transition-all duration-300 transform hover:scale-110 border backdrop-blur-md bg-white/10 shadow-lg"
                 style={{borderColor: '#B7C9E2'}}
               >
                 <div className="w-8 h-8 rounded-full" style={{backgroundColor: '#104F8F'}}></div>
@@ -165,7 +165,7 @@ export default function Hero() {
               <motion.div 
                 animate={{ y: [10, -10, 10] }}
                 transition={{ duration: 4, repeat: Infinity }}
-                className="absolute -bottom-4 -left-4 bg-white/90 backdrop-blur-sm rounded-full p-3 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-110 border"
+                className="absolute -bottom-4 -left-4 rounded-full p-3 transition-all duration-300 transform hover:scale-110 border backdrop-blur-md bg-white/10 shadow-lg"
                 style={{borderColor: '#B7C9E2'}}
               >
                 <div className="w-6 h-6 rounded-full" style={{backgroundColor: '#B7C9E2'}}></div>
@@ -202,7 +202,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.4 + index * 0.1, duration: 0.6 }}
-              className="text-center p-6 bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border"
+              className="text-center p-6 rounded-2xl transition-all duration-300 transform hover:scale-105 border backdrop-blur-md bg-white/10 shadow-lg"
               style={{borderColor: '#B7C9E2'}}
             >
               <div className="text-3xl md:text-4xl font-bold mb-2" style={{color: '#104F8F'}}>

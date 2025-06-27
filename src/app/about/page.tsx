@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'About - Hasib Ahmed',
-  description: 'Learn more about Hasib Ahmed, a passionate Software Developer with expertise in web technologies.'
+  description: 'Learn more about Hasib Ahmed, a dedicated QA Engineer & Frontend Developer with expertise in software quality assurance and modern web technologies.'
 }
 
 export default function About() {
@@ -16,28 +16,28 @@ export default function About() {
               About <span style={{color: '#104F8F'}}>Me</span>
             </h1>
             <div className="w-24 h-1 mx-auto rounded-full" style={{backgroundColor: '#104F8F'}}></div>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mt-6 leading-relaxed">
-              Passionate Software Developer crafting innovative solutions with modern technologies
+            <p className="text-xl max-w-3xl mx-auto mt-6 leading-relaxed" style={{color: '#104F8F'}}>
+              Dedicated QA Engineer & Frontend Developer ensuring software quality through comprehensive testing and modern web technologies
             </p>
           </div>
           
           {/* Main Content */}
-          <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 mb-12">
-            <div className="space-y-8 text-lg text-gray-600 leading-relaxed">
+          <div className="rounded-2xl border backdrop-blur-md bg-white/10 shadow-lg p-8 md:p-12 mb-12" style={{borderColor: '#B7C9E2'}}>
+            <div className="space-y-8 text-lg leading-relaxed" style={{color: '#104F8F'}}>
               <div className="relative">
                 <div className="absolute -left-4 top-0 w-1 h-full rounded-full" style={{backgroundColor: '#104F8F'}}></div>
                 <p className="pl-8">
-                  Hi, I am <span className="font-semibold text-gray-900">Hasib Ahmed</span>, a passionate Software Developer with over a year of
-                  experience in real-time projects. I continuously evolve my skills and embrace new
+                  Hi, I am <span className="font-semibold" style={{color: '#104F8F'}}>Hasib Ahmed</span>, a dedicated QA Engineer & Frontend Developer with over a year of
+                  experience in real-time projects. I continuously evolve my skills in software testing, quality assurance, and modern frontend
                   technologies. With a degree in Computer Science Engineering, I enhance my
-                  efficiency in software development.
+                  efficiency in quality assurance and web development.
                 </p>
               </div>
               
               <div className="relative">
                 <div className="absolute -left-4 top-0 w-1 h-full rounded-full" style={{backgroundColor: '#B7C9E2'}}></div>
                 <p className="pl-8">
-                  Currently, I&apos;m pursuing an <span className="font-semibold text-gray-900">Parallaxlogic Infotech, Software Development Company (LTD)</span> in Software Quality Assurance Engineer,
+                  Currently, I&apos;m pursuing an <span className="font-semibold" style={{color: '#104F8F'}}>Parallaxlogic Infotech, Software Development Company (LTD)</span> in Software Quality Assurance Engineer,
                   merging my technical expertise with business insight for impactful results.
                 </p>
               </div>
@@ -45,8 +45,8 @@ export default function About() {
           </div>
 
           {/* Skills Section */}
-          <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+          <div className="rounded-2xl border backdrop-blur-md bg-white/10 shadow-lg p-8 md:p-12 mb-12" style={{borderColor: '#B7C9E2'}}>
+            <h2 className="text-3xl font-bold mb-8 text-center" style={{color: '#104F8F'}}>
               Skills & <span style={{color: '#104F8F'}}>Technologies</span>
             </h2>
             
@@ -57,15 +57,15 @@ export default function About() {
                   className="group rounded-xl p-4 text-center transition-all duration-300 transform hover:scale-105 hover:shadow-lg border border-gray-200"
                   style={{backgroundColor: '#F5F6F7'}}
                 >
-                  <span className="font-semibold text-gray-900 group-hover:opacity-80 transition-opacity" style={{color: '#104F8F'}}>{skill}</span>
+                  <span className="font-semibold group-hover:opacity-80 transition-opacity" style={{color: '#104F8F'}}>{skill}</span>
                 </div>
               ))}
             </div>
           </div>
 
           {/* Work Experience Section */}
-          <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+          <div className="rounded-2xl border backdrop-blur-md bg-white/10 shadow-lg p-8 md:p-12 mb-12" style={{borderColor: '#B7C9E2'}}>
+            <h2 className="text-3xl font-bold mb-8 text-center" style={{color: '#104F8F'}}>
               Work <span style={{color: '#104F8F'}}>Experience</span>
             </h2>
             
@@ -73,35 +73,35 @@ export default function About() {
               <div className="absolute top-4 right-4">
                 <div className="w-3 h-3 rounded-full animate-pulse" style={{backgroundColor: '#104F8F'}}></div>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Parallaxlogic Infotech, Software Development Company (LTD)</h3>
+              <h3 className="text-xl font-semibold mb-2" style={{color: '#104F8F'}}>Parallaxlogic Infotech, Software Development Company (LTD)</h3>
               <p className="font-medium mb-1" style={{color: '#104F8F'}}>Software Quality Assurance Engineer</p>
-              <p className="text-gray-600 text-sm">Currently Pursuing</p>
+              <p className="text-sm" style={{color: '#104F8F'}}>Currently Pursuing</p>
             </div>
           </div>
 
           {/* Educational Background Section */}
-          <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+          <div className="rounded-2xl border backdrop-blur-md bg-white/10 shadow-lg p-8 md:p-12" style={{borderColor: '#B7C9E2'}}>
+            <h2 className="text-3xl font-bold mb-8 text-center" style={{color: '#104F8F'}}>
               Educational <span style={{color: '#104F8F'}}>Background</span>
             </h2>
             
-            <div className="relative rounded-xl p-6 border-l-4" style={{backgroundColor: '#F5F6F7', borderColor: '#B7C9E2'}}>
+            <div className="relative rounded-xl p-6 border-l-4" style={{backgroundColor: '#B7C9E2', borderColor: '#104F8F'}}>
               <div className="absolute top-4 right-4">
                 <div className="w-3 h-3 bg-green-500 rounded-full"></div>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Bachelor&apos;s Degree</h3>
+              <h3 className="text-xl font-semibold mb-2" style={{color: '#104F8F'}}>Bachelor&apos;s Degree</h3>
               <p className="font-medium mb-1" style={{color: '#104F8F'}}>Computer Science Engineering</p>
-              <p className="text-gray-600 text-sm">Completed</p>
+              <p className="text-sm" style={{color: '#104F8F'}}>Completed</p>
             </div>
           </div>
 
           {/* Call to Action */}
           <div className="text-center mt-16">
-            <div className="bg-white rounded-2xl shadow-xl p-8">
+            <div className="rounded-2xl border backdrop-blur-md bg-white/10 shadow-lg p-8" style={{borderColor: '#B7C9E2'}}>
               <h2 className="text-3xl font-bold mb-4" style={{color: '#104F8F'}}>
                 Let&apos;s Connect & Collaborate
               </h2>
-              <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+              <p className="mb-6 max-w-2xl mx-auto" style={{color: '#104F8F'}}>
                 I&apos;m always excited to work on new projects and collaborate with like-minded individuals. 
                 Let&apos;s build something amazing together!
               </p>
@@ -115,8 +115,8 @@ export default function About() {
                 </a>
                 <a
                   href="/contact"
-                  className="px-8 py-3 bg-white border-2 text-gray-700 hover:bg-gray-50 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
-                  style={{borderColor: '#104F8F'}}
+                  className="px-8 py-3 border-2 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105"
+                  style={{borderColor: '#104F8F', color: '#104F8F', backgroundColor: 'transparent'}}
                 >
                   Get In Touch
                 </a>

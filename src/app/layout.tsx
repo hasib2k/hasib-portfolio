@@ -11,22 +11,22 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Hasib Ahmed - Software Developer Portfolio",
-  description: "Passionate Software Developer with expertise in web technologies. Specializing in building responsive web experiences with intuitive design.",
-  keywords: ["Hasib Ahmed", "Software Developer", "Web Developer", "Portfolio", "React", "Next.js", "JavaScript", "TypeScript"],
+  title: "Hasib Ahmed - QA Engineer & Frontend Developer Portfolio",
+  description: "Dedicated QA Engineer & Frontend Developer with expertise in software quality assurance and modern web technologies. Specializing in testing automation, quality processes, and building exceptional user experiences.",
+  keywords: ["Hasib Ahmed", "QA Engineer", "Quality Assurance", "Frontend Developer", "Software Testing", "Test Automation", "React", "Next.js", "JavaScript", "TypeScript", "Testing"],
   authors: [{ name: "Hasib Ahmed" }],
   creator: "Hasib Ahmed",
   openGraph: {
-    title: "Hasib Ahmed - Software Developer Portfolio",
-    description: "Passionate Software Developer with expertise in web technologies.",
+    title: "Hasib Ahmed - QA Engineer & Frontend Developer Portfolio",
+    description: "Dedicated QA Engineer & Frontend Developer with expertise in software quality assurance and modern web technologies.",
     url: "https://hasibdev.in",
     siteName: "Hasib Ahmed Portfolio",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hasib Ahmed - Software Developer Portfolio",
-    description: "Passionate Software Developer with expertise in web technologies.",
+    title: "Hasib Ahmed - QA Engineer & Frontend Developer Portfolio",
+    description: "Dedicated QA Engineer & Frontend Developer with expertise in software quality assurance and modern web technologies.",
   },
 };
 

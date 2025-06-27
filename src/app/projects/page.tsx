@@ -10,57 +10,57 @@ export default function ProjectsPage() {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
-      description: "A comprehensive e-commerce solution built with Next.js and TypeScript, featuring user authentication, payment processing, and admin dashboard.",
-      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Stripe", "MongoDB"],
-      github: "https://github.com/hasib2k/ecommerce-platform",
-      live: "https://ecommerce-demo.hasibdev.in",
-      category: "Full-Stack"
+      title: "E-Commerce Testing Suite",
+      description: "Comprehensive testing suite for e-commerce platform including automated test scripts, performance testing, and quality assurance workflows.",
+      technologies: ["Selenium", "Jest", "Cypress", "TestNG", "JavaScript"],
+      github: "https://github.com/hasib2k/ecommerce-testing",
+      live: "https://testing-demo.hasibdev.in",
+      category: "QA Testing"
     },
     {
       id: 2,
-      title: "Task Management Application",
-      description: "A collaborative project management tool with real-time updates, drag-and-drop functionality, and team collaboration features.",
-      technologies: ["React", "Node.js", "Express", "Socket.io", "PostgreSQL"],
-      github: "https://github.com/hasib2k/task-manager",
+      title: "Task Management Frontend",
+      description: "Modern React-based frontend for project management with comprehensive testing coverage and quality assurance processes.",
+      technologies: ["React", "TypeScript", "Jest", "React Testing Library", "Tailwind CSS"],
+      github: "https://github.com/hasib2k/task-frontend",
       live: "https://tasks.hasibdev.in",
-      category: "Full-Stack"
+      category: "Frontend"
     },
     {
       id: 3,
-      title: "AI Chat Application",
-      description: "An intelligent chat application powered by OpenAI's GPT models, featuring conversation history and multiple AI personalities.",
-      technologies: ["Next.js", "OpenAI API", "Prisma", "PostgreSQL", "Tailwind CSS"],
-      github: "https://github.com/hasib2k/ai-chat-app",
-      live: "https://chat.hasibdev.in",
-      category: "AI/ML"
+      title: "Automated Testing Framework",
+      description: "Custom testing framework for web applications with automated test generation, bug tracking, and quality metrics reporting.",
+      technologies: ["Selenium", "Python", "Pytest", "TestRail", "Jenkins"],
+      github: "https://github.com/hasib2k/test-automation",
+      live: "https://automation.hasibdev.in",
+      category: "QA Testing"
     },
     {
       id: 4,
-      title: "Personal Portfolio Website",
-      description: "A modern, responsive portfolio website built with Next.js, featuring smooth animations and optimized performance.",
-      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-      github: "https://github.com/hasib2k/portfolio",
+      title: "Quality Dashboard Frontend",
+      description: "Interactive dashboard for QA metrics and testing results built with modern frontend technologies and comprehensive testing.",
+      technologies: ["React", "Chart.js", "TypeScript", "Jest", "Cypress"],
+      github: "https://github.com/hasib2k/qa-dashboard",
       live: "https://hasibdev.in",
       category: "Frontend"
     },
     {
       id: 5,
-      title: "Weather Dashboard",
-      description: "A comprehensive weather application with location-based forecasts, interactive maps, and weather alerts.",
-      technologies: ["React", "TypeScript", "Chart.js", "OpenWeather API"],
-      github: "https://github.com/hasib2k/weather-dashboard",
-      live: "https://weather.hasibdev.in",
-      category: "Frontend"
+      title: "API Testing Suite",
+      description: "Comprehensive API testing solution with automated validation, performance testing, and quality assurance for RESTful services.",
+      technologies: ["Postman", "Newman", "Jest", "Supertest", "API Testing"],
+      github: "https://github.com/hasib2k/api-testing",
+      live: "https://api-testing.hasibdev.in",
+      category: "QA Testing"
     },
     {
       id: 6,
-      title: "Social Media Analytics Tool",
-      description: "A comprehensive analytics platform for social media management, featuring engagement tracking and performance insights.",
-      technologies: ["Vue.js", "Python", "Django", "PostgreSQL", "Chart.js"],
-      github: "https://github.com/hasib2k/social-analytics",
-      live: "https://analytics.hasibdev.in",
-      category: "Full-Stack"
+      title: "Frontend Component Library",
+      description: "Reusable React component library with comprehensive testing coverage, documentation, and quality assurance processes.",
+      technologies: ["React", "TypeScript", "Storybook", "Jest", "Testing Library"],
+      github: "https://github.com/hasib2k/component-library",
+      live: "https://components.hasibdev.in",
+      category: "Frontend"
     }
   ]
   
@@ -74,22 +74,22 @@ export default function ProjectsPage() {
               My <span style={{color: '#104F8F'}}>Projects</span>
             </h1>
             <div className="w-24 h-1 mx-auto rounded-full" style={{backgroundColor: '#104F8F'}}></div>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mt-6 leading-relaxed">
-              A collection of my work showcasing various technologies and creative solutions.
+            <p className="text-xl max-w-3xl mx-auto mt-6 leading-relaxed" style={{color: '#104F8F'}}>
+              A collection of my QA testing projects and frontend development work showcasing quality assurance expertise and modern web technologies.
             </p>
           </div>
 
           {/* Projects Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project) => (
-              <div key={project.id} className="bg-white rounded-2xl shadow-xl p-6 hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+              <div key={project.id} className="rounded-2xl p-6 transition-all duration-300 transform hover:scale-105 border backdrop-blur-md bg-white/10 shadow-lg" style={{borderColor: '#B7C9E2'}}>
                 {/* Project Content */}
                 <div className="space-y-4">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  <h3 className="text-xl font-bold mb-3" style={{color: '#104F8F'}}>
                     {project.title}
                   </h3>
                   
-                  <p className="text-gray-600 text-sm leading-relaxed">
+                  <p className="text-sm leading-relaxed" style={{color: '#104F8F'}}>
                     {project.description}
                   </p>
 
@@ -101,12 +101,12 @@ export default function ProjectsPage() {
                   {/* Technologies */}
                   <div className="flex flex-wrap gap-2">
                     {project.technologies.slice(0, 3).map((tech) => (
-                      <span key={tech} className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded-lg">
+                      <span key={tech} className="px-2 py-1 text-xs rounded-lg" style={{backgroundColor: '#F5F6F7', color: '#104F8F'}}>
                         {tech}
                       </span>
                     ))}
                     {project.technologies.length > 3 && (
-                      <span className="px-2 py-1 bg-gray-100 text-gray-500 text-xs rounded-lg">
+                      <span className="px-2 py-1 text-xs rounded-lg" style={{backgroundColor: '#F5F6F7', color: '#104F8F'}}>
                         +{project.technologies.length - 3} more
                       </span>
                     )}
@@ -118,7 +118,8 @@ export default function ProjectsPage() {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors duration-200 text-sm"
+                      className="flex items-center gap-2 px-4 py-2 border rounded-lg transition-colors duration-200 text-sm"
+                      style={{borderColor: '#B7C9E2', color: '#104F8F'}}
                     >
                       <Github className="w-4 h-4" />
                       Code
@@ -141,11 +142,11 @@ export default function ProjectsPage() {
 
           {/* Call to Action */}
           <div className="text-center mt-16">
-            <div className="bg-white rounded-2xl shadow-xl p-8">
+            <div className="rounded-2xl p-8 border backdrop-blur-md bg-white/10 shadow-lg" style={{borderColor: '#B7C9E2'}}>
               <h2 className="text-3xl font-bold mb-4" style={{color: '#104F8F'}}>
                 Let&apos;s Work Together
               </h2>
-              <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+              <p className="mb-6 max-w-2xl mx-auto" style={{color: '#104F8F'}}>
                 I&apos;m always open to discussing new opportunities and exciting projects. 
                 Let&apos;s create something amazing together!
               </p>
@@ -161,8 +162,8 @@ export default function ProjectsPage() {
                   href="https://github.com/hasib2k"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-8 py-3 bg-white border-2 text-gray-700 hover:bg-gray-50 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg inline-flex items-center gap-3"
-                  style={{borderColor: '#104F8F'}}
+                  className="px-8 py-3 border-2 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-3"
+                  style={{borderColor: '#104F8F', color: '#104F8F', backgroundColor: 'transparent'}}
                 >
                   <Github className="w-5 h-5" />
                   View All Projects

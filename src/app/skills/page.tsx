@@ -9,85 +9,84 @@ export const metadata: Metadata = {
 export default function SkillsPage() {
   const skillCategories = [
     {
-      title: "Frontend Development",
-      icon: <Globe className="w-8 h-8" />,
+      title: "Quality Assurance & Testing",
+      icon: <Code className="w-8 h-8" />,
       color: "blue",
       skills: [
-        { name: "React.js", level: 90, description: "Building interactive UIs with hooks, context, and modern patterns" },
-        { name: "Next.js", level: 85, description: "Full-stack React framework with SSR, SSG, and API routes" },
-        { name: "TypeScript", level: 80, description: "Type-safe JavaScript development for scalable applications" },
-        { name: "JavaScript (ES6+)", level: 95, description: "Modern JavaScript with async/await, modules, and DOM manipulation" },
-        { name: "HTML5 & CSS3", level: 90, description: "Semantic markup and modern CSS features including Grid and Flexbox" },
-        { name: "Tailwind CSS", level: 85, description: "Utility-first CSS framework for rapid UI development" },
-        { name: "Sass/SCSS", level: 75, description: "CSS preprocessor for better styling organization" },
-        { name: "Responsive Design", level: 90, description: "Mobile-first design principles and cross-device compatibility" }
+        { name: "Manual Testing", level: 95, description: "Functional, usability, and exploratory testing methodologies" },
+        { name: "Automated Testing", level: 85, description: "Test automation using Selenium, Cypress, and Jest frameworks" },
+        { name: "Test Planning", level: 90, description: "Creating comprehensive test plans, cases, and testing strategies" },
+        { name: "Bug Tracking", level: 90, description: "Issue identification, documentation, and lifecycle management" },
+        { name: "API Testing", level: 85, description: "RESTful API testing using Postman, Newman, and automated scripts" },
+        { name: "Performance Testing", level: 75, description: "Load, stress, and performance testing using various tools" },
+        { name: "Regression Testing", level: 90, description: "Ensuring software stability through systematic regression testing" },
+        { name: "Test Documentation", level: 95, description: "Detailed test case creation and quality documentation" }
       ]
     },
     {
-      title: "Backend Development",
-      icon: <Database className="w-8 h-8" />,
+      title: "Frontend Development",
+      icon: <Globe className="w-8 h-8" />,
       color: "green",
       skills: [
-        { name: "Node.js", level: 80, description: "Server-side JavaScript runtime for scalable applications" },
-        { name: "Express.js", level: 85, description: "Web application framework for Node.js APIs and middleware" },
-        { name: "Python", level: 75, description: "Versatile programming language for web development and automation" },
-        { name: "Django", level: 70, description: "High-level Python web framework for rapid development" },
-        { name: "RESTful APIs", level: 85, description: "Designing and implementing REST APIs with proper HTTP methods" },
-        { name: "GraphQL", level: 65, description: "Query language for APIs with type system and efficient data fetching" },
-        { name: "JWT Authentication", level: 80, description: "Secure user authentication and authorization systems" },
-        { name: "Microservices", level: 60, description: "Distributed system architecture and service communication" }
+        { name: "React.js", level: 85, description: "Building interactive UIs with hooks, context, and modern patterns" },
+        { name: "JavaScript (ES6+)", level: 90, description: "Modern JavaScript with async/await, modules, and DOM manipulation" },
+        { name: "TypeScript", level: 80, description: "Type-safe JavaScript development for scalable applications" },
+        { name: "HTML5 & CSS3", level: 90, description: "Semantic markup and modern CSS features including Grid and Flexbox" },
+        { name: "Tailwind CSS", level: 85, description: "Utility-first CSS framework for rapid UI development" },
+        { name: "Responsive Design", level: 90, description: "Mobile-first design principles and cross-device compatibility" },
+        { name: "Component Testing", level: 85, description: "Testing React components with Jest and Testing Library" },
+        { name: "UI/UX Testing", level: 80, description: "User interface and experience validation and testing" }
       ]
     },
     {
-      title: "Database & Cloud",
-      icon: <Cloud className="w-8 h-8" />,
+      title: "Testing Tools & Automation",
+      icon: <Cpu className="w-8 h-8" />,
       color: "purple",
       skills: [
-        { name: "MongoDB", level: 80, description: "NoSQL document database for flexible data storage" },
-        { name: "PostgreSQL", level: 75, description: "Advanced relational database with complex queries" },
-        { name: "MySQL", level: 70, description: "Popular relational database management system" },
-        { name: "Redis", level: 65, description: "In-memory data structure store for caching and sessions" },
-        { name: "AWS Services", level: 60, description: "Cloud computing services including EC2, S3, and Lambda" },
-        { name: "Vercel", level: 85, description: "Platform for frontend deployment and serverless functions" },
-        { name: "Docker", level: 55, description: "Containerization platform for application deployment" },
-        { name: "Firebase", level: 70, description: "Backend-as-a-Service platform for real-time applications" }
+        { name: "Selenium WebDriver", level: 85, description: "Web application automation testing across browsers" },
+        { name: "Cypress", level: 80, description: "Modern end-to-end testing framework for web applications" },
+        { name: "Jest", level: 85, description: "JavaScript testing framework for unit and integration tests" },
+        { name: "Postman", level: 90, description: "API testing, documentation, and automation tool" },
+        { name: "JIRA", level: 85, description: "Issue tracking and project management for QA workflows" },
+        { name: "Git & GitHub", level: 90, description: "Version control and collaborative development workflows" },
+        { name: "TestRail", level: 75, description: "Test case management and reporting platform" }
       ]
     },
     {
-      title: "Tools & Technologies",
-      icon: <Cpu className="w-8 h-8" />,
+      title: "Development & DevOps",
+      icon: <Cloud className="w-8 h-8" />,
       color: "orange",
       skills: [
         { name: "Git & GitHub", level: 90, description: "Version control and collaborative development workflows" },
         { name: "VS Code", level: 95, description: "Primary code editor with extensions and debugging tools" },
+        { name: "Jenkins", level: 70, description: "CI/CD pipeline automation for testing and deployment" },
+        { name: "Docker", level: 65, description: "Containerization for consistent testing environments" },
+        { name: "Chrome DevTools", level: 85, description: "Browser debugging and performance optimization tools" },
         { name: "Figma", level: 70, description: "UI/UX design tool for creating mockups and prototypes" },
-        { name: "Postman", level: 80, description: "API development and testing platform" },
-        { name: "Webpack", level: 60, description: "Module bundler for JavaScript applications" },
-        { name: "Vite", level: 75, description: "Fast build tool for modern web development" },
         { name: "ESLint & Prettier", level: 85, description: "Code linting and formatting for consistent code quality" },
-        { name: "Chrome DevTools", level: 85, description: "Browser debugging and performance optimization tools" }
+        { name: "Agile/Scrum", level: 80, description: "Agile methodologies and sprint-based development" }
       ]
     },
     {
-      title: "Mobile Development",
-      icon: <Smartphone className="w-8 h-8" />,
+      title: "Quality Assurance Skills",
+      icon: <Users className="w-8 h-8" />,
       color: "indigo",
       skills: [
-        { name: "React Native", level: 65, description: "Cross-platform mobile app development with React" },
-        { name: "Progressive Web Apps", level: 75, description: "Web apps with native app-like experiences" },
-        { name: "Responsive Design", level: 90, description: "Mobile-first approach for all screen sizes" },
-        { name: "Mobile UI/UX", level: 70, description: "Understanding mobile interface design principles" }
+        { name: "Test Strategy", level: 90, description: "Developing comprehensive testing strategies and approaches" },
+        { name: "Risk Assessment", level: 85, description: "Identifying and mitigating potential quality risks" },
+        { name: "Cross-browser Testing", level: 90, description: "Ensuring compatibility across different browsers and devices" },
+        { name: "Accessibility Testing", level: 80, description: "Testing applications for accessibility compliance and usability" }
       ]
     },
     {
       title: "Soft Skills",
-      icon: <Users className="w-8 h-8" />,
+      icon: <Palette className="w-8 h-8" />,
       color: "pink",
       skills: [
-        { name: "Problem Solving", level: 90, description: "Analytical thinking and debugging complex issues" },
-        { name: "Team Collaboration", level: 85, description: "Working effectively in agile development teams" },
-        { name: "Communication", level: 80, description: "Clear technical communication with stakeholders" },
-        { name: "Project Management", level: 75, description: "Planning, organizing, and delivering projects on time" },
+        { name: "Problem Solving", level: 95, description: "Analytical thinking and debugging complex quality issues" },
+        { name: "Attention to Detail", level: 95, description: "Meticulous focus on identifying bugs and quality issues" },
+        { name: "Team Collaboration", level: 90, description: "Working effectively with developers and stakeholders" },
+        { name: "Communication", level: 85, description: "Clear reporting of bugs and quality metrics to teams" },
         { name: "Continuous Learning", level: 95, description: "Staying updated with latest technologies and best practices" },
         { name: "Code Review", level: 80, description: "Reviewing and providing constructive feedback on code" }
       ]
@@ -120,56 +119,56 @@ export default function SkillsPage() {
         </div>
 
         {/* Enhanced Skills Overview Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-          <div className="text-center p-6 bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-102 border" style={{borderColor: '#B7C9E2'}}>
-            <div className="text-3xl font-bold mb-2" style={{color: '#104F8F'}}>15+</div>
-            <div className="font-medium" style={{color: '#104F8F'}}>Programming Languages</div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+          <div className="text-center p-3 rounded-xl transition-all duration-300 transform hover:scale-105 border backdrop-blur-md bg-white/10 shadow-lg" style={{borderColor: '#B7C9E2'}}>
+            <div className="text-2xl font-bold mb-1" style={{color: '#104F8F'}}>1+</div>
+            <div className="font-medium text-sm" style={{color: '#104F8F'}}>Years of experience</div>
           </div>
-          <div className="text-center p-6 bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-102 border" style={{borderColor: '#B7C9E2'}}>
-            <div className="text-3xl font-bold mb-2" style={{color: '#104F8F'}}>25+</div>
-            <div className="font-medium" style={{color: '#104F8F'}}>Frameworks & Libraries</div>
+          <div className="text-center p-3 rounded-xl transition-all duration-300 transform hover:scale-105 border backdrop-blur-md bg-white/10 shadow-lg" style={{borderColor: '#B7C9E2'}}>
+            <div className="text-2xl font-bold mb-1" style={{color: '#104F8F'}}>20+</div>
+            <div className="font-medium text-sm" style={{color: '#104F8F'}}>Projects Tested</div>
           </div>
-          <div className="text-center p-6 bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-102 border" style={{borderColor: '#B7C9E2'}}>
-            <div className="text-3xl font-bold mb-2" style={{color: '#104F8F'}}>30+</div>
-            <div className="font-medium" style={{color: '#104F8F'}}>Tools & Technologies</div>
+          <div className="text-center p-3 rounded-xl transition-all duration-300 transform hover:scale-105 border backdrop-blur-md bg-white/10 shadow-lg" style={{borderColor: '#B7C9E2'}}>
+            <div className="text-2xl font-bold mb-1" style={{color: '#104F8F'}}>15+</div>
+            <div className="font-medium text-sm" style={{color: '#104F8F'}}>Technical Skills</div>
           </div>
-          <div className="text-center p-6 bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-102 border" style={{borderColor: '#B7C9E2'}}>
-            <div className="text-3xl font-bold mb-2" style={{color: '#104F8F'}}>1+</div>
-            <div className="font-medium" style={{color: '#104F8F'}}>Years Experience</div>
+          <div className="text-center p-3 rounded-xl transition-all duration-300 transform hover:scale-105 border backdrop-blur-md bg-white/10 shadow-lg" style={{borderColor: '#B7C9E2'}}>
+            <div className="text-2xl font-bold mb-1" style={{color: '#104F8F'}}>1000+</div>
+            <div className="font-medium text-sm" style={{color: '#104F8F'}}>Bugs Found & Fixed</div>
           </div>
         </div>
 
         {/* Enhanced Skills Categories */}
-        <div className="space-y-12">
+        <div className="space-y-8">
           {skillCategories.map((category, categoryIndex) => (
-            <div key={categoryIndex} className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-102 border p-8" style={{borderColor: '#B7C9E2'}}>
+            <div key={categoryIndex} className="rounded-xl transition-all duration-300 transform hover:scale-102 border backdrop-blur-md bg-white/10 shadow-lg p-6" style={{borderColor: '#B7C9E2'}}>
               {/* Enhanced Category Header */}
-              <div className="flex items-center gap-4 mb-8">
-                <div className={`p-4 rounded-2xl shadow-lg ${getColorClasses()}`} style={{backgroundColor: getCategoryBackground()}}>
+              <div className="flex items-center gap-3 mb-6">
+                <div className={`p-3 rounded-xl shadow-lg ${getColorClasses()}`} style={{backgroundColor: getCategoryBackground()}}>
                   {category.icon}
                 </div>
                 <div>
-                  <h2 className="text-3xl font-bold" style={{color: '#104F8F'}}>{category.title}</h2>
-                  <p className="font-medium" style={{color: '#104F8F'}}>
+                  <h2 className="text-2xl font-bold" style={{color: '#104F8F'}}>{category.title}</h2>
+                  <p className="font-medium text-sm" style={{color: '#104F8F'}}>
                     {category.skills.length} skills in this category
                   </p>
                 </div>
               </div>
 
               {/* Enhanced Skills Grid */}
-              <div className="grid md:grid-cols-2 gap-8">
+              <div className="grid md:grid-cols-2 gap-4">
                 {category.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex} className="space-y-4 p-6 rounded-xl hover:shadow-lg transition-all duration-300 transform hover:scale-102 border" style={{backgroundColor: '#F5F6F7', borderColor: '#B7C9E2'}}>
+                  <div key={skillIndex} className="space-y-3 p-4 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-102" style={{backgroundColor: '#F5F6F7'}}>
                     {/* Enhanced Skill Header */}
                     <div className="flex justify-between items-center">
-                      <h3 className="font-bold text-lg" style={{color: '#104F8F'}}>{skill.name}</h3>
-                      <span className="text-sm font-bold text-white px-3 py-1 rounded-full shadow-sm" style={{backgroundColor: '#104F8F'}}>{skill.level}%</span>
+                      <h3 className="font-bold text-base" style={{color: '#104F8F'}}>{skill.name}</h3>
+                      <span className="text-xs font-bold text-white px-2 py-1 rounded-full shadow-sm" style={{backgroundColor: '#104F8F'}}>{skill.level}%</span>
                     </div>
                     
                     {/* Enhanced Progress Bar */}
-                    <div className="w-full rounded-full h-3 shadow-inner" style={{backgroundColor: '#B7C9E2'}}>
+                    <div className="w-full rounded-full h-2 shadow-inner" style={{backgroundColor: '#B7C9E2'}}>
                       <div 
-                        className={`h-3 rounded-full transition-all duration-1000 ease-out shadow-lg`}
+                        className={`h-2 rounded-full transition-all duration-1000 ease-out shadow-lg`}
                         style={{ 
                           width: `${skill.level}%`,
                           background: 'linear-gradient(90deg, #104F8F 0%, #B7C9E2 100%)'
@@ -178,7 +177,7 @@ export default function SkillsPage() {
                     </div>
                     
                     {/* Enhanced Skill Description */}
-                    <p className="text-sm leading-relaxed font-medium" style={{color: '#104F8F'}}>
+                    <p className="text-xs leading-relaxed font-medium" style={{color: '#104F8F'}}>
                       {skill.description}
                     </p>
                   </div>
@@ -200,33 +199,33 @@ export default function SkillsPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center p-8 bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-102 border" style={{borderColor: '#B7C9E2'}}>
-              <div className="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg" style={{backgroundColor: '#104F8F'}}>
-                <Code className="w-10 h-10 text-white" />
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="text-center p-6 rounded-xl transition-all duration-300 transform hover:scale-102 border backdrop-blur-md bg-white/10 shadow-lg" style={{borderColor: '#B7C9E2'}}>
+              <div className="w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg" style={{backgroundColor: '#104F8F'}}>
+                <Code className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold mb-3" style={{color: '#104F8F'}}>Online Courses</h3>
-              <p className="leading-relaxed" style={{color: '#104F8F'}}>
+              <h3 className="text-xl font-bold mb-2" style={{color: '#104F8F'}}>Online Courses</h3>
+              <p className="leading-relaxed text-sm" style={{color: '#104F8F'}}>
                 Regularly completing courses on platforms like Udemy, Coursera, and freeCodeCamp
               </p>
             </div>
 
-            <div className="text-center p-8 bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-102 border" style={{borderColor: '#B7C9E2'}}>
-              <div className="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg" style={{backgroundColor: '#104F8F'}}>
-                <Users className="w-10 h-10 text-white" />
+            <div className="text-center p-6 rounded-xl transition-all duration-300 transform hover:scale-102 border backdrop-blur-md bg-white/10 shadow-lg" style={{borderColor: '#B7C9E2'}}>
+              <div className="w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg" style={{backgroundColor: '#104F8F'}}>
+                <Users className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold mb-3" style={{color: '#104F8F'}}>Community</h3>
-              <p className="leading-relaxed" style={{color: '#104F8F'}}>
+              <h3 className="text-xl font-bold mb-2" style={{color: '#104F8F'}}>Community</h3>
+              <p className="leading-relaxed text-sm" style={{color: '#104F8F'}}>
                 Active participant in developer communities, forums, and local tech meetups
               </p>
             </div>
 
-            <div className="text-center p-8 bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-102 border" style={{borderColor: '#B7C9E2'}}>
-              <div className="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg" style={{backgroundColor: '#104F8F'}}>
-                <Palette className="w-10 h-10 text-white" />
+            <div className="text-center p-6 rounded-xl transition-all duration-300 transform hover:scale-102 border backdrop-blur-md bg-white/10 shadow-lg" style={{borderColor: '#B7C9E2'}}>
+              <div className="w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg" style={{backgroundColor: '#104F8F'}}>
+                <Palette className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold mb-3" style={{color: '#104F8F'}}>Side Projects</h3>
-              <p className="leading-relaxed" style={{color: '#104F8F'}}>
+              <h3 className="text-xl font-bold mb-2" style={{color: '#104F8F'}}>Side Projects</h3>
+              <p className="leading-relaxed text-sm" style={{color: '#104F8F'}}>
                 Building personal projects to experiment with new technologies and frameworks
               </p>
             </div>
@@ -235,26 +234,26 @@ export default function SkillsPage() {
 
         {/* Enhanced CTA Section */}
         <div className="text-center mt-16 pt-16">
-          <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-12 border shadow-xl" style={{borderColor: '#B7C9E2'}}>
-            <h2 className="text-4xl font-bold mb-4" style={{color: '#104F8F'}}>
+          <div className="rounded-2xl p-8 border backdrop-blur-md bg-white/10 shadow-lg" style={{borderColor: '#B7C9E2'}}>
+            <h2 className="text-3xl font-bold mb-4" style={{color: '#104F8F'}}>
               Let&apos;s Build Something <span style={{color: '#104F8F'}}>Together</span>
             </h2>
-            <p className="text-lg mb-8 max-w-2xl mx-auto" style={{color: '#104F8F'}}>
+            <p className="text-base mb-6 max-w-2xl mx-auto" style={{color: '#104F8F'}}>
               With this diverse skill set, I&apos;m ready to tackle challenging projects and bring your ideas to life.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/projects"
-                className="text-white px-8 py-4 rounded-2xl font-semibold transition-all duration-300 transform hover:scale-102 shadow-lg hover:shadow-xl"
+                className="text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-102 shadow-lg hover:shadow-xl"
                 style={{backgroundColor: '#104F8F'}}
               >
                 View My Projects
               </a>
               <a
                 href="/hireme"
-                className="px-8 py-4 rounded-2xl font-semibold transition-all duration-300 transform hover:scale-102 shadow-lg border-2 hover:shadow-xl"
+                className="px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-102 shadow-lg border-2 hover:shadow-xl"
                 style={{
-                  backgroundColor: 'white',
+                  backgroundColor: 'transparent',
                   color: '#104F8F',
                   borderColor: '#B7C9E2'
                 }}

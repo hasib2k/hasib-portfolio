@@ -85,13 +85,14 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3, duration: 0.6 }}
                 viewport={{ once: true }}
-                className="bg-white/80 backdrop-blur-sm p-6 rounded-xl border border-white/50 shadow-lg"
+                className="p-6 rounded-xl border backdrop-blur-md bg-white/10 shadow-lg"
+                style={{borderColor: '#B7C9E2'}}
               >
                 <p className="text-lg leading-relaxed" style={{color: '#104F8F'}}>
-                  Hi, I am <span className="font-semibold">Hasib Ahmed</span>, a passionate Software Developer with over a year of
-                  experience in real-time projects. I continuously evolve my skills and embrace new
-                  technologies. With a degree in Computer Science Engineering, I enhance my
-                  efficiency in software development.
+                  Hi, I am <span className="font-semibold">Hasib Ahmed</span>, a dedicated QA Engineer & Frontend Developer with over 2 years of
+                  experience in software quality assurance and frontend development. I continuously evolve my testing methodologies and 
+                  development skills while embracing new technologies. With a degree in Computer Science Engineering, I enhance my
+                  efficiency in ensuring software quality and creating exceptional user interfaces.
                 </p>
               </motion.div>
               
@@ -100,11 +101,12 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, duration: 0.6 }}
                 viewport={{ once: true }}
-                className="bg-white/80 backdrop-blur-sm p-6 rounded-xl border border-white/50 shadow-lg"
+                className="p-6 rounded-xl border backdrop-blur-md bg-white/10 shadow-lg"
+                style={{borderColor: '#B7C9E2'}}
               >
                 <p className="text-lg leading-relaxed" style={{color: '#104F8F'}}>
-                  Currently, I&apos;m pursuing an <span className="font-semibold">Parallaxlogic Infotech, Software Development Company (LTD)</span> in Software Quality Assurance Engineer,
-                  merging my technical expertise with business insight for impactful results.
+                  Currently, I&apos;m working at <span className="font-semibold">Parallaxlogic Infotech, Software Development Company (LTD)</span> as a QA Engineer & Frontend Developer,
+                  merging my testing expertise with frontend development skills for comprehensive quality assurance and user experience optimization.
                 </p>
               </motion.div>
 
@@ -114,13 +116,14 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 0.6 }}
                 viewport={{ once: true }}
-                className="bg-white/80 backdrop-blur-sm p-6 rounded-xl border border-white/50 shadow-lg"
+                className="p-6 rounded-xl border backdrop-blur-md bg-white/10 shadow-lg"
+                style={{borderColor: '#B7C9E2'}}
               >
                 <h3 className="text-xl font-semibold mb-4" style={{color: '#104F8F'}}>
                   Core Expertise
                 </h3>
                 <div className="flex flex-wrap gap-3">
-                  {['React', 'Next.js', 'TypeScript', 'Node.js', 'Python', 'Software Quality Assurance Engineer'].map((skill, index) => (
+                  {['Manual Testing', 'Automated Testing', 'React', 'JavaScript', 'Selenium', 'Test Planning', 'Bug Tracking', 'Quality Assurance'].map((skill, index) => (
                     <motion.span
                       key={skill}
                       initial={{ opacity: 0, scale: 0.8 }}
@@ -159,17 +162,18 @@ export default function About() {
               
               <a
                 href="/hireme"
-                className="px-8 py-4 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 bg-white"
+                className="px-8 py-4 rounded-lg font-medium transition-all duration-300 hover:scale-105"
                 style={{
                   border: '2px solid #104F8F',
-                  color: '#104F8F'
+                  color: '#104F8F',
+                  backgroundColor: 'transparent'
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.backgroundColor = '#104F8F';
                   e.currentTarget.style.color = 'white';
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = 'white';
+                  e.currentTarget.style.backgroundColor = 'transparent';
                   e.currentTarget.style.color = '#104F8F';
                 }}
               >

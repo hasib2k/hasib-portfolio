@@ -49,10 +49,9 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.2, duration: 0.6 }}
               viewport={{ once: true }}
-              className="group relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 border border-white/50"
+              className="group relative rounded-2xl p-8 transition-all duration-500 transform hover:scale-105 border backdrop-blur-md bg-white/10 shadow-lg"
               style={{
-                background: 'linear-gradient(145deg, rgba(255,255,255,0.9) 0%, rgba(183,201,226,0.1) 100%)',
-                boxShadow: '0 8px 32px rgba(16, 79, 143, 0.1)'
+                borderColor: '#B7C9E2'
               }}
             >
               {/* Decorative gradient border */}
@@ -78,7 +77,7 @@ export default function Projects() {
                   className="flex-1 flex items-center justify-center gap-2 px-4 py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg border-2"
                   style={{
                     borderColor: '#B7C9E2',
-                    backgroundColor: 'white',
+                    backgroundColor: 'transparent',
                     color: '#104F8F'
                   }}
                   onMouseEnter={(e) => {
@@ -89,7 +88,7 @@ export default function Projects() {
                   }}
                   onMouseLeave={(e) => {
                     const target = e.currentTarget;
-                    target.style.backgroundColor = 'white';
+                    target.style.backgroundColor = 'transparent';
                     target.style.color = '#104F8F';
                     target.style.borderColor = '#B7C9E2';
                   }}
