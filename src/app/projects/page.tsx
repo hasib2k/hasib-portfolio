@@ -3,64 +3,64 @@ import { Github, ExternalLink } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Projects - Hasib Ahmed',
-  description: 'Explore my portfolio of software development projects, featuring modern web applications and innovative solutions.'
+  description: 'Explore my portfolio showcasing Python/Pytest automation frameworks, comprehensive testing strategies, and modern React/Next.js applications.'
 }
 
 export default function ProjectsPage() {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Testing Suite",
-      description: "Comprehensive testing suite for e-commerce platform including automated test scripts, performance testing, and quality assurance workflows.",
-      technologies: ["Selenium", "Jest", "Cypress", "TestNG", "JavaScript"],
+      title: "Python Pytest Automation Framework",
+      description: "Comprehensive test automation framework built with Python and Pytest, featuring modular test design, reporting, and CI/CD integration for scalable quality assurance.",
+      technologies: ["Python", "Pytest", "Selenium", "Requests", "Allure Reporting"],
       github: "https://github.com/hasib2k",
       live: "dev-portfolio-main.vercel.app",
-      category: "QA Testing"
+      category: "Test Automation"
     },
     {
       id: 2,
-      title: "Task Management Frontend",
-      description: "Modern React-based frontend for project management with comprehensive testing coverage and quality assurance processes.",
-      technologies: ["React", "TypeScript", "Jest", "React Testing Library", "Tailwind CSS"],
+      title: "React Next.js Portfolio Website",
+      description: "Modern, responsive portfolio website built with React and Next.js, featuring smooth animations, responsive design, and optimized performance.",
+      technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
       github: "https://github.com/hasib2k",
       live: "https://dev-portfolio-main.vercel.app",
-      category: "Frontend"
+      category: "Frontend Development"
     },
     {
       id: 3,
-      title: "Automated Testing Framework",
-      description: "Custom testing framework for web applications with automated test generation, bug tracking, and quality metrics reporting.",
-      technologies: ["Selenium", "Python", "Pytest", "TestRail", "Jenkins"],
+      title: "API Testing Suite with Python",
+      description: "Comprehensive API testing solution using Python Requests and Pytest for automated validation, data-driven testing, and performance monitoring.",
+      technologies: ["Python", "Pytest", "Requests", "JSON", "API Testing"],
       github: "https://github.com/hasib2k",
       live: "https://dev-portfolio-main.vercel.app",
-      category: "QA Testing"
+      category: "API Testing"
     },
     {
       id: 4,
-      title: "Quality Dashboard Frontend",
-      description: "Interactive dashboard for QA metrics and testing results built with modern frontend technologies and comprehensive testing.",
-      technologies: ["React", "Chart.js", "TypeScript", "Jest", "Cypress"],
+      title: "Manual Testing Documentation Portal",
+      description: "Comprehensive manual testing documentation system with test case management, bug tracking workflows, and quality metrics dashboard.",
+      technologies: ["Test Case Design", "Bug Tracking", "Test Planning", "Documentation", "QA Process"],
       github: "https://github.com/hasib2k",
       live: "https://dev-portfolio-main.vercel.app",
-      category: "Frontend"
+      category: "Manual Testing"
     },
     {
       id: 5,
-      title: "API Testing Suite",
-      description: "Comprehensive API testing solution with automated validation, performance testing, and quality assurance for RESTful services.",
-      technologies: ["Postman", "Newman", "Jest", "Supertest", "API Testing"],
+      title: "React E-commerce Frontend",
+      description: "Modern e-commerce frontend built with React and Next.js, featuring responsive design, state management, and comprehensive component testing.",
+      technologies: ["React", "Next.js", "Redux", "Tailwind CSS", "Jest"],
       github: "https://github.com/hasib2k",
       live: "https://dev-portfolio-main.vercel.app",
-      category: "QA Testing"
+      category: "Frontend Development"
     },
     {
       id: 6,
-      title: "Frontend Component Library",
-      description: "Reusable React component library with comprehensive testing coverage, documentation, and quality assurance processes.",
-      technologies: ["React", "TypeScript", "Storybook", "Jest", "Testing Library"],
+      title: "Cross-Platform Testing Framework",
+      description: "Python-based testing framework supporting web, API, and mobile testing with detailed reporting and CI/CD integration capabilities.",
+      technologies: ["Python", "Pytest", "Selenium", "Appium", "Jenkins"],
       github: "https://github.com/hasib2k",
       live: "https://dev-portfolio-main.vercel.app",
-      category: "Frontend"
+      category: "Test Automation"
     }
   ]
   
@@ -75,7 +75,8 @@ export default function ProjectsPage() {
             </h1>
             <div className="w-24 h-1 mx-auto rounded-full" style={{backgroundColor: '#104F8F'}}></div>
             <p className="text-xl max-w-3xl mx-auto mt-6 leading-relaxed" style={{color: '#104F8F'}}>
-              A collection of my QA testing projects and frontend development work showcasing quality assurance expertise and modern web technologies.
+              Showcasing my expertise in Python/Pytest automation frameworks, comprehensive testing strategies, 
+              manual testing processes, API testing solutions, and modern React/Next.js frontend development.
             </p>
           </div>
 

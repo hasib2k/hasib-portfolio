@@ -3,7 +3,7 @@ import { Mail, Phone, MapPin } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Hire Me - Hasib Ahmed',
-  description: 'Get in touch with Hasib Ahmed for quality assurance, testing, and frontend development opportunities.'
+  description: 'Hire Hasib Ahmed for Python/Pytest automation, comprehensive testing strategies, manual testing, API testing, and React/Next.js development.'
 }
 
 export default function HireMe() {
@@ -17,8 +17,9 @@ export default function HireMe() {
           </h1>
           <div className="w-24 h-1 mx-auto mb-6" style={{backgroundColor: '#104F8F'}}></div>
           <p className="text-xl max-w-3xl mx-auto leading-relaxed" style={{color: '#104F8F'}}>
-            I&apos;m always interested in new QA opportunities and exciting frontend projects. Whether you&apos;re looking for a quality assurance engineer, 
-            frontend developer, or freelance testing expertise, I&apos;d love to hear from you.
+            I&apos;m available for QA automation projects, manual testing initiatives, API testing solutions, 
+            and React/Next.js frontend development. Let&apos;s discuss how my Python/Pytest expertise and 
+            comprehensive testing approach can ensure your project&apos;s success.
           </p>
         </div>
         
@@ -29,8 +30,8 @@ export default function HireMe() {
               <div className="rounded-2xl p-8 border backdrop-blur-md bg-white/10 shadow-lg" style={{borderColor: '#B7C9E2'}}>
                 <h2 className="text-3xl font-bold mb-6" style={{color: '#104F8F'}}>Services I Offer</h2>
                 <p className="text-lg mb-8 leading-relaxed" style={{color: '#104F8F'}}>
-                  With expertise in modern web technologies, I deliver high-quality solutions 
-                  tailored to your specific needs.
+                  Specializing in Python/Pytest automation, comprehensive testing strategies, and modern 
+                  React/Next.js development to deliver exceptional quality and user experiences.
                 </p>
               </div>
               
@@ -50,11 +51,11 @@ export default function HireMe() {
                 <div className="border backdrop-blur-md bg-white/10 shadow-lg rounded-2xl p-6 transition-all duration-300 transform hover:scale-105" style={{borderColor: '#B7C9E2'}}>
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg" style={{backgroundColor: '#104F8F'}}>
-                      <span className="text-white font-bold">UI</span>
+                      <span className="text-white font-bold">PY</span>
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold mb-2" style={{color: '#104F8F'}}>Responsive Design</h3>
-                      <p style={{color: '#104F8F'}}>Mobile-first, responsive interfaces that work on all devices</p>
+                      <h3 className="text-lg font-semibold mb-2" style={{color: '#104F8F'}}>Python Test Automation</h3>
+                      <p style={{color: '#104F8F'}}>Advanced Pytest frameworks and Python automation solutions</p>
                     </div>
                   </div>
                 </div>
@@ -62,11 +63,11 @@ export default function HireMe() {
                 <div className="border backdrop-blur-md bg-white/10 shadow-lg rounded-2xl p-6 transition-all duration-300 transform hover:scale-105" style={{borderColor: '#B7C9E2'}}>
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg" style={{backgroundColor: '#104F8F'}}>
-                      <span className="text-white font-bold">JS</span>
+                      <span className="text-white font-bold">QA</span>
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold mb-2" style={{color: '#104F8F'}}>Modern Frameworks</h3>
-                      <p style={{color: '#104F8F'}}>React, Next.js, TypeScript for scalable applications</p>
+                      <h3 className="text-lg font-semibold mb-2" style={{color: '#104F8F'}}>Manual & API Testing</h3>
+                      <p style={{color: '#104F8F'}}>Comprehensive manual testing strategies and API validation</p>
                     </div>
                   </div>
                 </div>
@@ -74,11 +75,23 @@ export default function HireMe() {
                 <div className="border backdrop-blur-md bg-white/10 shadow-lg rounded-2xl p-6 transition-all duration-300 transform hover:scale-105" style={{borderColor: '#B7C9E2'}}>
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg" style={{backgroundColor: '#104F8F'}}>
-                      <span className="text-white font-bold">API</span>
+                      <span className="text-white font-bold">RX</span>
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold mb-2" style={{color: '#104F8F'}}>API Development</h3>
-                      <p style={{color: '#104F8F'}}>RESTful APIs and database integration solutions</p>
+                      <h3 className="text-lg font-semibold mb-2" style={{color: '#104F8F'}}>React & Next.js Development</h3>
+                      <p style={{color: '#104F8F'}}>Modern frontend applications with React and Next.js</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="border backdrop-blur-md bg-white/10 shadow-lg rounded-2xl p-6 transition-all duration-300 transform hover:scale-105" style={{borderColor: '#B7C9E2'}}>
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg" style={{backgroundColor: '#104F8F'}}>
+                      <span className="text-white font-bold">TC</span>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold mb-2" style={{color: '#104F8F'}}>Test Strategy & Consulting</h3>
+                      <p style={{color: '#104F8F'}}>Quality assurance consulting and test strategy development</p>
                     </div>
                   </div>
                 </div>

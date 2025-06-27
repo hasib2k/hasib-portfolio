@@ -6,10 +6,10 @@ import Image from 'next/image'
 
 export default function Hero() {
   const stats = [
-    { number: "1+", label: "Years of experience" },
-    { number: "20+", label: "Projects Tested" },
-    { number: "15+", label: "Technical Skills" },
-    { number: "1000+", label: "Bugs Found & Fixed" }
+    { number: "100+", label: "Manual Test Cases" },
+    { number: "500+", label: "Pytest Automation Scripts" },
+    { number: "50+", label: "API Endpoints Tested" },
+    { number: "20+", label: "React/Next.js Projects" }
   ]
 
   return (
@@ -31,7 +31,7 @@ export default function Hero() {
                 className="text-5xl md:text-6xl font-bold leading-tight"
                 style={{color: '#104F8F'}}
               >
-                Hello I&apos;m
+                Hello, I&apos;m
                 <span className="block" style={{color: '#104F8F'}}>Hasib Ahmed</span>
               </motion.h1>
               
@@ -42,7 +42,7 @@ export default function Hero() {
                 className="text-xl font-medium"
                 style={{color: '#104F8F'}}
               >
-                I&apos;m a dedicated QA Engineer & Frontend Developer
+                QA Automation Engineer & Frontend Developer | Python • Pytest • React • Next.js
               </motion.p>
               
               <motion.p 
@@ -52,9 +52,11 @@ export default function Hero() {
                 className="text-lg leading-relaxed max-w-xl"
                 style={{color: '#104F8F'}}
               >
-                With expertise in software quality assurance and frontend development, I ensure 
-                exceptional user experiences through rigorous testing, automated solutions, and 
-                modern web technologies that deliver reliable, high-quality applications.
+                I excel in comprehensive software testing — from manual testing strategies to advanced 
+                Python/Pytest automation frameworks and thorough API testing. Simultaneously, I build 
+                modern, responsive web applications using React and Next.js. Whether ensuring software 
+                quality through rigorous testing or creating seamless user experiences, I bridge the gap 
+                between flawless functionality and exceptional design.
               </motion.p>
             </div>
 
@@ -141,9 +143,9 @@ export default function Hero() {
             className="relative"
           >
             <div className="relative w-full max-w-md mx-auto">
-              <div className="aspect-square rounded-full overflow-hidden border-8 border-white/90 backdrop-blur-sm shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105" style={{background: 'linear-gradient(135deg, #B7C9E2, #F5F6F7)'}}>
+              <div className="aspect-square rounded-full overflow-hidden border-8 border-white/90 backdrop-blur-sm shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105" style={{background: 'linear-gradient(135deg, #B7C9E2, #F5F6F7)', boxShadow: '0 25px 50px -12px rgba(16, 79, 143, 0.4), 0 15px 30px -10px rgba(183, 201, 226, 0.5), 0 0 40px rgba(16, 79, 143, 0.3)'}}>
                 <Image
-                  src="/assets/profile_pic _2.jpg"
+                  src="/assets/profile_pic.jpg"
                   alt="Hasib Ahmed"
                   width={400}
                   height={400}

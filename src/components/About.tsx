@@ -18,9 +18,9 @@ export default function About() {
             className="relative"
           >
             <div className="relative w-full max-w-lg mx-auto">
-              <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+              <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl border-4 border-white" style={{boxShadow: '0 25px 50px -12px rgba(16, 79, 143, 0.25), 0 10px 20px -5px rgba(183, 201, 226, 0.3), 0 0 0 1px rgba(183, 201, 226, 0.1)'}}>
                 <Image
-                  src="/assets/profile_pic _2.jpg"
+                  src="/assets/profile_pic.jpg"
                   alt="Hasib Ahmed Profile"
                   width={500}
                   height={600}
@@ -89,10 +89,10 @@ export default function About() {
                 style={{borderColor: '#B7C9E2'}}
               >
                 <p className="text-lg leading-relaxed" style={{color: '#104F8F'}}>
-                  Hi, I am <span className="font-semibold">Hasib Ahmed</span>, a dedicated QA Engineer & Frontend Developer with over 1 year of
-                  experience in software quality assurance and frontend development. I continuously evolve my testing methodologies and
-                  development skills while embracing new technologies. With a degree in Computer Science Engineering, I enhance my
-                  efficiency in ensuring software quality and creating exceptional user interfaces.
+                  Hi, I am <span className="font-semibold">Hasib Ahmed</span>, a dedicated QA Automation Engineer & Frontend Developer with expertise in 
+                  comprehensive software testing and modern web development. I excel in manual testing strategies, Python/Pytest automation frameworks, 
+                  API testing, and building responsive applications with React and Next.js. With a Computer Science Engineering background, I bridge 
+                  the gap between rigorous quality assurance and exceptional user experiences.
                 </p>
               </motion.div>
               
@@ -105,8 +105,9 @@ export default function About() {
                 style={{borderColor: '#B7C9E2'}}
               >
                 <p className="text-lg leading-relaxed" style={{color: '#104F8F'}}>
-                  Currently, I&apos;m working at <span className="font-semibold">Parallaxlogic Infotech, Software Development Company (LTD)</span> as a QA Engineer & Frontend Developer,
-                  merging my testing expertise with frontend development skills for comprehensive quality assurance and user experience optimization.
+                  Currently, I&apos;m working at <span className="font-semibold">Parallaxlogic Infotech, Software Development Company (LTD)</span> as a QA Automation Engineer & Frontend Developer,
+                  where I design comprehensive testing strategies from manual test cases to advanced Python/Pytest automation frameworks, conduct thorough API testing,
+                  and develop modern web applications using React and Next.js for optimal user experiences.
                 </p>
               </motion.div>
 
@@ -123,7 +124,7 @@ export default function About() {
                   Core Expertise
                 </h3>
                 <div className="flex flex-wrap gap-3">
-                  {['Manual Testing', 'Automated Testing', 'React', 'JavaScript', 'Selenium', 'Test Planning', 'Bug Tracking', 'Quality Assurance'].map((skill, index) => (
+                  {['Python', 'Pytest', 'Manual Testing', 'API Testing', 'React', 'Next.js', 'JavaScript', 'Test Automation', 'Quality Assurance', 'Frontend Development'].map((skill, index) => (
                     <motion.span
                       key={skill}
                       initial={{ opacity: 0, scale: 0.8 }}

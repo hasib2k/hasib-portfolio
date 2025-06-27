@@ -3,79 +3,80 @@ import { Code, Globe, Cloud, Cpu, Palette, Users } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Skills - Hasib Ahmed',
-  description: 'Explore my technical skills and expertise in web development, programming languages, frameworks, and modern technologies.'
+  description: 'Explore my expertise in Python/Pytest automation, manual testing, API testing, React/Next.js development, and comprehensive QA methodologies.'
 }
 
 export default function SkillsPage() {
   const skillCategories = [
     {
-      title: "Quality Assurance & Testing",
+      title: "Python Test Automation",
       icon: <Code className="w-8 h-8" />,
       color: "blue",
       skills: [
-        { name: "Manual Testing", level: 95, description: "Functional, usability, and exploratory testing methodologies" },
-        { name: "Automated Testing", level: 85, description: "Test automation using Selenium, Cypress, and Jest frameworks" },
-        { name: "Test Planning", level: 90, description: "Creating comprehensive test plans, cases, and testing strategies" },
-        { name: "Bug Tracking", level: 90, description: "Issue identification, documentation, and lifecycle management" },
-        { name: "API Testing", level: 85, description: "RESTful API testing using Postman, Newman, and automated scripts" },
-        { name: "Performance Testing", level: 75, description: "Load, stress, and performance testing using various tools" },
-        { name: "Regression Testing", level: 90, description: "Ensuring software stability through systematic regression testing" },
-        { name: "Test Documentation", level: 95, description: "Detailed test case creation and quality documentation" }
+        { name: "Python Programming", level: 90, description: "Advanced Python for test automation, scripting, and framework development" },
+        { name: "Pytest Framework", level: 95, description: "Expert-level Pytest for comprehensive test automation and reporting" },
+        { name: "Selenium with Python", level: 85, description: "Web automation testing using Selenium WebDriver and Python" },
+        { name: "Requests Library", level: 90, description: "API testing automation using Python Requests for HTTP testing" },
+        { name: "Test Framework Design", level: 85, description: "Building scalable, maintainable test automation frameworks" },
+        { name: "Pytest Fixtures & Plugins", level: 88, description: "Advanced Pytest features for modular and reusable test design" },
+        { name: "Data-Driven Testing", level: 90, description: "Implementing parameterized and data-driven test approaches" },
+        { name: "Test Reporting", level: 85, description: "Allure reports, HTML reports, and custom test result documentation" }
       ]
     },
     {
-      title: "Frontend Development",
+      title: "Manual & API Testing",
       icon: <Globe className="w-8 h-8" />,
       color: "green",
       skills: [
-        { name: "React.js", level: 85, description: "Building interactive UIs with hooks, context, and modern patterns" },
-        { name: "JavaScript (ES6+)", level: 90, description: "Modern JavaScript with async/await, modules, and DOM manipulation" },
-        { name: "TypeScript", level: 80, description: "Type-safe JavaScript development for scalable applications" },
-        { name: "HTML5 & CSS3", level: 90, description: "Semantic markup and modern CSS features including Grid and Flexbox" },
-        { name: "Tailwind CSS", level: 85, description: "Utility-first CSS framework for rapid UI development" },
-        { name: "Responsive Design", level: 90, description: "Mobile-first design principles and cross-device compatibility" },
-        { name: "Component Testing", level: 85, description: "Testing React components with Jest and Testing Library" },
-        { name: "UI/UX Testing", level: 80, description: "User interface and experience validation and testing" }
+        { name: "Manual Testing", level: 95, description: "Comprehensive manual testing strategies, exploratory and functional testing" },
+        { name: "Test Case Design", level: 90, description: "Creating detailed, effective test cases and test scenario planning" },
+        { name: "API Testing", level: 88, description: "RESTful API testing, validation, and automation using various tools" },
+        { name: "Postman Testing", level: 85, description: "Advanced API testing, collections, and automation with Postman" },
+        { name: "Bug Tracking & Reporting", level: 92, description: "Detailed defect documentation, lifecycle management, and reporting" },
+        { name: "Test Planning", level: 90, description: "Comprehensive test strategy and planning for project requirements" },
+        { name: "Regression Testing", level: 88, description: "Systematic regression testing to ensure software stability" },
+        { name: "User Acceptance Testing", level: 85, description: "UAT coordination, execution, and stakeholder communication" }
       ]
     },
     {
-      title: "Testing Tools & Automation",
+      title: "React & Next.js Development",
       icon: <Cpu className="w-8 h-8" />,
       color: "purple",
       skills: [
-        { name: "Selenium WebDriver", level: 85, description: "Web application automation testing across browsers" },
-        { name: "Cypress", level: 80, description: "Modern end-to-end testing framework for web applications" },
-        { name: "Jest", level: 85, description: "JavaScript testing framework for unit and integration tests" },
-        { name: "Postman", level: 90, description: "API testing, documentation, and automation tool" },
-        { name: "JIRA", level: 85, description: "Issue tracking and project management for QA workflows" },
-        { name: "Git & GitHub", level: 90, description: "Version control and collaborative development workflows" },
-        { name: "TestRail", level: 75, description: "Test case management and reporting platform" }
+        { name: "React.js", level: 85, description: "Modern React development with hooks, context, and component patterns" },
+        { name: "Next.js", level: 88, description: "Full-stack React framework for SSR, routing, and optimized applications" },
+        { name: "JavaScript (ES6+)", level: 90, description: "Advanced JavaScript with modern syntax, async/await, and modules" },
+        { name: "TypeScript", level: 80, description: "Type-safe development for scalable React and Next.js applications" },
+        { name: "Tailwind CSS", level: 85, description: "Utility-first CSS framework for rapid and responsive UI development" },
+        { name: "Responsive Design", level: 88, description: "Mobile-first design principles and cross-device compatibility" },
+        { name: "Component Testing", level: 82, description: "Testing React components with Jest and React Testing Library" },
+        { name: "State Management", level: 80, description: "Redux, Context API, and modern state management patterns" }
       ]
     },
     {
-      title: "Development & DevOps",
+      title: "Development Tools & QA Process",
       icon: <Cloud className="w-8 h-8" />,
       color: "orange",
       skills: [
-        { name: "Git & GitHub", level: 90, description: "Version control and collaborative development workflows" },
-        { name: "VS Code", level: 95, description: "Primary code editor with extensions and debugging tools" },
-        { name: "Jenkins", level: 70, description: "CI/CD pipeline automation for testing and deployment" },
-        { name: "Docker", level: 65, description: "Containerization for consistent testing environments" },
-        { name: "Chrome DevTools", level: 85, description: "Browser debugging and performance optimization tools" },
-        { name: "Figma", level: 70, description: "UI/UX design tool for creating mockups and prototypes" },
-        { name: "ESLint & Prettier", level: 85, description: "Code linting and formatting for consistent code quality" },
-        { name: "Agile/Scrum", level: 80, description: "Agile methodologies and sprint-based development" }
+        { name: "Git & GitHub", level: 90, description: "Version control, collaboration, and code review workflows" },
+        { name: "VS Code", level: 95, description: "Primary development environment with testing and debugging extensions" },
+        { name: "JIRA", level: 85, description: "Issue tracking, test case management, and agile project workflows" },
+        { name: "Agile/Scrum", level: 88, description: "Agile testing methodologies and sprint-based QA processes" },
+        { name: "CI/CD Integration", level: 75, description: "Integrating automated tests into deployment pipelines" },
+        { name: "Test Documentation", level: 92, description: "Comprehensive test documentation and knowledge sharing" },
+        { name: "Cross-browser Testing", level: 85, description: "Ensuring compatibility across different browsers and platforms" },
+        { name: "Performance Testing", level: 78, description: "Load testing and performance validation strategies" }
       ]
     },
     {
-      title: "Quality Assurance Skills",
+      title: "Quality Assurance Expertise",
       icon: <Users className="w-8 h-8" />,
       color: "indigo",
       skills: [
-        { name: "Test Strategy", level: 90, description: "Developing comprehensive testing strategies and approaches" },
-        { name: "Risk Assessment", level: 85, description: "Identifying and mitigating potential quality risks" },
-        { name: "Cross-browser Testing", level: 90, description: "Ensuring compatibility across different browsers and devices" },
-        { name: "Accessibility Testing", level: 80, description: "Testing applications for accessibility compliance and usability" }
+        { name: "Test Strategy Development", level: 90, description: "Creating comprehensive testing strategies for project success" },
+        { name: "Risk-Based Testing", level: 85, description: "Prioritizing testing efforts based on risk assessment" },
+        { name: "Stakeholder Communication", level: 88, description: "Effective communication with development teams and stakeholders" },
+        { name: "Quality Metrics", level: 82, description: "Defining and tracking quality metrics and KPIs" }
       ]
     },
     {
@@ -113,8 +114,8 @@ export default function SkillsPage() {
           </h1>
           <div className="w-24 h-1 mx-auto rounded-full mb-6" style={{backgroundColor: '#104F8F'}}></div>
           <p className="text-xl max-w-3xl mx-auto leading-relaxed" style={{color: '#104F8F'}}>
-            A comprehensive overview of my technical expertise and professional capabilities 
-            developed through hands-on experience and continuous learning.
+            Showcasing my expertise in Python/Pytest automation frameworks, comprehensive manual testing, 
+            API testing methodologies, and modern React/Next.js frontend development capabilities.
           </p>
         </div>
 
