@@ -1,6 +1,6 @@
 # Hasib Ahmed - Portfolio Website
 
-A modern, responsive portfolio website built with Next.js 15, TypeScript, and Tailwind CSS. This project replicates the design and functionality of [hasibdev.in](https://hasibdev.in/).
+A modern, responsive portfolio website built with Next.js 15, TypeScript, and Tailwind CSS. This project replicates the design and functionality of [dev-portfolio-main][(https://hasibdev.in/](https://dev-portfolio-main.vercel.app/))..
 
 ## ✨ Features
 
