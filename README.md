@@ -2,7 +2,7 @@
 
 A modern, responsive portfolio website built with Next.js 15, TypeScript, and Tailwind CSS. This project replicates the design and functionality of [(dev-portfolio-main.vercel.app/).](https://dev-portfolio-maun.vercel.app/).
 
-## ✨ Features
+## Features
 
 - **Modern Design**: Clean, professional layout with smooth animations
 - **Responsive**: Optimized for desktop, tablet, and mobile devices
@@ -12,7 +12,7 @@ A modern, responsive portfolio website built with Next.js 15, TypeScript, and Ta
 - **TypeScript**: Type-safe development with full TypeScript support
 - **Animations**: Smooth transitions using Framer Motion
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Framework**: Next.js 15 (App Router)
 - **Language**: TypeScript
@@ -22,7 +22,7 @@ A modern, responsive portfolio website built with Next.js 15, TypeScript, and Ta
 - **Fonts**: Inter (Google Fonts)
 - **Deployment**: Vercel
 
-## 🚀 Getting Started
+## Getting Started
 
 1. **Clone the repository**
    ```bash
@@ -43,7 +43,7 @@ A modern, responsive portfolio website built with Next.js 15, TypeScript, and Ta
 4. **Open in browser**
    Navigate to [http://localhost:3000](http://localhost:3000)
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 src/
@@ -63,7 +63,7 @@ src/
     └── utils.ts         # Utility functions
 ```
 
-## 🎨 Key Sections
+## Key Sections
 
 1. **Hero Section**: Introduction with animated profile image and call-to-action buttons
 2. **About Section**: Personal information and professional background
@@ -71,7 +71,7 @@ src/
 4. **Footer**: Contact information and social media links
 5. **Navigation**: Responsive navigation with mobile menu
 
-## 📋 Required Assets
+## Required Assets
 
 To complete the setup, add these files to the `public/assets/` directory:
 
@@ -79,13 +79,13 @@ To complete the setup, add these files to the `public/assets/` directory:
 - `profile/profile.png` - About section profile image (500x600px)
 - `resume/hasib.pdf` - Resume/CV file
 
-## 🌐 Pages
+## Pages
 
 - **Home** (`/`) - Main landing page with all sections
 - **About** (`/about`) - Detailed about page with skills and education
 - **Hire Me** (`/hireme`) - Contact information and availability
 
-## 🎯 Customization
+## Customization
 
 1. **Content**: Update personal information in components
 2. **Styling**: Modify Tailwind classes for different colors/spacing
@@ -93,14 +93,14 @@ To complete the setup, add these files to the `public/assets/` directory:
 4. **Links**: Update social media and contact links
 5. **Resume**: Add your actual resume PDF
 
-## 📱 Responsive Design
+## Responsive Design
 
 The website is fully responsive with breakpoints:
 - Mobile: 320px - 768px
 - Tablet: 768px - 1024px
 - Desktop: 1024px+
 
-## 🚀 Deployment
+## Deployment
 
 ### Vercel (Recommended)
 1. Push your code to GitHub
@@ -112,18 +112,18 @@ The website is fully responsive with breakpoints:
 - **GitHub Pages**: Use GitHub Actions for deployment
 - **Traditional Hosting**: Upload `npm run build && npm run export` output
 
-## 📄 License
+## License
 
 This project is open source and available under the [MIT License](LICENSE).
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch
 3. Make your changes
 4. Submit a pull request
 
-## 📧 Contact
+## Contact
 
 - **Email**: hasibahmed.ig@gmail.com
 - **Phone**: +880 170 6776 711
