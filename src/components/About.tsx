@@ -18,14 +18,17 @@ export default function About() {
             className="relative"
           >
             <div className="relative w-full max-w-lg mx-auto">
-              <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl border-4 border-white" style={{boxShadow: '0 25px 50px -12px rgba(16, 79, 143, 0.25), 0 10px 20px -5px rgba(183, 201, 226, 0.3), 0 0 0 1px rgba(183, 201, 226, 0.1)'}}>
-                <Image
-                  src="/assets/profile_pic.jpg"
-                  alt="Hasib Ahmed Profile"
-                  width={500}
-                  height={600}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                />
+              <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl border-4 border-white transition-all duration-300 transform hover:scale-105" style={{boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.15), 0 15px 30px -10px rgba(16, 79, 143, 0.25), 0 10px 20px -5px rgba(183, 201, 226, 0.3), 0 0 0 1px rgba(183, 201, 226, 0.1)'}}>
+                <div className="relative w-full h-full">
+                  <Image
+                    src="/assets/profile_pic.jpg"
+                    alt="Hasib Ahmed Profile"
+                    width={500}
+                    height={600}
+                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-black/5 hover:bg-black/0 transition-all duration-500"></div>
+                </div>
               </div>
               
               {/* Enhanced Decorative Elements */}
@@ -85,14 +88,13 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3, duration: 0.6 }}
                 viewport={{ once: true }}
-                className="p-6 rounded-xl border backdrop-blur-md bg-white/10 shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:bg-white/20"
+                className="p-6 rounded-xl border backdrop-blur-md bg-white/10 shadow-lg transition-all duration-300 transform hover:scale-[1.02] hover:shadow-2xl hover:bg-white/25 hover:-translate-y-1"
                 style={{borderColor: '#B7C9E2'}}
               >
                 <p className="text-lg leading-relaxed" style={{color: '#104F8F'}}>
-                  Hi, I am <span className="font-semibold">Hasib Ahmed</span>, a dedicated QA Automation Engineer & Frontend Developer with expertise in 
-                  comprehensive software testing and modern web development. I excel in manual testing strategies, Python/Pytest automation frameworks, 
-                  API testing, and building responsive applications with React and Next.js. With a Computer Science Engineering background, I bridge 
-                  the gap between rigorous quality assurance and exceptional user experiences.
+                  Hi, I am <span className="font-semibold">Hasib Ahmed</span>, a dedicated QA Engineer & Frontend Developer with over a year of experience in 
+                  real-time projects. I continuously evolve my skills in software testing, quality assurance, and modern frontend technologies. 
+                  With a degree in Computer Science Engineering, I enhance my efficiency in quality assurance and web development.
                 </p>
               </motion.div>
               
@@ -101,13 +103,12 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, duration: 0.6 }}
                 viewport={{ once: true }}
-                className="p-6 rounded-xl border backdrop-blur-md bg-white/10 shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:bg-white/20"
+                className="p-6 rounded-xl border backdrop-blur-md bg-white/10 shadow-lg transition-all duration-300 transform hover:scale-[1.02] hover:shadow-2xl hover:bg-white/25 hover:-translate-y-1"
                 style={{borderColor: '#B7C9E2'}}
               >
                 <p className="text-lg leading-relaxed" style={{color: '#104F8F'}}>
-                  Currently, I&apos;m working at <span className="font-semibold">Parallaxlogic Infotech, Software Development Company (LTD)</span> as a QA Automation Engineer & Frontend Developer,
-                  where I design comprehensive testing strategies from manual test cases to advanced Python/Pytest automation frameworks, conduct thorough API testing,
-                  and develop modern web applications using React and Next.js for optimal user experiences.
+                  Currently, I&apos;m pursuing an <span className="font-semibold">Parallaxlogic Infotech, Software Development Company (LTD)</span> in Software Quality Assurance Engineer,
+                  merging my technical expertise with business insight for impactful results.
                 </p>
               </motion.div>
 

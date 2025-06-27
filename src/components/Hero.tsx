@@ -143,15 +143,18 @@ export default function Hero() {
             className="relative"
           >
             <div className="relative w-full max-w-md mx-auto">
-              <div className="aspect-square rounded-full overflow-hidden border-8 border-white/90 backdrop-blur-sm shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105" style={{background: 'linear-gradient(135deg, #B7C9E2, #F5F6F7)', boxShadow: '0 25px 50px -12px rgba(16, 79, 143, 0.4), 0 15px 30px -10px rgba(183, 201, 226, 0.5), 0 0 40px rgba(16, 79, 143, 0.3)'}}>
-                <Image
-                  src="/assets/profile_pic.jpg"
-                  alt="Hasib Ahmed"
-                  width={400}
-                  height={400}
-                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
-                  priority
-                />
+              <div className="aspect-square rounded-full overflow-hidden border-8 border-white/90 backdrop-blur-sm shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105" style={{background: 'linear-gradient(135deg, #B7C9E2, #F5F6F7)', boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.15), 0 15px 30px -10px rgba(16, 79, 143, 0.4), 0 10px 20px -5px rgba(183, 201, 226, 0.5), 0 0 40px rgba(16, 79, 143, 0.3)'}}>
+                <div className="relative w-full h-full">
+                  <Image
+                    src="/assets/profile_pic.jpg"
+                    alt="Hasib Ahmed"
+                    width={400}
+                    height={400}
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-black/5 hover:bg-black/0 transition-all duration-300"></div>
+                </div>
               </div>
               
               {/* Enhanced Floating Elements */}

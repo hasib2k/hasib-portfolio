@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, Home, User, Code, FolderOpen, BookOpen, Briefcase, Mail } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -10,12 +10,12 @@ export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
 
   const navItems = [
-    { href: '/', label: 'Home' },
-    { href: '/about', label: 'About' },
-    { href: '/skills', label: 'Skills' },
-    { href: '/projects', label: 'Projects' },
-    { href: '/blog', label: 'Blog' },
-    { href: '/hireme', label: 'Hire Me' },
+    { href: '/', label: 'Home', icon: Home },
+    { href: '/about', label: 'About', icon: User },
+    { href: '/skills', label: 'Skills', icon: Code },
+    { href: '/projects', label: 'Projects', icon: FolderOpen },
+    { href: '/blog', label: 'Blog', icon: BookOpen },
+    { href: '/hireme', label: 'Hire Me', icon: Briefcase },
   ]
 
   // Close menu when clicking outside or pressing escape
@@ -117,35 +117,43 @@ export default function Navigation() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 rounded-full overflow-hidden border-2 shadow-sm backdrop-blur-sm bg-white/20" style={{borderColor: '#B7C9E2'}}>
-              <Image
-                src="/assets/profile_pic.jpg"
-                alt="Hasib Ahmed"
-                width={32}
-                height={32}
-                className="w-full h-full object-cover"
-              />
+            <div className="w-8 h-8 rounded-full overflow-hidden border-2 shadow-sm backdrop-blur-sm bg-white/20" style={{borderColor: '#B7C9E2', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(16, 79, 143, 0.2)'}}>
+              <div className="relative w-full h-full">
+                <Image
+                  src="/assets/profile_pic.jpg"
+                  alt="Hasib Ahmed"
+                  width={32}
+                  height={32}
+                  className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-black/5"></div>
+              </div>
             </div>
             <span className="font-bold" style={{color: '#104F8F'}}>Hasib Ahmed</span>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-3">
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="nav-button relative transition-all duration-300 hover:opacity-80 hover:scale-105 px-4 py-2 rounded-lg backdrop-blur-md bg-white/10 shadow-lg border overflow-hidden touch-manipulation"
-                style={{color: '#104F8F', borderColor: '#B7C9E2'}}
-              >
-                <span className="relative z-10">{item.label}</span>
-              </Link>
-            ))}
+            {navItems.map((item) => {
+              const IconComponent = item.icon
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="nav-button relative transition-all duration-300 hover:opacity-80 hover:scale-105 px-4 py-2 rounded-lg backdrop-blur-md bg-white/10 shadow-lg border overflow-hidden touch-manipulation flex items-center gap-2"
+                  style={{color: '#104F8F', borderColor: '#B7C9E2'}}
+                >
+                  <IconComponent size={16} />
+                  <span className="relative z-10">{item.label}</span>
+                </Link>
+              )
+            })}
             <a
               href="/contact"
-              className="nav-button relative text-white px-4 py-2 rounded-lg transition-all duration-300 hover:opacity-90 hover:scale-105 backdrop-blur-md bg-white/20 shadow-lg border overflow-hidden touch-manipulation"
+              className="nav-button relative text-white px-4 py-2 rounded-lg transition-all duration-300 hover:opacity-90 hover:scale-105 backdrop-blur-md bg-white/20 shadow-lg border overflow-hidden touch-manipulation flex items-center gap-2"
               style={{backgroundColor: '#104F8F', borderColor: '#B7C9E2'}}
             >
+              <Mail size={16} />
               <span className="relative z-10">Contact</span>
             </a>
           </div>
@@ -171,23 +179,28 @@ export default function Navigation() {
               style={{borderColor: '#B7C9E2'}}
             >
               <div className="py-3 space-y-2 px-4">
-                {navItems.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className="nav-button relative block transition-all duration-300 hover:opacity-80 hover:scale-105 px-4 py-3 rounded-lg backdrop-blur-md bg-white/10 shadow-lg border overflow-hidden touch-manipulation"
-                    style={{color: '#104F8F', borderColor: '#B7C9E2'}}
-                    onClick={() => setIsOpen(false)}
-                  >
-                    <span className="relative z-10">{item.label}</span>
-                  </Link>
-                ))}
+                {navItems.map((item) => {
+                  const IconComponent = item.icon
+                  return (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className="nav-button relative transition-all duration-300 hover:opacity-80 hover:scale-105 px-4 py-3 rounded-lg backdrop-blur-md bg-white/10 shadow-lg border overflow-hidden touch-manipulation flex items-center gap-3"
+                      style={{color: '#104F8F', borderColor: '#B7C9E2'}}
+                      onClick={() => setIsOpen(false)}
+                    >
+                      <IconComponent size={18} />
+                      <span className="relative z-10">{item.label}</span>
+                    </Link>
+                  )
+                })}
                 <a
                   href="/contact"
-                  className="nav-button relative block text-white px-4 py-3 rounded-lg transition-all duration-300 hover:opacity-90 hover:scale-105 text-center backdrop-blur-md bg-white/20 shadow-lg border overflow-hidden touch-manipulation"
+                  className="nav-button relative text-white px-4 py-3 rounded-lg transition-all duration-300 hover:opacity-90 hover:scale-105 text-center backdrop-blur-md bg-white/20 shadow-lg border overflow-hidden touch-manipulation flex items-center justify-center gap-3"
                   style={{backgroundColor: '#104F8F', borderColor: '#B7C9E2'}}
                   onClick={() => setIsOpen(false)}
                 >
+                  <Mail size={18} />
                   <span className="relative z-10">Contact</span>
                 </a>
               </div>

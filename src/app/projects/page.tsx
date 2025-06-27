@@ -13,8 +13,8 @@ export default function ProjectsPage() {
       title: "Python Pytest Automation Framework",
       description: "Comprehensive test automation framework built with Python and Pytest, featuring modular test design, reporting, and CI/CD integration for scalable quality assurance.",
       technologies: ["Python", "Pytest", "Selenium", "Requests", "Allure Reporting"],
-      github: "https://github.com/hasib2k",
-      live: "dev-portfolio-main.vercel.app",
+      github: "https://github.com/hasib2k/pytest-automation-framework",
+      live: "/projects/python-pytest-automation",
       category: "Test Automation"
     },
     {
@@ -22,8 +22,8 @@ export default function ProjectsPage() {
       title: "React Next.js Portfolio Website",
       description: "Modern, responsive portfolio website built with React and Next.js, featuring smooth animations, responsive design, and optimized performance.",
       technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-      github: "https://github.com/hasib2k",
-      live: "https://dev-portfolio-main.vercel.app",
+      github: "https://github.com/hasib2k/hasib-portfolio",
+      live: "/projects/react-nextjs-portfolio",
       category: "Frontend Development"
     },
     {
@@ -31,8 +31,8 @@ export default function ProjectsPage() {
       title: "API Testing Suite with Python",
       description: "Comprehensive API testing solution using Python Requests and Pytest for automated validation, data-driven testing, and performance monitoring.",
       technologies: ["Python", "Pytest", "Requests", "JSON", "API Testing"],
-      github: "https://github.com/hasib2k",
-      live: "https://dev-portfolio-main.vercel.app",
+      github: "https://github.com/hasib2k/api-testing-suite",
+      live: "/projects/api-testing-suite",
       category: "API Testing"
     },
     {
@@ -40,8 +40,8 @@ export default function ProjectsPage() {
       title: "Manual Testing Documentation Portal",
       description: "Comprehensive manual testing documentation system with test case management, bug tracking workflows, and quality metrics dashboard.",
       technologies: ["Test Case Design", "Bug Tracking", "Test Planning", "Documentation", "QA Process"],
-      github: "https://github.com/hasib2k",
-      live: "https://dev-portfolio-main.vercel.app",
+      github: "https://github.com/hasib2k/manual-testing-portal",
+      live: "/projects/manual-testing-portal",
       category: "Manual Testing"
     },
     {
@@ -49,8 +49,8 @@ export default function ProjectsPage() {
       title: "React E-commerce Frontend",
       description: "Modern e-commerce frontend built with React and Next.js, featuring responsive design, state management, and comprehensive component testing.",
       technologies: ["React", "Next.js", "Redux", "Tailwind CSS", "Jest"],
-      github: "https://github.com/hasib2k",
-      live: "https://dev-portfolio-main.vercel.app",
+      github: "https://github.com/hasib2k/react-ecommerce-frontend",
+      live: "/projects/react-ecommerce-frontend",
       category: "Frontend Development"
     },
     {
@@ -58,8 +58,8 @@ export default function ProjectsPage() {
       title: "Cross-Platform Testing Framework",
       description: "Python-based testing framework supporting web, API, and mobile testing with detailed reporting and CI/CD integration capabilities.",
       technologies: ["Python", "Pytest", "Selenium", "Appium", "Jenkins"],
-      github: "https://github.com/hasib2k",
-      live: "https://dev-portfolio-main.vercel.app",
+      github: "https://github.com/hasib2k/cross-platform-testing",
+      live: "/projects/cross-platform-testing",
       category: "Test Automation"
     }
   ]
