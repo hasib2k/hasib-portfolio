@@ -1,13 +1,11 @@
-import { Metadata } from 'next'
-import Link from 'next/link'
-import { Github, ExternalLink } from 'lucide-react'
+'use client'
 
-export const metadata: Metadata = {
-  title: 'Projects - Hasib Ahmed',
-  description: 'Explore my portfolio showcasing Python/Pytest automation frameworks, comprehensive testing strategies, and modern React/Next.js applications.'
-}
+import Link from 'next/link'
+import { Github } from 'lucide-react'
+import { useRouter } from 'next/navigation'
 
 export default function ProjectsPage() {
+  const router = useRouter();
   const projects = [
     {
       id: 1,
@@ -23,7 +21,7 @@ export default function ProjectsPage() {
       title: "React Next.js Portfolio Website",
       description: "Modern, responsive portfolio website built with React and Next.js, featuring smooth animations, responsive design, and optimized performance.",
       technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-      github: "https://github.com/hasib2k/hasib-portfolio",
+      github: "https://github.com/hasib2k/marcel_grace",
       live: "/projects/react-nextjs-portfolio",
       category: "Frontend Development"
     },
@@ -84,56 +82,51 @@ export default function ProjectsPage() {
           {/* Projects Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project) => (
-              <div key={project.id} className="rounded-2xl p-6 transition-all duration-300 transform hover:scale-105 border backdrop-blur-md bg-white/10 shadow-lg" style={{borderColor: '#B7C9E2'}}>
-                {/* Project Content */}
+              <div
+                key={project.id}
+                className="group rounded-2xl p-6 transition-all duration-300 transform hover:scale-105 border backdrop-blur-md bg-white/10 shadow-lg focus:outline-none focus:ring-4 focus:ring-blue-200 cursor-pointer"
+                style={{borderColor: '#B7C9E2', textDecoration: 'none'}}
+                tabIndex={0}
+                role="button"
+                onClick={() => router.push(project.live)}
+                onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') { router.push(project.live); } }}
+                aria-label={`View details for ${project.title}`}
+              >
                 <div className="space-y-4">
-                  <h3 className="text-xl font-bold mb-3" style={{color: '#104F8F'}}>
+                  <h3 className="text-xl font-bold mb-3 group-hover:underline" style={{color: '#104F8F'}}>
                     {project.title}
                   </h3>
-                  
                   <p className="text-sm leading-relaxed" style={{color: '#104F8F'}}>
                     {project.description}
                   </p>
-
-                  {/* Category Badge */}
                   <div className="inline-block px-3 py-1 rounded-full text-xs font-medium" style={{backgroundColor: '#B7C9E2', color: '#104F8F'}}>
                     {project.category}
                   </div>
-
-                  {/* Technologies */}
                   <div className="flex flex-wrap gap-2">
-                    {project.technologies.slice(0, 3).map((tech) => (
+                    {(project.technologies ?? []).slice(0, 3).map((tech) => (
                       <span key={tech} className="px-2 py-1 text-xs rounded-lg" style={{backgroundColor: '#F5F6F7', color: '#104F8F'}}>
                         {tech}
                       </span>
                     ))}
-                    {project.technologies.length > 3 && (
+                    {(project.technologies ?? []).length > 3 && (
                       <span className="px-2 py-1 text-xs rounded-lg" style={{backgroundColor: '#F5F6F7', color: '#104F8F'}}>
-                        +{project.technologies.length - 3} more
+                        +{(project.technologies ?? []).length - 3} more
                       </span>
                     )}
                   </div>
-
-                  {/* Action Buttons */}
                   <div className="flex gap-3 pt-4">
                     <a
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-2 border rounded-lg transition-colors duration-200 text-sm"
+                      className="flex items-center gap-2 px-4 py-2 border rounded-lg transition-colors duration-200 text-sm bg-white/20 hover:bg-white/30"
                       style={{borderColor: '#B7C9E2', color: '#104F8F'}}
+                      tabIndex={0}
+                      onClick={e => e.stopPropagation()}
                     >
                       <Github className="w-4 h-4" />
                       Code
                     </a>
-                    <Link
-                      href={project.live}
-                      className="flex items-center gap-2 px-4 py-2 text-white rounded-lg transition-colors duration-200 text-sm"
-                      style={{backgroundColor: '#104F8F'}}
-                    >
-                      <ExternalLink className="w-4 h-4" />
-                      Live Demo
-                    </Link>
                   </div>
                 </div>
               </div>

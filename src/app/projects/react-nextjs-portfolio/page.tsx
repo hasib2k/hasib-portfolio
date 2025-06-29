@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function ReactNextjsPortfolio() {
   const technologies = [
-    'React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Vercel'
+    'React', 'JavaScript', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Vercel'
   ]
 
   const features = [
@@ -76,7 +76,7 @@ export default function ReactNextjsPortfolio() {
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <a
-              href="https://github.com/hasib2k/hasib-portfolio"
+              href="https://github.com/hasib2k/marcel_grace"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 px-8 py-4 rounded-2xl font-semibold text-white transition-all duration-300 hover:shadow-2xl transform hover:scale-105 shadow-xl"
@@ -86,7 +86,7 @@ export default function ReactNextjsPortfolio() {
               View Code
             </a>
             <a
-              href="https://hasibdev.vercel.app"
+              href="https://www.marcelgrace.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 px-8 py-4 rounded-2xl font-semibold border backdrop-blur-md bg-white/10 shadow-lg transition-all duration-300 hover:bg-white/20 hover:scale-105"

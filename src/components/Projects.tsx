@@ -6,18 +6,18 @@ import { ExternalLink, Github } from 'lucide-react'
 export default function Projects() {
   const projects = [
     {
+      title: "Portfolio Website",
+      github: "https://github.com/hasib2k/hasib-portfolio",
+      live: "https://dev-portfolio-main.vercel.app",
+    },
+    {
+      title: "Movie Streaming Platform",
+      github: "https://github.com/hasib2k/Movie_Streaming",
+      live: "https://dev-portfolio-main.vercel.app",
+    },
+    {
       title: "E-Commerce Platform",
-      github: "https://github.com/hasib2k",
-      live: "https://dev-portfolio-main.vercel.app",
-    },
-    {
-      title: "Task Management App",
-      github: "https://github.com/hasib2k",
-      live: "https://dev-portfolio-main.vercel.app",
-    },
-    {
-      title: "AI Chat Application",
-      github: "https://github.com/hasib2k",
+      github: "https://github.com/hasib2k/react_e-commerce",
       live: "https://dev-portfolio-main.vercel.app",
     }
   ]

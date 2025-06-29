@@ -47,6 +47,7 @@ function FAQItem({
 
 export default function ContactPage() {
   const [openFAQIndex, setOpenFAQIndex] = useState<number | null>(null)
+  const [formSent, setFormSent] = useState(false)
 
   const faqData = [
     {
@@ -187,7 +188,21 @@ export default function ContactPage() {
             {/* Contact Form */}
             <div className="rounded-2xl border backdrop-blur-md bg-white/10 shadow-lg p-8" style={{borderColor: '#B7C9E2'}}>
               <h2 className="text-3xl font-bold mb-6" style={{color: '#104F8F'}}>Send a Message</h2>
-              <form className="space-y-6">
+              {formSent && (
+                <div className="mb-6 p-4 rounded-lg bg-green-100 text-green-800 text-center font-semibold border border-green-300">
+                  Thank you! Your message has been prepared for sending. Please check your email client to complete the process.
+                </div>
+              )}
+              <form
+                className="space-y-6"
+                action="mailto:hasibahmed.ig@gmail.com"
+                method="POST"
+                encType="text/plain"
+                onSubmit={() => {
+                  setFormSent(true);
+                  setTimeout(() => setFormSent(false), 8000);
+                }}
+              >
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium mb-2" style={{color: '#104F8F'}}>
@@ -200,6 +215,7 @@ export default function ContactPage() {
                       className="w-full px-4 py-3 border rounded-lg focus:ring-2 transition-colors"
                       style={{borderColor: '#B7C9E2', color: '#104F8F'}}
                       placeholder="John Doe"
+                      required
                     />
                   </div>
                   <div>
@@ -213,6 +229,7 @@ export default function ContactPage() {
                       className="w-full px-4 py-3 border rounded-lg focus:ring-2 transition-colors"
                       style={{borderColor: '#B7C9E2', color: '#104F8F'}}
                       placeholder="john@example.com"
+                      required
                     />
                   </div>
                 </div>
@@ -228,6 +245,7 @@ export default function ContactPage() {
                     className="w-full px-4 py-3 border rounded-lg focus:ring-2 transition-colors"
                     style={{borderColor: '#B7C9E2', color: '#104F8F'}}
                     placeholder="Project Discussion"
+                    required
                   />
                 </div>
 
@@ -242,6 +260,7 @@ export default function ContactPage() {
                     className="w-full px-4 py-3 border rounded-lg focus:ring-2 transition-colors resize-none"
                     style={{borderColor: '#B7C9E2', color: '#104F8F'}}
                     placeholder="Tell me about your project..."
+                    required
                   ></textarea>
                 </div>
 

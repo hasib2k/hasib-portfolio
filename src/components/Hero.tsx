@@ -7,9 +7,9 @@ import Image from 'next/image'
 export default function Hero() {
   const stats = [
     { number: "100+", label: "Manual Test Cases" },
-    { number: "500+", label: "Pytest Automation Scripts" },
-    { number: "50+", label: "API Endpoints Tested" },
-    { number: "20+", label: "React/Next.js Projects" }
+    { number: "20+", label: "Pytest Automation Scripts" },
+    { number: "15+", label: "API Endpoints Tested" },
+    { number: "10+", label: "React/Next.js Projects" }
   ]
 
   return (
@@ -42,7 +42,7 @@ export default function Hero() {
                 className="text-xl font-medium"
                 style={{color: '#104F8F'}}
               >
-                QA Automation Engineer & Frontend Developer | Python • Pytest • React • Next.js
+                SQA Engineer & Frontend Developer | Python • Pytest • React • Next.js
               </motion.p>
               
               <motion.p 

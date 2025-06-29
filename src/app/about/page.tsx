@@ -27,7 +27,7 @@ export default function About() {
               <div className="relative">
                 <div className="absolute -left-4 top-0 w-1 h-full rounded-full" style={{backgroundColor: '#104F8F'}}></div>
                 <p className="pl-8">
-                  Hi, I am <span className="font-semibold" style={{color: '#104F8F'}}>Hasib Ahmed</span>, a dedicated QA Engineer & Frontend Developer with over a year of
+                  Hi, I am <span className="font-semibold" style={{color: '#104F8F'}}>Hasib Ahmed</span>, a dedicated SQA Engineer & Frontend Developer with over a year of
                   experience in real-time projects. I continuously evolve my skills in software testing, quality assurance, and modern frontend
                   technologies. With a degree in Computer Science Engineering, I enhance my
                   efficiency in quality assurance and web development.
@@ -51,7 +51,7 @@ export default function About() {
             </h2>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {['JavaScript', 'TypeScript', 'React', 'Next.js', 'Node.js', 'Python', 'Java', 'HTML/CSS', 'Tailwind CSS', 'MongoDB', 'SQL', 'Git'].map((skill) => (
+              {['TypeScript', 'React', 'Next.js', 'Node.js', 'Python', 'Java', 'HTML/CSS', 'Tailwind CSS', 'Git'].map((skill) => (
                 <div 
                   key={skill} 
                   className="group rounded-xl p-4 text-center transition-all duration-300 transform hover:scale-105 hover:shadow-lg border border-gray-200"
@@ -87,11 +87,11 @@ export default function About() {
             
             <div className="relative rounded-xl p-6 border-l-4" style={{backgroundColor: '#B7C9E2', borderColor: '#104F8F'}}>
               <div className="absolute top-4 right-4">
-                <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
               </div>
               <h3 className="text-xl font-semibold mb-2" style={{color: '#104F8F'}}>Bachelor&apos;s Degree</h3>
-              <p className="font-medium mb-1" style={{color: '#104F8F'}}>Computer Science Engineering</p>
-              <p className="text-sm" style={{color: '#104F8F'}}>Completed</p>
+              <p className="font-medium mb-1" style={{color: '#104F8F'}}>Computer Science & Engineering</p>
+              <p className="text-sm" style={{color: '#104F8F'}}>Completed 2024</p>
             </div>
           </div>
 

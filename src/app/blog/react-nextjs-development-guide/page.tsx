@@ -277,58 +277,6 @@ function Profile() {
                   </div>
                 </section>
 
-                {/* State Management */}
-                <section>
-                  <h2 className="text-3xl font-bold mb-4" style={{color: '#104F8F'}}>Modern State Management</h2>
-                  
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div className="p-6 rounded-lg border backdrop-blur-md bg-white/10" style={{borderColor: '#B7C9E2'}}>
-                      <h3 className="text-xl font-semibold mb-3" style={{color: '#104F8F'}}>Zustand (Recommended)</h3>
-                      <p className="leading-relaxed mb-3 text-sm">
-                        Lightweight, unopinionated state management with minimal boilerplate.
-                      </p>
-                      <div className="bg-white/20 rounded-lg p-3 border" style={{borderColor: '#B7C9E2'}}>
-                        <pre className="text-xs overflow-x-auto" style={{color: '#104F8F'}}>
-{`import { create } from 'zustand'
-
-interface UserStore {
-  user: User | null
-  setUser: (user: User) => void
-  logout: () => void
-}
-
-export const useUserStore = create<UserStore>((set) => ({
-  user: null,
-  setUser: (user) => set({ user }),
-  logout: () => set({ user: null })
-}))`}
-                        </pre>
-                      </div>
-                    </div>
-                    
-                    <div className="p-6 rounded-lg border backdrop-blur-md bg-white/10" style={{borderColor: '#B7C9E2'}}>
-                      <h3 className="text-xl font-semibold mb-3" style={{color: '#104F8F'}}>Context + useReducer</h3>
-                      <p className="leading-relaxed mb-3 text-sm">
-                        Built-in React solution for complex state management without external dependencies.
-                      </p>
-                      <div className="bg-white/20 rounded-lg p-3 border" style={{borderColor: '#B7C9E2'}}>
-                        <pre className="text-xs overflow-x-auto" style={{color: '#104F8F'}}>
-{`const ThemeContext = createContext()
-
-function themeReducer(state, action) {
-  switch (action.type) {
-    case 'TOGGLE_THEME':
-      return { theme: state.theme === 'light' ? 'dark' : 'light' }
-    default:
-      return state
-  }
-}`}
-                        </pre>
-                      </div>
-                    </div>
-                  </div>
-                </section>
-
                 {/* TypeScript Integration */}
                 <section>
                   <h2 className="text-3xl font-bold mb-4" style={{color: '#104F8F'}}>TypeScript Best Practices</h2>

@@ -32,8 +32,8 @@ export default function About() {
               </div>
               
               {/* Enhanced Decorative Elements */}
-              <div className="absolute -top-8 -right-8 w-32 h-32 rounded-full -z-10 opacity-70" style={{backgroundColor: '#B7C9E2'}}></div>
-              <div className="absolute -bottom-8 -left-8 w-40 h-40 rounded-full -z-10 opacity-50" style={{backgroundColor: '#104F8F'}}></div>
+              <div className="absolute -top-4 md:-top-8 -right-4 md:-right-8 w-20 h-20 md:w-32 md:h-32 rounded-full -z-10 opacity-70" style={{backgroundColor: '#B7C9E2'}}></div>
+              <div className="absolute -bottom-4 md:-bottom-8 -left-4 md:-left-8 w-24 h-24 md:w-40 md:h-40 rounded-full -z-10 opacity-50" style={{backgroundColor: '#104F8F'}}></div>
               
               {/* Floating geometric shapes */}
               <motion.div 
