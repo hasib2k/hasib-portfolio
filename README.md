@@ -27,7 +27,7 @@ A modern, responsive portfolio website built with Next.js 15, TypeScript, and Ta
 1. **Clone the repository**
    ```bash
    git clone <repository-url>
-   cd dev_portfolio
+   cd hasib-portfolio
    ```
 
 2. **Install dependencies**
