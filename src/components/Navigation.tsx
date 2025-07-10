@@ -2,18 +2,38 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, Home, User, Code, FolderOpen, BookOpen, Briefcase, Mail } from 'lucide-react'
+import { Menu, X, Home, User, Code, FolderOpen, BookOpen, Briefcase, Mail, ChevronDown } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
+  const [projectDropdownOpen, setProjectDropdownOpen] = useState(false)
 
   const navItems = [
     { href: '/', label: 'Home', icon: Home },
     { href: '/about', label: 'About', icon: User },
     { href: '/skills', label: 'Skills', icon: Code },
-    { href: '/projects', label: 'Projects', icon: FolderOpen },
+    {
+      href: '/projects',
+      label: 'Projects',
+      icon: FolderOpen,
+      hasDropdown: true,
+      dropdowns: [
+        {
+          label: 'Testing Project',
+          items: [
+            { href: '/projects/testing-project', label: 'Testing Project' }
+          ]
+        },
+        {
+          label: 'Development Project',
+          items: [
+            { href: '/projects/development-project', label: 'Development Project' }
+          ]
+        }
+      ]
+    },
     { href: '/blog', label: 'Blog', icon: BookOpen },
     { href: '/hireme', label: 'Hire Me', icon: Briefcase },
   ]
@@ -21,28 +41,42 @@ export default function Navigation() {
   // Close menu when clicking outside or pressing escape
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      const nav = document.querySelector('nav')
-      if (nav && !nav.contains(event.target as Node)) {
-        setIsOpen(false)
+      const nav = document.querySelector('nav');
+      const dropdown = document.getElementById('project-dropdown-menu');
+      const button = document.getElementById('project-dropdown-btn');
+      if (
+        nav &&
+        !nav.contains(event.target as Node)
+      ) {
+        setIsOpen(false);
+        setProjectDropdownOpen(false);
+      } else if (
+        dropdown &&
+        !dropdown.contains(event.target as Node) &&
+        button &&
+        !button.contains(event.target as Node)
+      ) {
+        setProjectDropdownOpen(false);
       }
-    }
+    };
 
     const handleEscapeKey = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
-        setIsOpen(false)
+        setIsOpen(false);
+        setProjectDropdownOpen(false);
       }
-    }
+    };
 
-    if (isOpen) {
-      document.addEventListener('mousedown', handleClickOutside)
-      document.addEventListener('keydown', handleEscapeKey)
+    if (isOpen || projectDropdownOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+      document.addEventListener('keydown', handleEscapeKey);
     }
 
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside)
-      document.removeEventListener('keydown', handleEscapeKey)
-    }
-  }, [isOpen])
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('keydown', handleEscapeKey);
+    };
+  }, [isOpen, projectDropdownOpen]);
 
   // Water drop effect handler
   const createWaterDropEffect = (e: MouseEvent | TouchEvent) => {
@@ -135,7 +169,46 @@ export default function Navigation() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-3">
             {navItems.map((item) => {
-              const IconComponent = item.icon
+              const IconComponent = item.icon;
+              if (item.hasDropdown) {
+                return (
+                  <div key={item.href} className="relative">
+                    <button
+                      id="project-dropdown-btn"
+                      className="nav-button relative transition-all duration-300 hover:opacity-80 hover:scale-105 px-4 py-2 rounded-lg backdrop-blur-md bg-white/10 shadow-lg border overflow-hidden touch-manipulation flex items-center gap-2"
+                      style={{color: '#104F8F', borderColor: '#B7C9E2', backgroundColor: 'rgba(255,255,255,0.1)'}}
+                      tabIndex={0}
+                      aria-haspopup="true"
+                      aria-expanded={projectDropdownOpen}
+                      onClick={() => setProjectDropdownOpen((open) => !open)}
+                    >
+                      <IconComponent size={16} />
+                      <span className="relative z-10">{item.label}</span>
+                      <ChevronDown size={16} style={{color: '#104F8F'}} className={`ml-1 transition-transform duration-200 ${projectDropdownOpen ? 'rotate-180' : ''}`} />
+                    </button>
+                    {projectDropdownOpen && (
+                      <div
+                        id="project-dropdown-menu"
+                        className="absolute left-0 mt-6 w-56 rounded-lg shadow-lg border border-blue-200 z-50 py-2 bg-white/10 backdrop-blur-md"
+                        style={{borderColor: '#B7C9E2'}}>
+                        {item.dropdowns.map((dropdown) => (
+                          dropdown.items.map((drop) => (
+                            <Link
+                              key={drop.href}
+                              href={drop.href}
+                              className="block px-6 py-3 text-blue-900 hover:bg-blue-100 transition-colors duration-200 rounded-lg"
+                              style={{color: '#104F8F'}}
+                              onClick={() => setProjectDropdownOpen(false)}
+                            >
+                              {drop.label}
+                            </Link>
+                          ))
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                );
+              }
               return (
                 <Link
                   key={item.href}
@@ -146,7 +219,7 @@ export default function Navigation() {
                   <IconComponent size={16} />
                   <span className="relative z-10">{item.label}</span>
                 </Link>
-              )
+              );
             })}
             <a
               href="/contact"

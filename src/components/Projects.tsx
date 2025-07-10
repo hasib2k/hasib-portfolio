@@ -6,19 +6,18 @@ import { ExternalLink, Github } from 'lucide-react'
 export default function Projects() {
   const projects = [
     {
-      title: "Portfolio Website",
-      github: "https://github.com/hasib2k/hasib-portfolio",
-      live: "https://dev-portfolio-main.vercel.app",
+      title: "WyzrFriends Social Platform",
+      github: "https://wyzrfriends.com/", // No public repo, using live link
+      live: "https://wyzrfriends.com/",
+      description: "WyzrFriends is a vibrant social networking platform designed to help users connect, share, and build meaningful communities. Features include real-time chat, group creation, event management, and a modern, mobile-friendly UI with smooth animations.",
+      // image removed
     },
     {
-      title: "Movie Streaming Platform",
-      github: "https://github.com/hasib2k/Movie_Streaming",
-      live: "https://dev-portfolio-main.vercel.app",
-    },
-    {
-      title: "E-Commerce Platform",
-      github: "https://github.com/hasib2k/react_e-commerce",
-      live: "https://dev-portfolio-main.vercel.app",
+      title: "JICA Official Website",
+      github: "https://www.jica.go.jp/english/", // No public repo, using live link
+      live: "https://www.jica.go.jp/english/",
+      description: "JICA's official website is a comprehensive portal for the Japan International Cooperation Agency, offering resources on global development, project updates, and international cooperation news. The site is accessible, multilingual, and optimized for performance.",
+      // image removed
     }
   ]
 
@@ -60,10 +59,13 @@ export default function Projects() {
                 <div className="w-6 h-6 rounded-full bg-white/30"></div>
               </div>
 
-              <h3 className="text-2xl font-bold mb-8 transition-colors duration-300"
+
+              {/* No logo/image */}
+              <h3 className="text-2xl font-bold mb-4 transition-colors duration-300"
                   style={{color: '#104F8F'}}>
                 {project.title}
               </h3>
+              <p className="mb-8 text-base text-gray-700 dark:text-gray-300 min-h-[60px]">{project.description}</p>
 
               {/* Enhanced Links */}
               <div className="flex gap-4">
