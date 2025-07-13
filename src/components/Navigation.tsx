@@ -42,8 +42,8 @@ export default function Navigation() {
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       const nav = document.querySelector('nav');
-      const dropdown = document.getElementById('project-dropdown-menu');
-      const button = document.getElementById('project-dropdown-btn');
+      const dropdown = document.getElementById('project-dropdown-menu') || document.getElementById('project-dropdown-menu-mobile');
+      const button = document.getElementById('project-dropdown-btn') || document.getElementById('project-dropdown-btn-mobile');
       if (
         nav &&
         !nav.contains(event.target as Node)
@@ -253,7 +253,51 @@ export default function Navigation() {
             >
               <div className="py-3 space-y-2 px-4">
                 {navItems.map((item) => {
-                  const IconComponent = item.icon
+                  const IconComponent = item.icon;
+                  if (item.hasDropdown) {
+                    return (
+                      <div key={item.href} className="relative">
+                        <button
+                          id="project-dropdown-btn-mobile"
+                          type="button"
+                          className="nav-button w-full flex items-center gap-3 px-4 py-3 rounded-lg backdrop-blur-md bg-white/10 shadow-lg border transition-all duration-300 hover:opacity-80 hover:scale-105"
+                          style={{color: '#104F8F', borderColor: '#B7C9E2'}}
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setProjectDropdownOpen((open) => !open);
+                          }}
+                          aria-haspopup="true"
+                          aria-expanded={projectDropdownOpen}
+                        >
+                          <IconComponent size={18} />
+                          <span className="relative z-10">{item.label}</span>
+                          <ChevronDown size={16} style={{color: '#104F8F'}} className={`ml-1 transition-transform duration-200 ${projectDropdownOpen ? 'rotate-180' : ''}`} />
+                        </button>
+                        {projectDropdownOpen && (
+                          <div id="project-dropdown-menu-mobile" className="mt-2 w-full rounded-lg shadow-lg border border-blue-200 z-50 py-2 bg-white/10 backdrop-blur-md flex flex-col gap-2" style={{borderColor: '#B7C9E2'}}>
+                            {item.dropdowns.map((dropdown) => (
+                              dropdown.items.map((drop) => (
+                                <Link
+                                  key={drop.href}
+                                  href={drop.href}
+                                  className="block w-full px-6 py-3 text-blue-900 font-semibold text-base sm:text-lg hover:bg-blue-100 transition-colors duration-200 rounded-lg text-left"
+                                  style={{color: '#104F8F'}}
+                                  onClick={() => {
+                                    setProjectDropdownOpen(false);
+                                    setIsOpen(false);
+                                  }}
+                                  tabIndex={0}
+                                  role="button"
+                                >
+                                  {drop.label}
+                                </Link>
+                              ))
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    );
+                  }
                   return (
                     <Link
                       key={item.href}
@@ -265,7 +309,7 @@ export default function Navigation() {
                       <IconComponent size={18} />
                       <span className="relative z-10">{item.label}</span>
                     </Link>
-                  )
+                  );
                 })}
                 <a
                   href="/contact"
