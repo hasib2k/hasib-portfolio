@@ -10,14 +10,18 @@ export default function Projects() {
       github: "https://wyzrfriends.com/", // No public repo, using live link
       live: "https://wyzrfriends.com/",
       description: "WyzrFriends is a vibrant social networking platform designed to help users connect, share, and build meaningful communities. Features include real-time chat, group creation, event management, and a modern, mobile-friendly UI with smooth animations.",
-      // image removed
     },
     {
       title: "JICA Official Website",
       github: "https://www.jica.go.jp/english/", // No public repo, using live link
       live: "https://www.jica.go.jp/english/",
       description: "JICA's official website is a comprehensive portal for the Japan International Cooperation Agency, offering resources on global development, project updates, and international cooperation news. The site is accessible, multilingual, and optimized for performance.",
-      // image removed
+    },
+    {
+      title: "Marcel Grace Website",
+      github: "https://github.com/hasib2k/marcel_grace",
+      live: "https://www.marcelgrace.com/",
+      description: "A professional website for Marcel Grace, a software development company. Showcases innovative digital solutions, company portfolio, client success stories, and a full range of development services, all with a modern UI/UX and responsive design.",
     }
   ]
 
@@ -59,7 +63,6 @@ export default function Projects() {
                 <div className="w-6 h-6 rounded-full bg-white/30"></div>
               </div>
 
-
               {/* No logo/image */}
               <h3 className="text-2xl font-bold mb-4 transition-colors duration-300"
                   style={{color: '#104F8F'}}>
@@ -69,32 +72,34 @@ export default function Projects() {
 
               {/* Enhanced Links */}
               <div className="flex gap-4">
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 flex items-center justify-center gap-2 px-4 py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg border-2"
-                  style={{
-                    borderColor: '#B7C9E2',
-                    backgroundColor: 'transparent',
-                    color: '#104F8F'
-                  }}
-                  onMouseEnter={(e) => {
-                    const target = e.currentTarget;
-                    target.style.backgroundColor = '#104F8F';
-                    target.style.color = 'white';
-                    target.style.borderColor = '#104F8F';
-                  }}
-                  onMouseLeave={(e) => {
-                    const target = e.currentTarget;
-                    target.style.backgroundColor = 'transparent';
-                    target.style.color = '#104F8F';
-                    target.style.borderColor = '#B7C9E2';
-                  }}
-                >
-                  <Github size={18} />
-                  <span>Code</span>
-                </a>
+                {project.github && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 flex items-center justify-center gap-2 px-4 py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg border-2"
+                    style={{
+                      borderColor: '#B7C9E2',
+                      backgroundColor: 'transparent',
+                      color: '#104F8F'
+                    }}
+                    onMouseEnter={(e) => {
+                      const target = e.currentTarget;
+                      target.style.backgroundColor = '#104F8F';
+                      target.style.color = 'white';
+                      target.style.borderColor = '#104F8F';
+                    }}
+                    onMouseLeave={(e) => {
+                      const target = e.currentTarget;
+                      target.style.backgroundColor = 'transparent';
+                      target.style.color = '#104F8F';
+                      target.style.borderColor = '#B7C9E2';
+                    }}
+                  >
+                    <Github size={18} />
+                    <span>Code</span>
+                  </a>
+                )}
                 <a
                   href={project.live}
                   target="_blank"
