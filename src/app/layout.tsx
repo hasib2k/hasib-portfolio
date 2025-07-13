@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
-import { MuseoModerno } from "next/font/google";
+import { Tilt_Neon } from "next/font/google";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import "./globals.css";
 
-const museoModerno = MuseoModerno({
+const tiltNeon = Tilt_Neon({
   subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  style: ["normal", "italic"],
-  variable: "--font-museo-moderno",
+  weight: ["400"],
+  variable: "--font-tilt-neon",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -37,8 +37,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={museoModerno.variable} suppressHydrationWarning>
-      <body className={`${museoModerno.className} antialiased`}>
+    <html lang="en" className={tiltNeon.variable} suppressHydrationWarning>
+      <body className={`${tiltNeon.className} antialiased font-sans`}>
         <div className="flex flex-col min-h-screen">
           <Navigation />
           <main className="flex-1">
