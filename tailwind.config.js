@@ -9,9 +9,19 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: [
-          'Tilt Neon',
-          'var(--font-tilt-neon)',
-          'system-ui',
+          'Exo 2',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          'Segoe UI',
+          'Roboto',
+          'sans-serif',
+        ],
+        serif: [
+          'Exo 2',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          'Segoe UI',
+          'Roboto',
           'sans-serif',
         ],
       },

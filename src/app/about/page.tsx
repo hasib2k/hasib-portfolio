@@ -27,7 +27,7 @@ export default function About() {
             {/* Profile Image */}
             <div className="flex justify-center lg:justify-end">
               <div className="relative group">
-                <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 rounded-full blur-sm opacity-15 group-hover:opacity-25 transition duration-1000 group-hover:duration-200"></div>
                 <div className="relative">
                   <Image
                     src="/assets/Profile2.jpeg"

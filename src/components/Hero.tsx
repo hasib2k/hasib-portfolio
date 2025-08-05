@@ -13,7 +13,9 @@ export default function Hero() {
   ]
 
   return (
-    <section className="min-h-screen relative overflow-hidden" style={{backgroundImage: 'linear-gradient(135deg, #F5F6F7 0%, #B7C9E2 100%)'}}>
+    <section className="min-h-screen relative overflow-hidden" style={{
+      backgroundImage: 'linear-gradient(135deg, #F5F6F7 0%, #B7C9E2 100%)'
+    }}>
       <div className="container mx-auto px-4 sm:px-6 pt-16 sm:pt-20 pb-12 sm:pb-16">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[80vh]">
           {/* Content */}
@@ -24,6 +26,17 @@ export default function Hero() {
             className="space-y-6 sm:space-y-8"
           >
             <div className="space-y-4">
+              <motion.p 
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.05, duration: 0.5 }}
+                className="text-lg sm:text-xl lg:text-2xl font-medium"
+                style={{color: '#104F8F'}}
+              >
+                
+                Hey there! This is,
+              </motion.p>
+              
               <motion.h1 
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -31,7 +44,6 @@ export default function Hero() {
                 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight"
                 style={{color: '#104F8F'}}
               >
-                Hello, I&apos;m
                 <span className="block" style={{color: '#104F8F'}}>Hasib Ahmed</span>
               </motion.h1>
               
@@ -39,20 +51,13 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 0.5 }}
-                className="text-lg sm:text-xl font-medium"
-                style={{color: '#104F8F'}}
+                className="text-lg sm:text-xl font-light tracking-widest uppercase"
+                style={{
+                  color: '#104F8F',
+                  letterSpacing: '0.15em'
+                }}
               >
-                SQA Engineer & Frontend Developer | Python • Pytest • React • Next.js
-              </motion.p>
-              
-              <motion.p 
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3, duration: 0.5 }}
-                className="text-base sm:text-lg leading-relaxed max-w-xl"
-                style={{color: '#104F8F'}}
-              >
-                Expert in software testing and frontend development. I create comprehensive testing solutions with Python/Pytest and build modern web applications with React/Next.js.
+                SQA Engineer & Frontend Developer
               </motion.p>
             </div>
 
@@ -187,6 +192,17 @@ export default function Hero() {
                 style={{backgroundColor: '#104F8F', opacity: 0.4}}
               ></motion.div>
             </div>
+            
+            {/* Tagline under image */}
+            <motion.p 
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6, duration: 0.5 }}
+              className="text-center text-base sm:text-lg italic mt-6"
+              style={{color: '#104F8F'}}
+            >
+              &quot;Driven by Curiosity, Powered by Code, Perfected by Testing.&quot;
+            </motion.p>
           </motion.div>
         </div>
 
