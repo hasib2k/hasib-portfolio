@@ -1,5 +1,4 @@
 import { Metadata } from 'next'
-import Link from 'next/link'
 import { Github, ExternalLink, ShoppingCart, Palette, Zap, TestTube } from 'lucide-react'
 import ProjectBackButton from '@/components/ProjectBackButton'
 

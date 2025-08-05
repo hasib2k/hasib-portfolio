@@ -30,7 +30,7 @@ export default function About() {
                 <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
                 <div className="relative">
                   <Image
-                    src="/assets/profile2.jpeg"
+                    src="/assets/Profile2.jpeg"
                     alt="Hasib Ahmed - QA Engineer & Frontend Developer"
                     width={300}
                     height={300}

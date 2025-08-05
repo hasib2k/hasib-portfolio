@@ -181,10 +181,21 @@ export default function ProjectsPage() {
                 style={{borderColor: '#B7C9E2'}}
                 tabIndex={0}
                 role="button"
-                onClick={() => project.live.startsWith('/') ? router.push(project.live) : window.open(project.live, '_blank')}
+                onClick={() => {
+                  if (project.live.startsWith('/')) {
+                    router.push(project.live);
+                  } else {
+                    window.open(project.live, '_blank');
+                  }
+                }}
                 onKeyDown={e => { 
                   if (e.key === 'Enter' || e.key === ' ') { 
-                    project.live.startsWith('/') ? router.push(project.live) : window.open(project.live, '_blank')
+                    e.preventDefault();
+                    if (project.live.startsWith('/')) {
+                      router.push(project.live);
+                    } else {
+                      window.open(project.live, '_blank');
+                    }
                   } 
                 }}
                 aria-label={`View details for ${project.title}`}
@@ -248,7 +259,7 @@ export default function ProjectsPage() {
           {filteredProjects.length === 0 && (
             <div className="text-center py-12">
               <p className="text-lg mb-4" style={{color: '#104F8F'}}>
-                No projects found for "{activeFilter}"
+                No projects found for &quot;{activeFilter}&quot;
               </p>
               <button
                 onClick={() => handleFilterChange('All')}

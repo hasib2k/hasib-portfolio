@@ -1,7 +1,5 @@
 'use client'
 
-import { Metadata } from 'next'
-import Link from 'next/link'
 import { Github, ExternalLink, Code, TestTube, Zap, Settings } from 'lucide-react'
 import ProjectBackButton from '@/components/ProjectBackButton'
 

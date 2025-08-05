@@ -1,6 +1,5 @@
 'use client'
 
-import Link from 'next/link'
 import { Github, ExternalLink, FileText, Bug, BarChart3, CheckSquare } from 'lucide-react'
 import ProjectBackButton from '@/components/ProjectBackButton'
 
