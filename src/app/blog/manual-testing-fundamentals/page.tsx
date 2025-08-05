@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowLeft, Calendar, Clock, User, CheckSquare, FileText, Target, AlertCircle } from 'lucide-react'
+import BlogNavigation from '@/components/BlogNavigation'
 
 export const metadata: Metadata = {
   title: 'Manual Testing Fundamentals: Creating Effective Test Cases - Hasib Ahmed',
@@ -328,6 +329,9 @@ export default function ManualTestingFundamentals() {
                 ))}
               </div>
             </div>
+
+            {/* Blog Navigation */}
+            <BlogNavigation currentSlug="manual-testing-fundamentals" />
           </article>
         </div>
       </div>

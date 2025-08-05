@@ -1,11 +1,8 @@
-import { Metadata } from 'next'
-import Link from 'next/link'
-import { ArrowLeft, Github, ExternalLink, FileText, Bug, BarChart3, CheckSquare } from 'lucide-react'
+'use client'
 
-export const metadata: Metadata = {
-  title: 'Manual Testing Documentation Portal - Hasib Ahmed',
-  description: 'Comprehensive manual testing documentation system with test case management, bug tracking workflows, and quality metrics dashboard.'
-}
+import Link from 'next/link'
+import { Github, ExternalLink, FileText, Bug, BarChart3, CheckSquare } from 'lucide-react'
+import ProjectBackButton from '@/components/ProjectBackButton'
 
 export default function ManualTestingPortal() {
   const technologies = [
@@ -40,14 +37,7 @@ export default function ManualTestingPortal() {
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           {/* Back Button */}
-          <Link 
-            href="/projects"
-            className="inline-flex items-center gap-2 mb-8 px-4 py-2 rounded-lg backdrop-blur-md bg-white/10 shadow-lg border transition-all duration-300 hover:bg-white/20 hover:scale-105"
-            style={{borderColor: '#B7C9E2', color: '#104F8F'}}
-          >
-            <ArrowLeft size={20} />
-            Back to Projects
-          </Link>
+          <ProjectBackButton />
 
           {/* Header */}
           <div className="text-center mb-12">

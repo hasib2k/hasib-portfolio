@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowLeft, Calendar, Clock, User, Target, Users, Zap, TrendingUp } from 'lucide-react'
+import BlogNavigation from '@/components/BlogNavigation'
 
 export const metadata: Metadata = {
   title: 'Quality Assurance in Agile Development: Testing Strategies - Hasib Ahmed',
@@ -316,6 +317,9 @@ export default function AgileQaTestingStrategies() {
                 ))}
               </div>
             </div>
+
+            {/* Blog Navigation */}
+            <BlogNavigation currentSlug="agile-qa-testing-strategies" />
           </article>
         </div>
       </div>

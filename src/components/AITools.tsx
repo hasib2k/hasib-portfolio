@@ -20,7 +20,7 @@ export default function AITools() {
             <h3 className="text-lg sm:text-2xl font-bold mb-3 sm:mb-4 transition-colors duration-300" style={{color: '#104F8F'}}>
               Copilot Robot
             </h3>
-            <p className="mb-6 sm:mb-8 text-sm sm:text-base text-gray-700 dark:text-gray-300 min-h-[48px] sm:min-h-[60px]">An AI-powered coding assistant that helps you write, debug, and optimize code in real time. Supports multiple languages, provides intelligent suggestions, and integrates seamlessly with modern development workflows.</p>
+            <p className="mb-6 sm:mb-8 text-sm sm:text-base min-h-[48px] sm:min-h-[60px]" style={{color: '#104F8F'}}>An AI-powered coding assistant that helps you write, debug, and optimize code in real time. Supports multiple languages, provides intelligent suggestions, and integrates seamlessly with modern development workflows.</p>
             <div className="flex gap-4">
               <a
                 href="https://github.com/features/copilot"
@@ -42,7 +42,7 @@ export default function AITools() {
             <h3 className="text-lg sm:text-2xl font-bold mb-3 sm:mb-4 transition-colors duration-300" style={{color: '#104F8F'}}>
               ChatGPT
             </h3>
-            <p className="mb-6 sm:mb-8 text-sm sm:text-base text-gray-700 dark:text-gray-300 min-h-[48px] sm:min-h-[60px]">A conversational AI model by OpenAI that can answer questions, assist with writing, and provide creative ideas. Used for chatbots, content generation, and productivity tools.</p>
+            <p className="mb-6 sm:mb-8 text-sm sm:text-base min-h-[48px] sm:min-h-[60px]" style={{color: '#104F8F'}}>A conversational AI model by OpenAI that can answer questions, assist with writing, and provide creative ideas. Used for chatbots, content generation, and productivity tools.</p>
             <div className="flex gap-4">
               <a
                 href="https://chat.openai.com/"
@@ -64,7 +64,7 @@ export default function AITools() {
             <h3 className="text-lg sm:text-2xl font-bold mb-3 sm:mb-4 transition-colors duration-300" style={{color: '#104F8F'}}>
               Midjourney
             </h3>
-            <p className="mb-6 sm:mb-8 text-sm sm:text-base text-gray-700 dark:text-gray-300 min-h-[48px] sm:min-h-[60px]">An AI image generation tool that creates stunning visuals from text prompts. Popular for digital art, design inspiration, and creative projects.</p>
+            <p className="mb-6 sm:mb-8 text-sm sm:text-base min-h-[48px] sm:min-h-[60px]" style={{color: '#104F8F'}}>An AI image generation tool that creates stunning visuals from text prompts. Popular for digital art, design inspiration, and creative projects.</p>
             <div className="flex gap-4">
               <a
                 href="https://www.midjourney.com/"

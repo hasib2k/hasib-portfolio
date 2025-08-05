@@ -68,7 +68,7 @@ export default function Projects() {
                   style={{color: '#104F8F'}}>
                 {project.title}
               </h3>
-              <p className="mb-6 sm:mb-8 text-sm sm:text-base text-gray-700 dark:text-gray-300 min-h-[48px] sm:min-h-[60px]">{project.description}</p>
+              <p className="mb-6 sm:mb-8 text-sm sm:text-base min-h-[48px] sm:min-h-[60px]" style={{color: '#104F8F'}}>{project.description}</p>
 
               {/* Enhanced Links - always at bottom */}
               <div className="mt-auto flex flex-col sm:flex-row gap-3 sm:gap-4">

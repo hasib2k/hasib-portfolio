@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowLeft, Calendar, Clock, User, DollarSign, TrendingUp, Calculator, BarChart } from 'lucide-react'
+import BlogNavigation from '@/components/BlogNavigation'
 
 export const metadata: Metadata = {
   title: 'Test Automation ROI: Building Business Cases for QA Investment - Hasib Ahmed',
@@ -391,6 +392,9 @@ export default function TestAutomationRoiBusinessCase() {
                 ))}
               </div>
             </div>
+
+            {/* Blog Navigation */}
+            <BlogNavigation currentSlug="test-automation-roi-business-case" />
           </article>
         </div>
       </div>

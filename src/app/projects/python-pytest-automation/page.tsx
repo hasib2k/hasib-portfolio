@@ -1,11 +1,9 @@
+'use client'
+
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { ArrowLeft, Github, ExternalLink, Code, TestTube, Zap, Settings } from 'lucide-react'
-
-export const metadata: Metadata = {
-  title: 'Python Pytest Automation Framework - Hasib Ahmed',
-  description: 'Comprehensive test automation framework built with Python and Pytest, featuring modular test design, reporting, and CI/CD integration for scalable quality assurance.'
-}
+import { Github, ExternalLink, Code, TestTube, Zap, Settings } from 'lucide-react'
+import ProjectBackButton from '@/components/ProjectBackButton'
 
 export default function PythonPytestAutomation() {
   const technologies = [
@@ -40,14 +38,7 @@ export default function PythonPytestAutomation() {
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           {/* Back Button */}
-          <Link 
-            href="/projects"
-            className="inline-flex items-center gap-2 mb-8 px-4 py-2 rounded-lg backdrop-blur-md bg-white/10 shadow-lg border transition-all duration-300 hover:bg-white/20 hover:scale-105"
-            style={{borderColor: '#B7C9E2', color: '#104F8F'}}
-          >
-            <ArrowLeft size={20} />
-            Back to Projects
-          </Link>
+          <ProjectBackButton />
 
           {/* Header */}
           <div className="text-center mb-12">

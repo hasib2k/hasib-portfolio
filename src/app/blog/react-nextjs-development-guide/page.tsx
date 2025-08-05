@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowLeft, Calendar, Clock, User, Palette, Smartphone, Code } from 'lucide-react'
+import BlogNavigation from '@/components/BlogNavigation'
 
 export const metadata: Metadata = {
   title: 'Modern React Development with Next.js - Hasib Ahmed',
@@ -381,6 +382,9 @@ export function Button({ variant, size = 'md', children, ...props }: ButtonProps
                 ))}
               </div>
             </div>
+
+            {/* Blog Navigation */}
+            <BlogNavigation currentSlug="react-nextjs-development-guide" />
           </article>
         </div>
       </div>

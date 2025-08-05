@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowLeft, Calendar, Clock, User, Palette, Smartphone, Code } from 'lucide-react'
+import BlogNavigation from '@/components/BlogNavigation'
 
 export const metadata: Metadata = {
   title: 'Modern React Development with Next.js - Hasib Ahmed',
@@ -368,6 +369,9 @@ test('user can create and view blog post', async ({ page }) => {
                 ))}
               </div>
             </div>
+
+            {/* Blog Navigation */}
+            <BlogNavigation currentSlug="react-nextjs-patterns" />
           </article>
         </div>
       </div>

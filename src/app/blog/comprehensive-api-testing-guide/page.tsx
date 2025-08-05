@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowLeft, Calendar, Clock, User, CheckSquare, Bug, FileText } from 'lucide-react'
+import BlogNavigation from '@/components/BlogNavigation'
 
 export const metadata: Metadata = {
   title: 'Comprehensive API Testing Strategies and Best Practices - Hasib Ahmed',
@@ -247,6 +248,9 @@ def test_get_user():
                 ))}
               </div>
             </div>
+
+            {/* Blog Navigation */}
+            <BlogNavigation currentSlug="comprehensive-api-testing-guide" />
           </article>
         </div>
       </div>

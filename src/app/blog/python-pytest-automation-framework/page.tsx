@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowLeft, Calendar, Clock, User, Code, TestTube, Zap } from 'lucide-react'
+import BlogNavigation from '@/components/BlogNavigation'
 
 export const metadata: Metadata = {
   title: 'Building Robust Test Automation with Python and Pytest - Hasib Ahmed',
@@ -225,6 +226,9 @@ def api_client():
                 ))}
               </div>
             </div>
+
+            {/* Blog Navigation */}
+            <BlogNavigation currentSlug="python-pytest-automation-framework" />
           </article>
         </div>
       </div>
