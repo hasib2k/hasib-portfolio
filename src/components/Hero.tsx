@@ -59,7 +59,7 @@ export default function Hero() {
                     fontFamily: 'Exo 2, sans-serif'
                   }}
                 >
-                  I'm
+                  I&apos;m
                 </motion.span>
               </motion.div>
               
@@ -78,7 +78,7 @@ export default function Hero() {
                     fontFamily: 'Exo 2, sans-serif'
                   }}
                 >
-                  I'm
+                  I&apos;m
                 </span>
                 <span style={{color: '#104F8F'}}>Hasib Ahmed</span>
               </motion.h1>
