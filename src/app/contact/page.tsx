@@ -291,10 +291,10 @@ Email: ${email}`;
                   </div>
 
                   {/* Gmail-style Footer with Send Button */}
-                  <div className="flex items-center justify-between pt-4 border-t" style={{borderColor: '#E5E7EB'}}>
+                  <div className="flex justify-center pt-4 border-t" style={{borderColor: '#E5E7EB'}}>
                     <button
                       type="submit"
-                      className="px-6 py-2 text-white rounded-lg font-medium transition-all duration-200 hover:opacity-90 hover:shadow-lg flex items-center gap-2 cursor-pointer group"
+                      className="px-6 sm:px-8 py-2 sm:py-3 text-white rounded-lg font-medium transition-all duration-200 hover:opacity-90 hover:shadow-lg flex items-center gap-2 cursor-pointer group w-full sm:w-auto justify-center"
                       style={{backgroundColor: '#104F8F'}}
                       onMouseEnter={(e) => {
                         e.currentTarget.style.backgroundColor = '#0d4085';
@@ -304,12 +304,8 @@ Email: ${email}`;
                       }}
                     >
                       <Send className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5" />
-                      Send Message
+                      <span className="text-sm sm:text-base">Send Message</span>
                     </button>
-                    
-                    <div className="flex items-center gap-3 text-sm text-gray-500">
-                      <span>Ctrl+Enter to send</span>
-                    </div>
                   </div>
                 </form>
               </div>

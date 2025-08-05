@@ -26,32 +26,68 @@ export default function Hero() {
             className="space-y-6 sm:space-y-8"
           >
             <div className="space-y-4">
-              <motion.p 
+              <motion.div 
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.05, duration: 0.5 }}
-                className="text-lg sm:text-xl lg:text-2xl font-normal"
-                style={{color: '#104F8F'}}
+                className="relative mt-4 sm:mt-0"
               >
-                
-                Hey there! This is,
-              </motion.p>
+                <motion.span
+                  className="text-xl sm:text-2xl lg:text-3xl font-light tracking-wider block text-center sm:text-left"
+                  style={{
+                    color: '#B7C9E2',
+                    fontFamily: 'Exo 2, sans-serif',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.2em'
+                  }}
+                >
+                  Hello World
+                </motion.span>
+              </motion.div>
+
+              {/* Mobile I'm - only visible on mobile */}
+              <motion.div 
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.08, duration: 0.5 }}
+                className="block sm:hidden text-center"
+              >
+                <motion.span
+                  className="text-xl font-light tracking-wider"
+                  style={{
+                    color: '#B7C9E2',
+                    fontFamily: 'Exo 2, sans-serif'
+                  }}
+                >
+                  I'm
+                </motion.span>
+              </motion.div>
               
               <motion.h1 
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1, duration: 0.5 }}
-                className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight"
+                className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-center sm:text-left"
                 style={{color: '#104F8F'}}
               >
-                <span className="block" style={{color: '#104F8F'}}>Hasib Ahmed</span>
+                {/* Desktop I'm - only visible on desktop, inline with name */}
+                <span 
+                  className="hidden sm:inline text-xl sm:text-2xl lg:text-3xl font-light tracking-wider mr-6" 
+                  style={{
+                    color: '#B7C9E2',
+                    fontFamily: 'Exo 2, sans-serif'
+                  }}
+                >
+                  I'm
+                </span>
+                <span style={{color: '#104F8F'}}>Hasib Ahmed</span>
               </motion.h1>
               
               <motion.p 
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 0.5 }}
-                className="text-lg sm:text-xl font-light tracking-widest uppercase"
+                className="text-xs sm:text-sm font-light tracking-widest uppercase text-center sm:text-left"
                 style={{
                   color: '#104F8F',
                   letterSpacing: '0.15em'
