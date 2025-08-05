@@ -114,25 +114,45 @@ export default function About() {
 
               {/* Skills Highlight */}
               <motion.div
-                initial={{ opacity: 0, y: 10 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5, duration: 0.5 }}
+                transition={{ delay: 0.5, duration: 0.8, ease: "easeOut" }}
                 viewport={{ once: true }}
-                className="p-4 sm:p-6 rounded-xl border backdrop-blur-md bg-white/10 shadow-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-xl hover:bg-white/20"
+                className="p-4 sm:p-6 rounded-xl border backdrop-blur-md bg-white/10 shadow-lg transition-all duration-500 hover:scale-[1.02] hover:shadow-xl hover:bg-white/20"
                 style={{borderColor: '#B7C9E2'}}
               >
-                <h3 className="text-lg sm:text-xl font-semibold mb-4" style={{color: '#104F8F'}}>
+                <motion.h3 
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.6, duration: 0.6, ease: "easeOut" }}
+                  viewport={{ once: true }}
+                  className="text-lg sm:text-xl font-semibold mb-4" 
+                  style={{color: '#104F8F'}}
+                >
                   Core Expertise
-                </h3>
+                </motion.h3>
                 <div className="flex flex-wrap gap-2 sm:gap-3">
                   {['Python', 'Pytest', 'Manual Testing', 'API Testing', 'React', 'Next.js', 'JavaScript', 'Test Automation', 'Quality Assurance', 'Frontend Development'].map((skill, index) => (
                     <motion.span
                       key={skill}
-                      initial={{ opacity: 0, scale: 0.9 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      transition={{ delay: 0.6 + index * 0.05, duration: 0.3 }}
+                      initial={{ opacity: 0, scale: 0.8, y: 10 }}
+                      whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                      transition={{ 
+                        delay: 0.7 + index * 0.08, 
+                        duration: 0.5, 
+                        ease: "easeOut",
+                        type: "spring",
+                        stiffness: 100,
+                        damping: 10
+                      }}
                       viewport={{ once: true }}
-                      className="px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-medium border transition-all duration-300 hover:scale-105 hover:shadow-md cursor-pointer"
+                      whileHover={{ 
+                        scale: 1.1, 
+                        y: -2,
+                        transition: { duration: 0.2, ease: "easeInOut" }
+                      }}
+                      whileTap={{ scale: 0.95 }}
+                      className="px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-medium border transition-all duration-300 hover:shadow-lg cursor-pointer"
                       style={{
                         backgroundColor: '#B7C9E2',
                         color: '#104F8F',
@@ -141,10 +161,12 @@ export default function About() {
                       onMouseEnter={(e) => {
                         e.currentTarget.style.backgroundColor = '#104F8F';
                         e.currentTarget.style.color = 'white';
+                        e.currentTarget.style.transform = 'translateY(-2px)';
                       }}
                       onMouseLeave={(e) => {
                         e.currentTarget.style.backgroundColor = '#B7C9E2';
                         e.currentTarget.style.color = '#104F8F';
+                        e.currentTarget.style.transform = 'translateY(0px)';
                       }}
                     >
                       {skill}

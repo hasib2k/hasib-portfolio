@@ -30,24 +30,11 @@ export default function HireMe() {
               <div className="rounded-2xl p-8 border backdrop-blur-md bg-white/10 shadow-lg" style={{borderColor: '#B7C9E2'}}>
                 <h2 className="text-3xl font-bold mb-6" style={{color: '#104F8F'}}>Services I Offer</h2>
                 <p className="text-lg mb-8 leading-relaxed" style={{color: '#104F8F'}}>
-                  Specializing in Python/Pytest automation, comprehensive testing strategies, and modern 
-                  React/Next.js development to deliver exceptional quality and user experiences.
+                  Specializing in Python/Pytest automation, comprehensive testing strategies, and modern React/Next.js development.
                 </p>
               </div>
               
               <div className="grid gap-6">
-                <div className="border backdrop-blur-md bg-white/10 shadow-lg rounded-2xl p-6 transition-all duration-300 transform hover:scale-105" style={{borderColor: '#B7C9E2'}}>
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg" style={{backgroundColor: '#104F8F'}}>
-                      <span className="text-white font-bold">FS</span>
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold mb-2" style={{color: '#104F8F'}}>Full-Stack Development</h3>
-                      <p style={{color: '#104F8F'}}>End-to-end web application development with modern technologies</p>
-                    </div>
-                  </div>
-                </div>
-
                 <div className="border backdrop-blur-md bg-white/10 shadow-lg rounded-2xl p-6 transition-all duration-300 transform hover:scale-105" style={{borderColor: '#B7C9E2'}}>
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg" style={{backgroundColor: '#104F8F'}}>
@@ -103,7 +90,7 @@ export default function HireMe() {
               <div className="rounded-2xl p-8 border backdrop-blur-md bg-white/10 shadow-lg" style={{borderColor: '#B7C9E2'}}>
                 <h2 className="text-3xl font-bold mb-6" style={{color: '#104F8F'}}>Get In Touch</h2>
                 <p className="text-lg mb-8 leading-relaxed" style={{color: '#104F8F'}}>
-                  Ready to start your project? Choose the best way to reach out to me.
+                  Ready to start your project? Choose the best way to reach out and connect with me.
                 </p>
               </div>
               

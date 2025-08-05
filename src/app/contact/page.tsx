@@ -79,26 +79,18 @@ export default function ContactPage() {
           {/* Header Section */}
           <div className="text-center mb-16">
             <h1 className="text-5xl md:text-6xl font-bold mb-6" style={{color: '#104F8F'}}>
-              Get In <span style={{color: '#104F8F'}}>Touch</span>
+              Let&apos;s <span style={{color: '#104F8F'}}>Connect</span>
             </h1>
             <div className="w-24 h-1 mx-auto rounded-full" style={{backgroundColor: '#104F8F'}}></div>
             <p className="text-xl max-w-3xl mx-auto mt-6 leading-relaxed" style={{color: '#104F8F'}}>
-              I&apos;m always interested in new QA opportunities and exciting frontend projects. 
-              Whether you need quality assurance expertise or frontend development, I&apos;d love to hear from you.
+              I&apos;m based in Bangladesh and available for both remote and on-site QA and frontend development opportunities. 
+              Feel free to reach out through any of the channels below for testing or development projects.
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-16">
             {/* Contact Information */}
             <div className="space-y-8">
-              <div>
-                <h2 className="text-3xl font-bold mb-6" style={{color: '#104F8F'}}>Let&apos;s Connect</h2>
-                <p className="text-lg mb-8 leading-relaxed" style={{color: '#104F8F'}}>
-                  I&apos;m based in Bangladesh and available for both remote and on-site QA and frontend development opportunities. 
-                  Feel free to reach out through any of the channels below for testing or development projects.
-                </p>
-              </div>
-
               {/* Contact Methods */}
               <div className="space-y-6">
                 <a 
@@ -185,94 +177,142 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Contact Form */}
-            <div className="rounded-2xl border backdrop-blur-md bg-white/10 shadow-lg p-8" style={{borderColor: '#B7C9E2'}}>
-              <h2 className="text-3xl font-bold mb-6" style={{color: '#104F8F'}}>Send a Message</h2>
+            {/* Contact Form - Gmail Style */}
+            <div className="rounded-2xl border backdrop-blur-md bg-white/5 shadow-xl overflow-hidden" style={{borderColor: '#B7C9E2'}}>
+              {/* Gmail-style Header */}
+              <div className="border-b p-6" style={{backgroundColor: 'rgba(16, 79, 143, 0.05)', borderColor: '#B7C9E2'}}>
+                <h2 className="text-2xl font-semibold flex items-center gap-3" style={{color: '#104F8F'}}>
+                  <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{backgroundColor: '#104F8F'}}>
+                    <Send className="w-4 h-4 text-white" />
+                  </div>
+                  Send a Message
+                </h2>
+              </div>
+
+              {/* Success Message */}
               {formSent && (
-                <div className="mb-6 p-4 rounded-lg bg-green-100 text-green-800 text-center font-semibold border border-green-300">
-                  Thank you! Your message has been prepared for sending. Please check your email client to complete the process.
+                <div className="mx-6 mt-6 p-4 rounded-lg bg-green-50 text-green-700 text-center font-medium border border-green-200">
+                  ✓ Message prepared successfully! Please check your email client to send.
                 </div>
               )}
-              <form
-                className="space-y-6"
-                action="mailto:hasibahmed.ig@gmail.com"
-                method="POST"
-                encType="text/plain"
-                onSubmit={() => {
-                  setFormSent(true);
-                  setTimeout(() => setFormSent(false), 8000);
-                }}
-              >
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium mb-2" style={{color: '#104F8F'}}>
-                      Your Name
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      className="w-full px-4 py-3 border rounded-lg focus:ring-2 transition-colors"
-                      style={{borderColor: '#B7C9E2', color: '#104F8F'}}
-                      placeholder="John Doe"
-                      required
-                    />
+
+              {/* Gmail-style Form */}
+              <div className="p-6">
+                <form
+                  className="space-y-4"
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    const formData = new FormData(e.currentTarget);
+                    const name = formData.get('name') as string;
+                    const email = formData.get('email') as string;
+                    const subject = formData.get('subject') as string;
+                    const message = formData.get('message') as string;
+                    
+                    const emailBody = `Hello Hasib,
+
+My name is ${name}.
+
+${message}
+
+Best regards,
+${name}
+Email: ${email}`;
+                    
+                    const mailtoLink = `mailto:hasibahmed.ig@gmail.com?subject=${encodeURIComponent(subject || 'Contact from Portfolio')}&body=${encodeURIComponent(emailBody)}`;
+                    window.location.href = mailtoLink;
+                    
+                    // Clear form after sending
+                    (e.target as HTMLFormElement).reset();
+                    setFormSent(true);
+                    setTimeout(() => setFormSent(false), 8000);
+                  }}
+                >
+                  {/* To Field (Read-only) */}
+                  <div className="flex items-center border-b pb-3" style={{borderColor: '#E5E7EB'}}>
+                    <label className="text-sm font-medium w-16 text-gray-600">To:</label>
+                    <div className="flex-1 px-3 py-2 rounded-md text-sm text-white" style={{backgroundColor: '#104F8F'}}>
+                      hasibahmed.ig@gmail.com
+                    </div>
                   </div>
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium mb-2" style={{color: '#104F8F'}}>
-                      Email Address
-                    </label>
+
+                  {/* From Field */}
+                  <div className="flex items-center border-b pb-3" style={{borderColor: '#E5E7EB'}}>
+                    <label htmlFor="email" className="text-sm font-medium w-16 text-gray-600">From:</label>
                     <input
                       type="email"
                       id="email"
                       name="email"
-                      className="w-full px-4 py-3 border rounded-lg focus:ring-2 transition-colors"
-                      style={{borderColor: '#B7C9E2', color: '#104F8F'}}
-                      placeholder="john@example.com"
+                      className="flex-1 px-3 py-2 border-0 focus:ring-0 focus:outline-none text-sm bg-transparent"
+                      style={{color: '#104F8F'}}
+                      placeholder="Enter Your Email"
                       required
                     />
                   </div>
-                </div>
 
-                <div>
-                  <label htmlFor="subject" className="block text-sm font-medium mb-2" style={{color: '#104F8F'}}>
-                    Subject
-                  </label>
-                  <input
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    className="w-full px-4 py-3 border rounded-lg focus:ring-2 transition-colors"
-                    style={{borderColor: '#B7C9E2', color: '#104F8F'}}
-                    placeholder="Project Discussion"
-                    required
-                  />
-                </div>
+                  {/* Name Field */}
+                  <div className="flex items-center border-b pb-3" style={{borderColor: '#E5E7EB'}}>
+                    <label htmlFor="name" className="text-sm font-medium w-16 text-gray-600">Name:</label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      className="flex-1 px-3 py-2 border-0 focus:ring-0 focus:outline-none text-sm bg-transparent"
+                      style={{color: '#104F8F'}}
+                      placeholder="Enter Your Name"
+                      required
+                    />
+                  </div>
 
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium mb-2" style={{color: '#104F8F'}}>
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={6}
-                    className="w-full px-4 py-3 border rounded-lg focus:ring-2 transition-colors resize-none"
-                    style={{borderColor: '#B7C9E2', color: '#104F8F'}}
-                    placeholder="Tell me about your project..."
-                    required
-                  ></textarea>
-                </div>
+                  {/* Subject Field */}
+                  <div className="flex items-center border-b pb-3" style={{borderColor: '#E5E7EB'}}>
+                    <label htmlFor="subject" className="text-sm font-medium w-16 text-gray-600">Subject:</label>
+                    <input
+                      type="text"
+                      id="subject"
+                      name="subject"
+                      className="flex-1 px-3 py-2 border-0 focus:ring-0 focus:outline-none text-sm bg-transparent"
+                      style={{color: '#104F8F'}}
+                      placeholder="Project Discussion"
+                      required
+                    />
+                  </div>
 
-                <button
-                  type="submit"
-                  className="w-full px-6 py-3 text-white rounded-lg font-semibold transition-all duration-300 hover:opacity-90 flex items-center justify-center gap-2"
-                  style={{backgroundColor: '#104F8F'}}
-                >
-                  <Send className="w-5 h-5" />
-                  Send Message
-                </button>
-              </form>
+                  {/* Message Field */}
+                  <div className="mt-6">
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows={8}
+                      className="w-full px-3 py-3 border-0 focus:ring-0 focus:outline-none text-sm bg-transparent resize-none"
+                      style={{color: '#104F8F'}}
+                      placeholder="Tell me about your project..."
+                      required
+                    ></textarea>
+                  </div>
+
+                  {/* Gmail-style Footer with Send Button */}
+                  <div className="flex items-center justify-between pt-4 border-t" style={{borderColor: '#E5E7EB'}}>
+                    <button
+                      type="submit"
+                      className="px-6 py-2 text-white rounded-lg font-medium transition-all duration-200 hover:opacity-90 hover:shadow-lg flex items-center gap-2 cursor-pointer group"
+                      style={{backgroundColor: '#104F8F'}}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.backgroundColor = '#0d4085';
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.backgroundColor = '#104F8F';
+                      }}
+                    >
+                      <Send className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5" />
+                      Send Message
+                    </button>
+                    
+                    <div className="flex items-center gap-3 text-sm text-gray-500">
+                      <span>Ctrl+Enter to send</span>
+                    </div>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
 

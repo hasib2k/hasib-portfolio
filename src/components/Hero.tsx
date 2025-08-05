@@ -30,7 +30,7 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.05, duration: 0.5 }}
-                className="text-lg sm:text-xl lg:text-2xl font-medium"
+                className="text-lg sm:text-xl lg:text-2xl font-normal"
                 style={{color: '#104F8F'}}
               >
                 
@@ -71,8 +71,8 @@ export default function Hero() {
               <a
                 href="/assets/resume/hasib_ahmed_cv.pdf"
                 download="Hasib_Ahmed_CV.pdf"
-                className="text-white px-6 sm:px-8 py-3 sm:py-4 rounded-2xl font-semibold inline-flex items-center justify-center gap-2 transition-all duration-300 hover:shadow-2xl transform hover:scale-105 w-full sm:w-auto cursor-pointer active:scale-95 shadow-xl"
-                style={{backgroundColor: '#104F8F'}}
+                className="px-6 sm:px-8 py-2.5 sm:py-3 rounded-2xl font-semibold inline-flex items-center justify-center gap-2 transition-all duration-300 hover:shadow-2xl transform hover:scale-105 w-full sm:w-auto cursor-pointer active:scale-95 border backdrop-blur-md bg-white/10 shadow-lg"
+                style={{borderColor: '#104F8F', color: '#104F8F'}}
                 onClick={() => {
                   // Ensure the download works even if the file path needs adjustment
                   console.log('Downloading CV...');
@@ -198,7 +198,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.5 }}
-              className="text-center text-base sm:text-lg italic mt-6"
+              className="text-center text-xs sm:text-sm italic mt-6"
               style={{color: '#104F8F'}}
             >
               &quot;Driven by Curiosity, Powered by Code, Perfected by Testing.&quot;
